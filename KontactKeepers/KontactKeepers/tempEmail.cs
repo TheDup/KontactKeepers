@@ -8,6 +8,17 @@ namespace KontactKeepers
 {
     class tempEmail
     {
+		private string emailaddress;
 
-    }
+		public string EmailAddress
+		{
+			get { return emailaddress; }
+			set { emailaddress = value; }
+		}
+
+		public tempEmail(string emailaddress)
+		{
+			this.emailaddress = emailaddress;
+		}
+	}
 }
