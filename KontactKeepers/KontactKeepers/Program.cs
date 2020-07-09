@@ -17,14 +17,14 @@ namespace KontactKeepers
                 Body = new TextPart("plain") { Text = "Hello world!" },
                 Subject = "Test",
             };
-            messageToSend.From.Add(new MailboxAddress("Jannes Venter", "jannesventer09@gmail.com"));
-            messageToSend.To.Add(new MailboxAddress("Devilliers du Plessis", "jannesventer09@gmail.com"));
+            messageToSend.From.Add(new MailboxAddress("ContactKeeper", "kontactkeeper@campus-kiosk.co.za"));
+            messageToSend.To.Add(new MailboxAddress("JAMES", "devilliers.duplessis@gmail.com"));
             using (var client = new SmtpClient())
             {
                 client.Connect("host21.axxesslocal.co.za", 465, true);
 
                 // Note: only needed if the SMTP server requires authentication
-                client.Authenticate("KontactKeeper@campus-kiosk.ac.za", "g4Ha2QtlMi7D");
+                client.Authenticate("KontactKeeper@campus-kiosk.co.za", "g4Ha2QtlMi7D");
 
                 client.Send(messageToSend);
                 client.Disconnect(true);
