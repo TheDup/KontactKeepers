@@ -12,19 +12,21 @@ namespace KontactKeepers
     {
         static void Main(string[] args)
         {
+            EmailConf ec = new EmailConf();
+
             var messageToSend = new MimeMessage
             {
-                Body = new TextPart("plain") { Text = "Hello world!" },
-                Subject = "Test",
+                Body = new TextPart("plain") { Text = "Someone added encapsulation and object usage" },
+                Subject = "Greetings",
             };
-            messageToSend.From.Add(new MailboxAddress("ContactKeeper", "kontactkeeper@campus-kiosk.co.za"));
-            messageToSend.To.Add(new MailboxAddress("JAMES", "devilliers.duplessis@gmail.com"));
+            messageToSend.From.Add(new MailboxAddress("ContactKeeper", ec.EmailAddressUName));
+            messageToSend.To.Add(new MailboxAddress("DeVilliers", "devilliers.duplessis@gmail.com"));
             using (var client = new SmtpClient())
             {
-                client.Connect("host21.axxesslocal.co.za", 465, true);
+                client.Connect(ec.OutgoingServer, int.Parse(ec.SmtpPort), true);
 
                 // Note: only needed if the SMTP server requires authentication
-                client.Authenticate("KontactKeeper@campus-kiosk.co.za", "g4Ha2QtlMi7D");
+                client.Authenticate(ec.EmailAddressUName, ec.MailPass);
 
                 client.Send(messageToSend);
                 client.Disconnect(true);
