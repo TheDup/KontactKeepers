@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MailKit.Net.Smtp;
+using MimeKit;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,14 +27,24 @@ namespace KontactKeepers
         public string OutgoingServer { get => outgoingServer; set => outgoingServer = value; }
         public string SmtpPort { get => smtpPort; set => smtpPort = value; }
 
-        // Non SSL settings
-        //Username: Your Email Address
-        //Incoming Server: Your Domain
-        //IMAP Port: 143
-        //POP3 Port: 110
-        //Outgoing Server: Your Domain
-        //SMTP Port: 25
+        public void SendActivityEmail(string destAddress)
+        {
+            var messageToSend = new MimeMessage();
+            
+            messageToSend.Subject = "Account activity";
+            BodyBuilder bb = new BodyBuilder();
+            bb.HtmlBody = File.ReadAllText("index.html");
+            messageToSend.Body = bb.ToMessageBody();
+            messageToSend.From.Add(new MailboxAddress("KontactKeeper", emailAddressUName));
+            messageToSend.To.Add(new MailboxAddress("Client", destAddress));
 
-
+            using (var client = new SmtpClient())
+            {
+                client.Connect(outgoingServer, int.Parse(smtpPort), true);
+                client.Authenticate(emailAddressUName, mailPass);
+                client.Send(messageToSend);
+                client.Disconnect(true);
+            }
+        }
     }
 }
