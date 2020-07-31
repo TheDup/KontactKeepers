@@ -12,8 +12,7 @@ namespace KontactKeepers
     {
         static void Main(string[] args)
         {
-            EmailConf econf = new EmailConf();
-            econf.SendActivityEmail("jannesventer09@gmail.com");
+            
         }
     }
 }
