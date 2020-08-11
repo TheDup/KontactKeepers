@@ -53,19 +53,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\janne\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\FaceBookAPI.csproj",
+      "projectUniqueName": "C:\\Users\\janne\\OneDrive\\Documents\\Git Repos\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\FaceBookAPI.csproj",
       "projectName": "FaceBookAPI",
-      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\FaceBookAPI.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\obj\\",
+      "projectPath": "C:\\Users\\janne\\OneDrive\\Documents\\Git Repos\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\FaceBookAPI.csproj",
+      "packagesPath": "C:\\Users\\janne\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\janne\\OneDrive\\Documents\\Git Repos\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\janne\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -109,7 +109,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   },
