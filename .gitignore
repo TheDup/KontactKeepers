@@ -1,2 +1,6 @@
 
 *.lock
+KontactKeepers/.vs/KontactKeeper/DesignTimeBuild/.dtbcache
+KontactKeepers/.vs/KontactKeeper/v16/.suo
+KontactKeepers/.vs/KontactKeeper/v16/Server/sqlite3/storage.ide-shm
+KontactKeepers/.vs/KontactKeeper/v16/Server/sqlite3/storage.ide-wal
