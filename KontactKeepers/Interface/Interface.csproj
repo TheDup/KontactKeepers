@@ -102,5 +102,15 @@
   <ItemGroup>
     <None Include="bin\settings.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+      <Project>{708c10d2-127a-47e8-ba70-d9a5420bf0ff}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KontactKeepers\EmailAPI.csproj">
+      <Project>{a17851ff-4db0-4c73-bcbf-45f53396497b}</Project>
+      <Name>EmailAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
