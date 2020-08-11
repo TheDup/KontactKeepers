@@ -1,47 +1,64 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Documents\\GitHub\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\FaceBookAPI.csproj": {}
+    "C:\\Users\\janne\\OneDrive\\Documents\\Git Repos\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\FaceBookAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Documents\\GitHub\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\FaceBookAPI.csproj": {
+    "C:\\Users\\janne\\OneDrive\\Documents\\Git Repos\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\FaceBookAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\FaceBookAPI.csproj",
+        "projectUniqueName": "C:\\Users\\janne\\OneDrive\\Documents\\Git Repos\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\FaceBookAPI.csproj",
         "projectName": "FaceBookAPI",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\FaceBookAPI.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\obj\\",
+        "projectPath": "C:\\Users\\janne\\OneDrive\\Documents\\Git Repos\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\FaceBookAPI.csproj",
+        "packagesPath": "C:\\Users\\janne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janne\\OneDrive\\Documents\\Git Repos\\KontactKeepers\\KontactKeepers\\FaceBookAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\janne\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net472"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net472": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
         }
       },
       "frameworks": {
-        "net472": {}
-      },
-      "runtimes": {
-        "win": {
-          "#import": []
-        },
-        "win-x64": {
-          "#import": []
-        },
-        "win-x86": {
-          "#import": []
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Facebook": {
+              "target": "Package",
+              "version": "[7.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
