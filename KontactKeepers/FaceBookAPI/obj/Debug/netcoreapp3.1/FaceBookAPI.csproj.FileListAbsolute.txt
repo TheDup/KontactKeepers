@@ -1,4 +1,0 @@
-C:\Users\Admin\Documents\GitHub\KontactKeepers\KontactKeepers\FaceBookAPI\bin\Debug\netcoreapp3.1\FaceBookAPI.exe
-C:\Users\Admin\Documents\GitHub\KontactKeepers\KontactKeepers\FaceBookAPI\obj\Debug\netcoreapp3.1\FaceBookAPI.csprojAssemblyReference.cache
-C:\Users\Admin\Documents\GitHub\KontactKeepers\KontactKeepers\FaceBookAPI\obj\Debug\netcoreapp3.1\FaceBookAPI.AssemblyInfoInputs.cache
-C:\Users\Admin\Documents\GitHub\KontactKeepers\KontactKeepers\FaceBookAPI\obj\Debug\netcoreapp3.1\FaceBookAPI.AssemblyInfo.cs
