@@ -1,5 +1,4 @@
-﻿using BusinessLogic;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,8 +55,9 @@ namespace DataAccess
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
-                    string query = string.Format("INSERT INTO tblFBUser (FBID, Name, LastSeen) VALUES ('{0}','{1}','{2}')", fbid, name, lastseen);
+                    string query = string.Format("INSERT INTO tblFBUser (FBID, FBName, LastSeen) VALUES ('{0}','{1}','{2}')", fbid, name, lastseen);
                     SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (SqlException sqlex)
@@ -85,6 +85,7 @@ namespace DataAccess
                     conn.Open();
                     string query = string.Format("delete from tblFBUser where FBID = {0}",id);
                     SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (SqlException sqlex)

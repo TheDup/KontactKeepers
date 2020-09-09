@@ -14,7 +14,7 @@ namespace BusinessLogic
         public List<FBUser> GetFBUsers()
         {
             DataHandler dh = new DataHandler();
-            DataTable dt = dh.Read("FBUsers");
+            DataTable dt = dh.Read("tblFBUser");
             List<FBUser> users = new List<FBUser>();
             foreach (DataRow row in dt.Rows)
             {

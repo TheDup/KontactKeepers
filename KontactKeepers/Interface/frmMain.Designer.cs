@@ -83,7 +83,7 @@
             this.txtCOType = new System.Windows.Forms.TextBox();
             this.txtCOClientNo = new System.Windows.Forms.TextBox();
             this.txtCOContractNo = new System.Windows.Forms.TextBox();
-            this.dgvContracts = new System.Windows.Forms.DataGridView();
+            this.dgvEndUser = new System.Windows.Forms.DataGridView();
             this.panHome = new System.Windows.Forms.Panel();
             this.btnContracts1 = new System.Windows.Forms.Button();
             this.btnClients1 = new System.Windows.Forms.Button();
@@ -93,12 +93,13 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.panButtons = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panAdmins.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalls)).BeginInit();
             this.panCallAgents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.panEndUsers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContracts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEndUser)).BeginInit();
             this.panHome.SuspendLayout();
             this.panButtons.SuspendLayout();
             this.SuspendLayout();
@@ -487,7 +488,7 @@
             this.panEndUsers.Controls.Add(this.txtCOType);
             this.panEndUsers.Controls.Add(this.txtCOClientNo);
             this.panEndUsers.Controls.Add(this.txtCOContractNo);
-            this.panEndUsers.Controls.Add(this.dgvContracts);
+            this.panEndUsers.Controls.Add(this.dgvEndUser);
             this.panEndUsers.Location = new System.Drawing.Point(13, 68);
             this.panEndUsers.Name = "panEndUsers";
             this.panEndUsers.Size = new System.Drawing.Size(559, 481);
@@ -679,19 +680,19 @@
             this.txtCOContractNo.Size = new System.Drawing.Size(100, 20);
             this.txtCOContractNo.TabIndex = 26;
             // 
-            // dgvContracts
+            // dgvEndUser
             // 
-            this.dgvContracts.AllowUserToAddRows = false;
-            this.dgvContracts.AllowUserToDeleteRows = false;
-            this.dgvContracts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvEndUser.AllowUserToAddRows = false;
+            this.dgvEndUser.AllowUserToDeleteRows = false;
+            this.dgvEndUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContracts.Location = new System.Drawing.Point(3, 4);
-            this.dgvContracts.Name = "dgvContracts";
-            this.dgvContracts.ReadOnly = true;
-            this.dgvContracts.Size = new System.Drawing.Size(350, 470);
-            this.dgvContracts.TabIndex = 25;
+            this.dgvEndUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEndUser.Location = new System.Drawing.Point(3, 4);
+            this.dgvEndUser.Name = "dgvEndUser";
+            this.dgvEndUser.ReadOnly = true;
+            this.dgvEndUser.Size = new System.Drawing.Size(350, 470);
+            this.dgvEndUser.TabIndex = 25;
             // 
             // panHome
             // 
@@ -795,14 +796,25 @@
             this.label23.TabIndex = 8;
             this.label23.Text = "Admin interface";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(19, 6);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(30, 27);
+            this.btnRefresh.TabIndex = 9;
+            this.btnRefresh.Text = "refr";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(584, 561);
-            this.Controls.Add(this.panCallAgents);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.panEndUsers);
+            this.Controls.Add(this.panCallAgents);
             this.Controls.Add(this.panAdmins);
             this.Controls.Add(this.panHome);
             this.Controls.Add(this.label23);
@@ -823,7 +835,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).EndInit();
             this.panEndUsers.ResumeLayout(false);
             this.panEndUsers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContracts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEndUser)).EndInit();
             this.panHome.ResumeLayout(false);
             this.panButtons.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -862,7 +874,7 @@
         private System.Windows.Forms.TextBox txtCOType;
         private System.Windows.Forms.TextBox txtCOClientNo;
         private System.Windows.Forms.TextBox txtCOContractNo;
-        private System.Windows.Forms.DataGridView dgvContracts;
+        private System.Windows.Forms.DataGridView dgvEndUser;
         private System.Windows.Forms.Button btnCAUpdate;
         private System.Windows.Forms.Button btnCADelete;
         private System.Windows.Forms.Button btnCAAdd;
@@ -897,6 +909,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
 

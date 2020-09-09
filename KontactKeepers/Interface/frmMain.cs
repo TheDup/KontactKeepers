@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using FacebookAPI;
+using BusinessLogic;
 
 namespace Interface
 {
@@ -20,14 +22,18 @@ namespace Interface
             btnCalls1.Click += new EventHandler(btnCalls_Click);
             btnClients1.Click += new EventHandler(btnClients_Click);
             btnContracts1.Click += new EventHandler(btnContracts_Click);
-
+            FBConf.Login("kontactkeeper09@gmail.com", "J@mes009");
             refresh();
         }
         
         public void refresh()
         {
-            
+            Connector cn = new Connector();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = cn.GetFBUsers();
+            dgvEndUser.DataSource = bs;
         }
+        
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
@@ -103,6 +109,9 @@ namespace Interface
             refresh();
         }
 
-        
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
     }
 }

@@ -28,7 +28,9 @@ namespace BusinessLogic
 
 		public SqlDateTime LastSeen
 		{
-			get { return lastseen; }
+			get {
+				return lastseen; 
+			}
 			set { lastseen = value; }
 		}
 

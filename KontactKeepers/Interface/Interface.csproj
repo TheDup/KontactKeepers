@@ -107,9 +107,9 @@
       <Project>{708c10d2-127a-47e8-ba70-d9a5420bf0ff}</Project>
       <Name>BusinessLogic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\KontactKeepers\EmailAPI.csproj">
-      <Project>{a17851ff-4db0-4c73-bcbf-45f53396497b}</Project>
-      <Name>EmailAPI</Name>
+    <ProjectReference Include="..\FacebookAPI\FacebookAPI.csproj">
+      <Project>{25a9db0f-f988-4641-a2a4-e60db7e4dd49}</Project>
+      <Name>FacebookAPI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
