@@ -49,3 +49,28 @@ C:\Users\janne\OneDrive\Desktop\Interface\obj\Debug\Interface.csproj.GenerateRes
 C:\Users\janne\OneDrive\Desktop\Interface\obj\Debug\Interface.csproj.CoreCompileInputs.cache
 C:\Users\janne\OneDrive\Desktop\Interface\obj\Debug\Interface.exe
 C:\Users\janne\OneDrive\Desktop\Interface\obj\Debug\Interface.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\Interface.exe
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\obj\Debug\Interface.csprojAssemblyReference.cache
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\obj\Debug\Interface.frmLogin.resources
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\obj\Debug\Interface.frmMain.resources
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\obj\Debug\Interface.frmSettings.resources
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\obj\Debug\Interface.csproj.GenerateResource.cache
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\obj\Debug\Interface.csproj.CoreCompileInputs.cache
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\Interface.exe.config
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\Interface.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\BusinessLogic.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\FacebookAPI.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\DataAccess.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\fbchat-sharp.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\AngleSharp.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\BusinessLogic.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\FacebookAPI.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\DataAccess.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\fbchat-sharp.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\AngleSharp.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\obj\Debug\Interface.csproj.CopyComplete
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\obj\Debug\Interface.exe
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\obj\Debug\Interface.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\Newtonsoft.Json.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Interface\bin\Debug\Newtonsoft.Json.xml

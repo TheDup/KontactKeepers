@@ -8,13 +8,6 @@ namespace BusinessLogic
 {
     public class Admin
     {
-		private int pidadmin;
-
-		public int PIDAdmin
-		{
-			get { return pidadmin; }
-			set { pidadmin = value; }
-		}
 		private string fname;
 
 		public string FName
@@ -43,9 +36,8 @@ namespace BusinessLogic
 			get { return password; }
 			set { password = value; }
 		}
-		public Admin(int pidadmin, string fname, string lname, string uname, string password)
+		public Admin(string fname, string lname, string uname, string password)
 		{
-			this.pidadmin = pidadmin;
 			this.fname = fname;
 			this.lname = lname;
 			this.uname = uname;

@@ -43,8 +43,16 @@
   <ItemGroup>
     <Compile Include="Admin.cs" />
     <Compile Include="Agent.cs" />
+    <Compile Include="Connector.cs" />
     <Compile Include="EndUser.cs" />
+    <Compile Include="FBUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{b5a0a8de-73ed-48e3-b3e6-fecf0258decf}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

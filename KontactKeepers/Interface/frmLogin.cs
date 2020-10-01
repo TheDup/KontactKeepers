@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,31 @@ namespace Interface
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frmMain frm = new frmMain();
-            frm.Show();
-            this.Hide();
+            bool check = false;
+            Connector cn = new Connector();
+            List<Admin> admins = cn.GetAdmins();
+
+            foreach (Admin item in admins)
+            {
+                if (txtUsername.Text == item.UName)
+                {
+                    if (txtPassword.Text == item.Password)
+                    {
+                        check = true;
+                    }
+                }
+            }
+            if (check)
+            {
+                frmMain frm = new frmMain();
+                frm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect details, Try again?", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                txtPassword.Clear();
+            }
         }
     }
 }

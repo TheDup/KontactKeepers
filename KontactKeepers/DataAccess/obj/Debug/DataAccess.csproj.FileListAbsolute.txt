@@ -1,0 +1,6 @@
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
