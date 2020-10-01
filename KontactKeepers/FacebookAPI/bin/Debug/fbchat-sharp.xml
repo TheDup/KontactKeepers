@@ -100,22 +100,11 @@
         <member name="P:fbchat_sharp.API.Client._state">
             Stores and manages state required for most Facebook requests.
         </member>
-        <member name="F:fbchat_sharp.API.Client.mqttClient">
-            Mqtt client for receiving messages
-        </member>
         <member name="P:fbchat_sharp.API.Client._uid">
             <summary>
             The ID of the client.
             Can be used as `thread_id`.
             Note: Modifying this results in undefined behaviour
-            </summary>
-        </member>
-        <member name="M:fbchat_sharp.API.Client.#ctor">
-            <summary>
-            A client for the Facebook Chat (Messenger).
-            This is the main class of `fbchat-sharp`, which contains all the methods you use to
-            interact with Facebook.You can extend this class, and overwrite the `on` methods,
-            to provide custom event handling (mainly useful while listening).
             </summary>
         </member>
         <member name="M:fbchat_sharp.API.Client.fromSession(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.Net.Cookie}},System.String)">
@@ -143,13 +132,15 @@
             </summary>
             <param name="session_cookies"></param>
             <param name="user_agent"></param>
+            <returns>false if ``session_cookies`` does not contain proper cookies</returns>
         </member>
-        <member name="M:fbchat_sharp.API.Client.login(System.String,System.String,System.String)">
+        <member name="M:fbchat_sharp.API.Client.login(System.String,System.String,System.Int32,System.String)">
             <summary>
             Uses ``email`` and ``password`` to login the user (If the user is already logged in, this will do a re-login)
             </summary>
             <param name="email">Facebook ``email`` or ``id`` or ``phone number``</param>
             <param name="password">Facebook account password</param>
+            <param name="max_tries">Maximum number of times to try logging in</param>
             <param name="user_agent"></param>
         </member>
         <member name="M:fbchat_sharp.API.Client.logout">
@@ -837,19 +828,17 @@
             <param name="thread_id">User/Group ID to unmute.See :ref:`intro_threads`</param>
             <returns></returns>
         </member>
-        <member name="M:fbchat_sharp.API.Client.startListening(System.Threading.CancellationTokenSource,System.Boolean)">
+        <member name="M:fbchat_sharp.API.Client.startListening">
             <summary>
             Start listening from an external event loop
             </summary>
-            <param name="_cancellationTokenSource"></param>
-            <param name="markAlive">Whether this should ping the Facebook server before running</param>
         </member>
-        <member name="M:fbchat_sharp.API.Client.doOneListen(System.Threading.CancellationToken)">
+        <member name="M:fbchat_sharp.API.Client.doOneListen(System.Boolean)">
             <summary>
             Does one cycle of the listening loop.
             This method is useful if you want to control fbchat from an external event loop
             </summary>
-            <param name="cancellationToken"></param>
+            <param name="markAlive">Whether this should ping the Facebook server before running</param>
             <returns>Whether the loop should keep running</returns>
         </member>
         <member name="M:fbchat_sharp.API.Client.stopListening">
@@ -885,9 +874,9 @@
             Called when the client is listening
             </summary>
         </member>
-        <member name="M:fbchat_sharp.API.Client.onMqttListenError(System.Exception)">
+        <member name="M:fbchat_sharp.API.Client.onListenError(System.Exception)">
             <summary>
-            Called when an error was encountered while listening on mqtt
+            Called when an error was encountered while listening
             </summary>
             <param name="exception">The exception that was encountered</param>
         </member>
@@ -904,18 +893,6 @@
             <param name="ts">The timestamp of the message</param>
             <param name="metadata">Extra metadata about the message</param>
             <param name="msg">A full set of the data received</param>
-        </member>
-        <member name="M:fbchat_sharp.API.Client.onPendingMessage(System.String,System.Nullable{fbchat_sharp.API.ThreadType},Newtonsoft.Json.Linq.JToken,Newtonsoft.Json.Linq.JToken)">
-            <summary>
-            Called when the client is listening, and somebody that isn't
-            connected with you on either Facebook or Messenger sends a message.
-            After that, you need to use fetchThreadList to actually read the message.
-            </summary>
-            <param name="thread_id">Thread ID that the message was sent to</param>
-            <param name="thread_type">Type of thread that the message was sent to</param>
-            <param name="metadata">Extra metadata about the message</param>
-            <param name="msg">A full set of the data received</param>
-            <returns></returns>
         </member>
         <member name="M:fbchat_sharp.API.Client.onColorChange(System.String,System.String,System.String,System.String,System.Nullable{fbchat_sharp.API.ThreadType},System.Int64,Newtonsoft.Json.Linq.JToken,Newtonsoft.Json.Linq.JToken)">
             <summary>
@@ -1091,12 +1068,6 @@
             </summary>
              <param name="from_id">The ID of the person that sent the request</param>
              <param name="msg">A full set of the data recieved</param>
-        </member>
-        <member name="M:fbchat_sharp.API.Client._onSeen(System.Collections.Generic.IEnumerable{System.String},System.String)">
-            <summary>
-             .. todo::
-             Documenting this and make it public
-            </summary>
         </member>
         <member name="M:fbchat_sharp.API.Client.onInbox(System.Object,System.Object,System.Object,Newtonsoft.Json.Linq.JToken)">
             <summary>
@@ -1365,11 +1336,6 @@
             Custom exception thrown by fbchat-sharp. All exceptions in the fbchat-sharp module inherits this
             </summary>
         </member>
-        <member name="M:fbchat_sharp.API.FBchatException.#ctor(System.String)">
-            <summary>
-            Custom exception thrown by fbchat-sharp. All exceptions in the fbchat-sharp module inherits this
-            </summary>
-        </member>
         <member name="T:fbchat_sharp.API.FBchatFacebookError">
             <summary>
             Thrown by fbchat-sharp when Facebook returns an error
@@ -1444,11 +1410,6 @@
             <param name="request_status_code"></param>
         </member>
         <member name="T:fbchat_sharp.API.FBchatUserError">
-            <summary>
-            Thrown by fbchat-sharp when wrong values are entered
-            </summary>
-        </member>
-        <member name="M:fbchat_sharp.API.FBchatUserError.#ctor(System.String)">
             <summary>
             Thrown by fbchat-sharp when wrong values are entered
             </summary>
@@ -1803,60 +1764,6 @@
             <param name="name"></param>
             <param name="expiration_time"></param>
             <param name="is_expired"></param>
-        </member>
-        <member name="T:fbchat_sharp.API.FB_Marketplace">
-            <summary>
-            Facebook messenger marketplace class
-            </summary>
-        </member>
-        <member name="P:fbchat_sharp.API.FB_Marketplace.participants">
-            Unique list (set) of the group thread"s participant user IDs
-        </member>
-        <member name="P:fbchat_sharp.API.FB_Marketplace.nicknames">
-            Dict, containing user nicknames mapped to their IDs
-        </member>
-        <member name="P:fbchat_sharp.API.FB_Marketplace.color">
-            A `ThreadColor`. The groups"s message color
-        </member>
-        <member name="P:fbchat_sharp.API.FB_Marketplace.emoji">
-            The groups"s default emoji
-        </member>
-        <member name="P:fbchat_sharp.API.FB_Marketplace.admins">
-            Set containing user IDs of thread admins
-        </member>
-        <member name="P:fbchat_sharp.API.FB_Marketplace.approval_mode">
-            True if users need approval to join
-        </member>
-        <member name="P:fbchat_sharp.API.FB_Marketplace.approval_requests">
-            Set containing user IDs requesting to join
-        </member>
-        <member name="P:fbchat_sharp.API.FB_Marketplace.join_link">
-            Link for joining group
-        </member>
-        <member name="M:fbchat_sharp.API.FB_Marketplace.#ctor(System.String,System.String,System.String,System.Int32,System.String,fbchat_sharp.API.FB_Plan,System.Collections.Generic.ISet{System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.String,Newtonsoft.Json.Linq.JToken,System.Collections.Generic.ISet{System.String},System.Boolean,System.Collections.Generic.ISet{System.String},System.String)">
-            <summary>
-            Represents a Facebook marketplace. Inherits `Thread`
-            </summary>
-            <param name="uid"></param>
-            <param name="photo"></param>
-            <param name="name"></param>
-            <param name="message_count"></param>
-            <param name="last_message_timestamp"></param>
-            <param name="plan"></param>
-            <param name="participants"></param>
-            <param name="nicknames"></param>
-            <param name="color"></param>
-            <param name="emoji"></param>
-            <param name="admins"></param>
-            <param name="approval_mode"></param>
-            <param name="approval_requests"></param>
-            <param name="join_link"></param>
-        </member>
-        <member name="M:fbchat_sharp.API.FB_Marketplace.#ctor(System.String)">
-            <summary>
-            Represents a Facebook marketplace. Inherits `Thread`
-            </summary>
-            <param name="uid"></param>
         </member>
         <member name="T:fbchat_sharp.API.EmojiSize">
             <summary>
@@ -2448,18 +2355,22 @@
             <summary>
             Loads sessions cookies calling ReadCookiesFromDiskAsync and tries to login.
             </summary>
+            <returns>Returns true if login was successful</returns>
         </member>
-        <member name="M:fbchat_sharp.API.MessengerClient.DoLogin(System.String,System.String)">
+        <member name="M:fbchat_sharp.API.MessengerClient.DoLogin(System.String,System.String,System.Int32)">
             <summary>
             Tries to login using provided email and password.
             </summary>
             <param name="email">User facebook email</param>
             <param name="password">User facebook password</param>
+            <param name="max_tries">Max. number of retries</param>
+            <returns>Returns true if login was successful</returns>
         </member>
         <member name="M:fbchat_sharp.API.MessengerClient.DoLogout">
             <summary>
             Deletes session cookies calling DeleteCookiesAsync and logs out the client
             </summary>
+            <returns>Returns true if logout was successful</returns>
         </member>
         <member name="M:fbchat_sharp.API.MessengerClient.GetUserUid">
             <returns>Returns the user id or null if not logged in</returns>

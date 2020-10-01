@@ -11,6 +11,18 @@ namespace BusinessLogic
 {
     public class Connector
     {
+        public List<Admin> GetAdmins()
+        {
+            DataHandler dh = new DataHandler();
+            List<Admin> admins = new List<Admin>();
+            DataTable dt = dh.Read("tblAdmin");
+            foreach (DataRow row in dt.Rows)
+            {
+                admins.Add(new Admin(row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString()));
+            }
+            return admins;
+        }
+
         public List<FBUser> GetFBUsers()
         {
             DataHandler dh = new DataHandler();

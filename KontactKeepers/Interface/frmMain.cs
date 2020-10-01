@@ -113,5 +113,10 @@ namespace Interface
         {
             refresh();
         }
+
+        private void btnCAAdd_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+        }
     }
 }
