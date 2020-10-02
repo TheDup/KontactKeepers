@@ -1,2 +1,0 @@
-C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\WhatsappAPI\obj\Debug\WhatsappAPI.csprojAssemblyReference.cache
-C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\WhatsappAPI\obj\Debug\WhatsappAPI.csproj.CoreCompileInputs.cache

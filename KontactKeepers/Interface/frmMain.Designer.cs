@@ -96,6 +96,8 @@
             this.panButtons = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtAdminID = new System.Windows.Forms.TextBox();
             this.panAdmins.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalls)).BeginInit();
             this.panCallAgents.SuspendLayout();
@@ -145,6 +147,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panAdmins.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panAdmins.Controls.Add(this.label10);
+            this.panAdmins.Controls.Add(this.txtAdminID);
             this.panAdmins.Controls.Add(this.label6);
             this.panAdmins.Controls.Add(this.maskedTextBox2);
             this.panAdmins.Controls.Add(this.maskedTextBox1);
@@ -168,7 +172,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(360, 85);
+            this.label6.Location = new System.Drawing.Point(360, 114);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 28;
@@ -177,7 +181,7 @@
             // maskedTextBox2
             // 
             this.maskedTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(451, 82);
+            this.maskedTextBox2.Location = new System.Drawing.Point(451, 111);
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
             this.maskedTextBox2.TabIndex = 27;
@@ -186,7 +190,7 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(451, 56);
+            this.maskedTextBox1.Location = new System.Drawing.Point(451, 85);
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
             this.maskedTextBox1.TabIndex = 26;
@@ -195,7 +199,7 @@
             // txtCATime
             // 
             this.txtCATime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCATime.Location = new System.Drawing.Point(451, 29);
+            this.txtCATime.Location = new System.Drawing.Point(451, 58);
             this.txtCATime.Name = "txtCATime";
             this.txtCATime.Size = new System.Drawing.Size(100, 20);
             this.txtCATime.TabIndex = 25;
@@ -204,7 +208,7 @@
             // btnCAUpdate
             // 
             this.btnCAUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCAUpdate.Location = new System.Drawing.Point(451, 194);
+            this.btnCAUpdate.Location = new System.Drawing.Point(451, 223);
             this.btnCAUpdate.Name = "btnCAUpdate";
             this.btnCAUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnCAUpdate.TabIndex = 24;
@@ -214,7 +218,7 @@
             // btnCADelete
             // 
             this.btnCADelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCADelete.Location = new System.Drawing.Point(451, 166);
+            this.btnCADelete.Location = new System.Drawing.Point(451, 195);
             this.btnCADelete.Name = "btnCADelete";
             this.btnCADelete.Size = new System.Drawing.Size(75, 23);
             this.btnCADelete.TabIndex = 23;
@@ -224,7 +228,7 @@
             // btnCAAdd
             // 
             this.btnCAAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCAAdd.Location = new System.Drawing.Point(451, 137);
+            this.btnCAAdd.Location = new System.Drawing.Point(451, 166);
             this.btnCAAdd.Name = "btnCAAdd";
             this.btnCAAdd.Size = new System.Drawing.Size(75, 23);
             this.btnCAAdd.TabIndex = 22;
@@ -235,7 +239,7 @@
             // btnCASearch
             // 
             this.btnCASearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCASearch.Location = new System.Drawing.Point(451, 108);
+            this.btnCASearch.Location = new System.Drawing.Point(451, 137);
             this.btnCASearch.Name = "btnCASearch";
             this.btnCASearch.Size = new System.Drawing.Size(75, 23);
             this.btnCASearch.TabIndex = 21;
@@ -246,7 +250,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(360, 59);
+            this.label9.Location = new System.Drawing.Point(360, 88);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 13);
             this.label9.TabIndex = 16;
@@ -256,7 +260,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(360, 32);
+            this.label8.Location = new System.Drawing.Point(360, 61);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 15;
@@ -266,7 +270,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(360, 6);
+            this.label2.Location = new System.Drawing.Point(360, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 14;
@@ -275,7 +279,7 @@
             // txtCACallNo
             // 
             this.txtCACallNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCACallNo.Location = new System.Drawing.Point(451, 3);
+            this.txtCACallNo.Location = new System.Drawing.Point(451, 32);
             this.txtCACallNo.Name = "txtCACallNo";
             this.txtCACallNo.Size = new System.Drawing.Size(100, 20);
             this.txtCACallNo.TabIndex = 7;
@@ -830,6 +834,24 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(360, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 13);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Admin ID";
+            // 
+            // txtAdminID
+            // 
+            this.txtAdminID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAdminID.Location = new System.Drawing.Point(451, 6);
+            this.txtAdminID.Name = "txtAdminID";
+            this.txtAdminID.Size = new System.Drawing.Size(100, 20);
+            this.txtAdminID.TabIndex = 29;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -837,9 +859,9 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(584, 561);
             this.Controls.Add(this.panAdmins);
-            this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.panEndUsers);
             this.Controls.Add(this.panCallAgents);
+            this.Controls.Add(this.panEndUsers);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.panHome);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.panButtons);
@@ -936,6 +958,8 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtAdminID;
     }
 }
 

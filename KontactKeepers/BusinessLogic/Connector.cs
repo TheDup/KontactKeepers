@@ -1,11 +1,11 @@
-﻿using DataAccess;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess;
 
 namespace BusinessLogic
 {
@@ -44,6 +44,24 @@ namespace BusinessLogic
             DataHandler dh = new DataHandler();
             dh.DeleteUser(fbid);
             dh.AddUser(fbid, name, lastseen);
+        }
+        public void AddAdmin(string fname, string lname, string uname, string password)
+        {
+            DataHandler dh = new DataHandler();
+            dh.AddAdmin(fname, lname, uname, password);
+        }
+
+        public void UpdateAdmin(string pidadmin, string fname, string lname, string uname, string password)
+        {
+            DataHandler dh = new DataHandler();
+            dh.DeleteAdmin(pidadmin);
+            dh.AddAdmin( fname, lname, uname, password);
+        }
+
+        public void DeleteAdmin(string pidadmin)
+        {
+            DataHandler dh = new DataHandler();
+            dh.DeleteAdmin(pidadmin);
         }
     }
 }

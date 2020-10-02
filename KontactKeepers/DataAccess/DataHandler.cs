@@ -76,6 +76,7 @@ namespace DataAccess
                 }
             }
         }
+
         public void DeleteUser(string id)
         {
             try
@@ -83,7 +84,7 @@ namespace DataAccess
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
-                    string query = string.Format("delete from tblFBUser where FBID = {0}",id);
+                    string query = string.Format("delete from tblFBUser where FBID = {0}", id);
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                 }
@@ -104,5 +105,65 @@ namespace DataAccess
                 }
             }
         }
+
+        public void AddAdmin(string fname, string lname, string uname, string password)
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    string query = string.Format("INSERT INTO tblAdmin (FName, LName, UName, Password) VALUES ('{0}','{1}','{2}','{3}')", fname, lname, uname, password);
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public void DeleteAdmin(string id)
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    string query = string.Format("delete from tblAdmin where ID = {0}", id);
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
     }
+
 }
