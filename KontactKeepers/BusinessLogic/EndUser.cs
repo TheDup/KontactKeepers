@@ -44,25 +44,12 @@ namespace BusinessLogic
 			get { return password; }
 			set { password = value; }
 		}
-		private string idnumber;
-		public string IDNumber
-		{
-			get { return idnumber; }
-			set { idnumber = value; }
-		}
 		private string cellnumber;
 
 		public string CellNumber
 		{
 			get { return cellnumber; }
 			set { cellnumber = value; }
-		}
-		private bool waauthed;
-
-		public bool WAAuthed
-		{
-			get { return waauthed; }
-			set { waauthed = value; }
 		}
 		private bool waverified;
 
@@ -78,13 +65,6 @@ namespace BusinessLogic
 			get { return email; }
 			set { email = value; }
 		}
-		private bool emailauthed;
-
-		public bool EmailAuthed
-		{
-			get { return emailauthed; }
-			set { emailauthed = value; }
-		}
 		private bool emailverified;
 
 		public bool EmailVerified
@@ -92,12 +72,12 @@ namespace BusinessLogic
 			get { return emailverified; }
 			set { emailverified = value; }
 		}
-		private string fburl;
+		private string fbid;
 
-		public string FBURL
+		public string FBID
 		{
-			get { return fburl; }
-			set { fburl = value; }
+			get { return fbid; }
+			set { fbid = value; }
 		}
 		private string fbmessengerid;
 
@@ -106,13 +86,7 @@ namespace BusinessLogic
 			get { return fbmessengerid; }
 			set { fbmessengerid = value; }
 		}
-		private bool fbauthed;
 
-		public bool FBAuthed
-		{
-			get { return fbauthed; }
-			set { fbauthed = value; }
-		}
 		private bool fbverified;
 
 		public bool FBVerified
@@ -120,57 +94,21 @@ namespace BusinessLogic
 			get { return fbverified; }
 			set { fbverified = value; }
 		}
-		private string twitterurl;
+		
 
-		public string TwitterURL
-		{
-			get { return twitterurl; }
-			set { twitterurl = value; }
-		}
-		private DateTime lastverified;
-
-		public DateTime LastVerified
-		{
-			get { return lastverified; }
-			set { lastverified = value; }
-		}
-		private bool pursue;
-
-		public bool Pursue
-		{
-			get { return pursue; }
-			set { pursue = value; }
-		}
-		private DateTime lastpinged;
-
-		public DateTime LastPinged
-		{
-			get { return lastpinged; }
-			set { lastpinged = value; }
-		}
-
-		public EndUser(int pidenduser, string fname, string lname, string uname, string password, string idnumber, string cellnumber, bool waauthed, bool waverified, string email, bool emailauthed, bool emailverified, string fburl, string fbmessengerid, bool fbauthed, bool fbverified, string twitterurl, DateTime lastverified, bool pursue, DateTime lastpinged)
+		public EndUser(int pidenduser, string fname, string lname, string uname, string password, string cellnumber, bool waverified, string email, bool emailverified, string fbid, bool fbverified)
 		{
 			this.pidenduser = pidenduser;
 			this.fname = fname;
 			this.lname = lname;
 			this.uname = uname;
 			this.password = password;
-			this.idnumber = idnumber;
 			this.cellnumber = cellnumber;
-			this.waauthed = waauthed;
 			this.waverified = waverified;
 			this.email = email;
-			this.emailauthed = emailauthed;
 			this.emailverified = emailverified;
-			this.fburl = fburl;
-			this.fbmessengerid = fbmessengerid;
-			this.fbauthed = fbauthed;
+			this.fbid = fbid;
 			this.fbverified = fbverified;
-			this.twitterurl = twitterurl;
-			this.lastverified = lastverified;
-			this.pursue = pursue;
-			this.lastpinged = lastpinged;
 		}
 	}
 }

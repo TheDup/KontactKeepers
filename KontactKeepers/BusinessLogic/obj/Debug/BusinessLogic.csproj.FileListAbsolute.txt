@@ -4,3 +4,12 @@ C:\Users\janne\OneDrive\Desktop\BusinessLogic\obj\Debug\BusinessLogic.csprojAsse
 C:\Users\janne\OneDrive\Desktop\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
 C:\Users\janne\OneDrive\Desktop\BusinessLogic\obj\Debug\BusinessLogic.dll
 C:\Users\janne\OneDrive\Desktop\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\BusinessLogic\obj\Debug\BusinessLogic.csprojAssemblyReference.cache
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\BusinessLogic\obj\Debug\BusinessLogic.pdb

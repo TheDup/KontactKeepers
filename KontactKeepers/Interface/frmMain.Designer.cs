@@ -33,6 +33,8 @@
             this.btnClients = new System.Windows.Forms.Button();
             this.btnContracts = new System.Windows.Forms.Button();
             this.panAdmins = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtAdminID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -96,8 +98,6 @@
             this.panButtons = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtAdminID = new System.Windows.Forms.TextBox();
             this.panAdmins.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalls)).BeginInit();
             this.panCallAgents.SuspendLayout();
@@ -167,6 +167,24 @@
             this.panAdmins.Size = new System.Drawing.Size(559, 481);
             this.panAdmins.TabIndex = 0;
             this.panAdmins.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(360, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 13);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Admin ID";
+            // 
+            // txtAdminID
+            // 
+            this.txtAdminID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAdminID.Location = new System.Drawing.Point(451, 6);
+            this.txtAdminID.Name = "txtAdminID";
+            this.txtAdminID.Size = new System.Drawing.Size(100, 20);
+            this.txtAdminID.TabIndex = 29;
             // 
             // label6
             // 
@@ -834,35 +852,17 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(360, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 13);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "Admin ID";
-            // 
-            // txtAdminID
-            // 
-            this.txtAdminID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAdminID.Location = new System.Drawing.Point(451, 6);
-            this.txtAdminID.Name = "txtAdminID";
-            this.txtAdminID.Size = new System.Drawing.Size(100, 20);
-            this.txtAdminID.TabIndex = 29;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.panHome);
             this.Controls.Add(this.panAdmins);
             this.Controls.Add(this.panCallAgents);
             this.Controls.Add(this.panEndUsers);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.panHome);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.panButtons);
             this.Controls.Add(this.btnHome);

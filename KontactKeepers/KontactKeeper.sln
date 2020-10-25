@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookAPI", "FacebookAPI\FacebookAPI.csproj", "{54F4417B-C2FB-49BD-B5BA-8AC8BBD2B3E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{8052262F-3D4B-4C3D-AB70-AB503AC1F6FB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{54F4417B-C2FB-49BD-B5BA-8AC8BBD2B3E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54F4417B-C2FB-49BD-B5BA-8AC8BBD2B3E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54F4417B-C2FB-49BD-B5BA-8AC8BBD2B3E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8052262F-3D4B-4C3D-AB70-AB503AC1F6FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8052262F-3D4B-4C3D-AB70-AB503AC1F6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8052262F-3D4B-4C3D-AB70-AB503AC1F6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8052262F-3D4B-4C3D-AB70-AB503AC1F6FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

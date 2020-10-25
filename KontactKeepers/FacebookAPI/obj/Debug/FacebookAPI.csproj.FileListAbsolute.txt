@@ -1,0 +1,15 @@
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\bin\Debug\FacebookAPI.dll
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\bin\Debug\FacebookAPI.pdb
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\bin\Debug\AngleSharp.dll
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\bin\Debug\BusinessLogic.dll
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\bin\Debug\fbchat-sharp.dll
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\bin\Debug\DataAccess.dll
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\bin\Debug\BusinessLogic.pdb
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\bin\Debug\AngleSharp.xml
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\bin\Debug\fbchat-sharp.xml
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\bin\Debug\DataAccess.pdb
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\obj\Debug\FacebookAPI.csprojAssemblyReference.cache
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\obj\Debug\FacebookAPI.csproj.CoreCompileInputs.cache
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\obj\Debug\FacebookAPI.csproj.CopyComplete
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\obj\Debug\FacebookAPI.dll
+C:\Users\JAMES\Documents\GitRepo\KontactKeepers\KontactKeepers\FacebookAPI\obj\Debug\FacebookAPI.pdb
