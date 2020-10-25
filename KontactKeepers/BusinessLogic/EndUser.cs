@@ -79,13 +79,6 @@ namespace BusinessLogic
 			get { return fbid; }
 			set { fbid = value; }
 		}
-		private string fbmessengerid;
-
-		public string FBMessengerID
-		{
-			get { return fbmessengerid; }
-			set { fbmessengerid = value; }
-		}
 
 		private bool fbverified;
 
