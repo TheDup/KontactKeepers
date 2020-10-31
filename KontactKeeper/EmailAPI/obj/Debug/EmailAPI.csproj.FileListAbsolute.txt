@@ -1,0 +1,15 @@
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\bin\Debug\EmailAPI.dll
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\bin\Debug\EmailAPI.pdb
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\bin\Debug\MailKit.dll
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\bin\Debug\MimeKit.dll
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\bin\Debug\MailKit.pdb
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\bin\Debug\MailKit.xml
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\bin\Debug\MimeKit.pdb
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\bin\Debug\MimeKit.xml
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\obj\Debug\EmailAPI.csprojAssemblyReference.cache
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\obj\Debug\EmailAPI.csproj.CoreCompileInputs.cache
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\obj\Debug\EmailAPI.csproj.CopyComplete
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\obj\Debug\EmailAPI.dll
+C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\obj\Debug\EmailAPI.pdb
