@@ -14,3 +14,19 @@ C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\Busi
 C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.pdb
 C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\BusinessLogic\bin\Debug\fbchat-sharp.dll
 C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\BusinessLogic\bin\Debug\AngleSharp.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\AngleSharp.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\fbchat-sharp.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\MQTTnet.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\AngleSharp.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\fbchat-sharp.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.csprojAssemblyReference.cache
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.pdb

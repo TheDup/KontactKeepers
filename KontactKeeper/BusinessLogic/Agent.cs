@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlTypes;
+using AngleSharp.Css.Values;
 
 namespace BusinessLogic
 {
@@ -50,9 +52,9 @@ namespace BusinessLogic
 			get { return agentext; }
 			set { agentext = value; }
 		}
-		private int avgcalllength;
+		private string avgcalllength;
 
-		public int AVGCallLength
+		public string AVGCallLength
 		{
 			get { return avgcalllength; }
 			set { avgcalllength = value; }
@@ -72,7 +74,7 @@ namespace BusinessLogic
 			set { performancescore = value; }
 		}
 
-		public Agent(string fname, string lname, string uname, string password, int totalhours, string agentext, int avgcalllength, int totalcalls, int performancescore)
+		public Agent(string fname, string lname, string uname, string password, int totalhours, string agentext, string avgcalllength, int totalcalls, int performancescore)
 		{
 			this.fname = fname;
 			this.lname = lname;

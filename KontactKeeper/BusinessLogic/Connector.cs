@@ -37,11 +37,11 @@ namespace BusinessLogic
         public List<Agent> GetCallAgents()
         {
             DataHandler dh = new DataHandler();
-            DataTable dt = dh.Read("tblAgent");
+            DataTable dt = dh.Read("tblCallAgent");
             List<Agent> agents = new List<Agent>();
             foreach (DataRow row in dt.Rows)
             {
-                agents.Add(new Agent(row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), int.Parse(row[5].ToString()), row[6].ToString(), int.Parse(row[7].ToString()), int.Parse(row[8].ToString()), int.Parse(row[9].ToString())));
+                agents.Add(new Agent(row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), int.Parse(row[5].ToString()), row[6].ToString(), row[7].ToString(), int.Parse(row[8].ToString()), int.Parse(row[9].ToString())));
             }
             return agents;
         }

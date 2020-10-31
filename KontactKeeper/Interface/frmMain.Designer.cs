@@ -513,6 +513,8 @@
             // 
             // txtELName
             // 
+            this.txtELName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtELName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtELName.Location = new System.Drawing.Point(451, 55);
             this.txtELName.Name = "txtELName";
             this.txtELName.Size = new System.Drawing.Size(100, 20);
@@ -520,6 +522,8 @@
             // 
             // txtEFName
             // 
+            this.txtEFName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEFName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEFName.Location = new System.Drawing.Point(451, 29);
             this.txtEFName.Name = "txtEFName";
             this.txtEFName.Size = new System.Drawing.Size(100, 20);
@@ -789,8 +793,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(584, 561);
-            this.Controls.Add(this.panAdmins);
             this.Controls.Add(this.panEndUsers);
+            this.Controls.Add(this.panAdmins);
             this.Controls.Add(this.panCallAgents);
             this.Controls.Add(this.panHome);
             this.Controls.Add(this.btnRefresh);

@@ -17,3 +17,22 @@ C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\Face
 C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.dll
 C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.pdb
 C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\FacebookAPI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\FacebookAPI.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\FacebookAPI.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\AngleSharp.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\BusinessLogic.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\fbchat-sharp.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\MQTTnet.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\DataAccess.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\BusinessLogic.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\AngleSharp.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\fbchat-sharp.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\DataAccess.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.csprojAssemblyReference.cache
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.csproj.CoreCompileInputs.cache
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.csproj.CopyComplete
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.pdb

@@ -33,7 +33,7 @@ namespace Interface
             BindingSource bsC = new BindingSource();
             BindingSource bsE = new BindingSource();
             bsA.DataSource = cn.GetAdmins();
-            bsC.DataSource = cn.GetFBUsers();
+            bsC.DataSource = cn.GetCallAgents();
             bsE.DataSource = cn.GetFBUsers();
 
             dgvAdmin.DataSource = bsA;

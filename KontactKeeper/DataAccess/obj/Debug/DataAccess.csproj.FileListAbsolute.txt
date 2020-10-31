@@ -12,3 +12,17 @@ C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\Data
 C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\DataAccess\bin\Debug\fbchat-sharp.xml
 C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\DataAccess\bin\Debug\Newtonsoft.Json.xml
 C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\AngleSharp.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\fbchat-sharp.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\MQTTnet.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\AngleSharp.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\fbchat-sharp.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.pdb
