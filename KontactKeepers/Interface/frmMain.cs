@@ -22,7 +22,7 @@ namespace Interface
             btnCalls1.Click += new EventHandler(btnCalls_Click);
             btnClients1.Click += new EventHandler(btnClients_Click);
             btnContracts1.Click += new EventHandler(btnContracts_Click);
-            FBConf.Login("kontactkeeper09@gmail.com", "J@mes009");
+            FBConf.Login("kontactkeeper09@gmail.com", "J@nnesventer009");
             refresh();
         }
         

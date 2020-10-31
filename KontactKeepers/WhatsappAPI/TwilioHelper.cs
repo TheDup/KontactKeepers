@@ -8,11 +8,7 @@ namespace WhatsAppSelenium
 {
     class TwilioHelper
     {
-        public List<User> insertUsers()
-        {
-            List<User> users = new List<User>();
-            users.Add(new User());
-        }
+        
        
     }
 }
