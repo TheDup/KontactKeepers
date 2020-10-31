@@ -15,7 +15,7 @@ namespace DataAccess
         SqlConnection conn;
         public DataHandler()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings.ToString());
+            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionstring"].ConnectionString);
         }
         public DataTable Read(string table)
         {

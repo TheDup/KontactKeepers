@@ -29,3 +29,4 @@ C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Kontac
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\KontactKeepers\obj\Debug\EmailAPI.csproj.CopyComplete
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\KontactKeepers\obj\Debug\KontactKeepers.dll
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\KontactKeepers\obj\Debug\KontactKeepers.pdb
+C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\KontactKeepers\obj\Debug\EmailAPI.csprojAssemblyReference.cache

@@ -21,7 +21,6 @@ C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\Whatsa
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\WhatsappAPI\bin\Debug\Newtonsoft.Json.xml
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\WhatsappAPI\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\WhatsappAPI\bin\Debug\Twilio.xml
-C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\WhatsappAPI\bin\Debug\fbchat-sharp.xml
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\WhatsappAPI\bin\Debug\BusinessLogic.pdb
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\WhatsappAPI\bin\Debug\AngleSharp.xml
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeepers\WhatsappAPI\bin\Debug\DataAccess.pdb
