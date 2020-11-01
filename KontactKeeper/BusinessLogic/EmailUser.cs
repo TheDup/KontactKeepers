@@ -7,7 +7,7 @@ using System.Data.Sql;
 
 namespace BusinessLogic
 {
-    class EmailUser
+    public class EmailUser
     {
         private string email;
 

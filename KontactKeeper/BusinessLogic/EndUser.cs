@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-	class EndUser
+	public class EndUser
 	{
 		private int pidenduser;
 

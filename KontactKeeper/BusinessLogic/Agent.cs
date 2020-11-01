@@ -10,7 +10,15 @@ namespace BusinessLogic
 {
 	public class Agent
 	{
-		private string fname;
+        private int pidagent;
+
+        public int PIDAgent
+        {
+            get { return pidagent; }
+            set { pidagent = value; }
+        }
+
+        private string fname;
 
 		public string FName
 		{
@@ -74,8 +82,9 @@ namespace BusinessLogic
 			set { performancescore = value; }
 		}
 
-		public Agent(string fname, string lname, string uname, string password, int totalhours, string agentext, string avgcalllength, int totalcalls, int performancescore)
+		public Agent(int pidagent, string fname, string lname, string uname, string password, int totalhours, string agentext, string avgcalllength, int totalcalls, int performancescore)
 		{
+			this.pidagent = pidagent;
 			this.fname = fname;
 			this.lname = lname;
 			this.uname = uname;
