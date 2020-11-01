@@ -105,9 +105,11 @@
     <Compile Include="Admin.cs" />
     <Compile Include="Agent.cs" />
     <Compile Include="Connector.cs" />
+    <Compile Include="EmailUser.cs" />
     <Compile Include="EndUser.cs" />
     <Compile Include="FBUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WAUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
