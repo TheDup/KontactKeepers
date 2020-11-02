@@ -92,6 +92,10 @@
             this.panButtons = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.txtEUsername = new System.Windows.Forms.TextBox();
+            this.txtEPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panAdmins.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             this.panCallAgents.SuspendLayout();
@@ -488,6 +492,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panEndUsers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panEndUsers.Controls.Add(this.label5);
+            this.panEndUsers.Controls.Add(this.label3);
+            this.panEndUsers.Controls.Add(this.txtEPassword);
+            this.panEndUsers.Controls.Add(this.txtEUsername);
             this.panEndUsers.Controls.Add(this.txtELName);
             this.panEndUsers.Controls.Add(this.txtEFName);
             this.panEndUsers.Controls.Add(this.txtEFBID);
@@ -550,7 +558,7 @@
             // btnEUpdate
             // 
             this.btnEUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEUpdate.Location = new System.Drawing.Point(451, 245);
+            this.btnEUpdate.Location = new System.Drawing.Point(451, 310);
             this.btnEUpdate.Name = "btnEUpdate";
             this.btnEUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnEUpdate.TabIndex = 41;
@@ -560,7 +568,7 @@
             // btnEDelete
             // 
             this.btnEDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEDelete.Location = new System.Drawing.Point(451, 217);
+            this.btnEDelete.Location = new System.Drawing.Point(451, 282);
             this.btnEDelete.Name = "btnEDelete";
             this.btnEDelete.Size = new System.Drawing.Size(75, 23);
             this.btnEDelete.TabIndex = 40;
@@ -570,7 +578,7 @@
             // btnEAdd
             // 
             this.btnEAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEAdd.Location = new System.Drawing.Point(451, 188);
+            this.btnEAdd.Location = new System.Drawing.Point(451, 253);
             this.btnEAdd.Name = "btnEAdd";
             this.btnEAdd.Size = new System.Drawing.Size(75, 23);
             this.btnEAdd.TabIndex = 39;
@@ -580,7 +588,7 @@
             // btnESearch
             // 
             this.btnESearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnESearch.Location = new System.Drawing.Point(451, 159);
+            this.btnESearch.Location = new System.Drawing.Point(451, 224);
             this.btnESearch.Name = "btnESearch";
             this.btnESearch.Size = new System.Drawing.Size(75, 23);
             this.btnESearch.TabIndex = 38;
@@ -674,6 +682,7 @@
             this.dgvEndUser.ReadOnly = true;
             this.dgvEndUser.Size = new System.Drawing.Size(350, 379);
             this.dgvEndUser.TabIndex = 25;
+            this.dgvEndUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEndUser_CellContentClick);
             // 
             // panHome
             // 
@@ -787,14 +796,50 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // txtEUsername
+            // 
+            this.txtEUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEUsername.Location = new System.Drawing.Point(451, 161);
+            this.txtEUsername.Name = "txtEUsername";
+            this.txtEUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtEUsername.TabIndex = 57;
+            // 
+            // txtEPassword
+            // 
+            this.txtEPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEPassword.Location = new System.Drawing.Point(451, 187);
+            this.txtEPassword.Name = "txtEPassword";
+            this.txtEPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtEPassword.TabIndex = 58;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(360, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Username";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(358, 190);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 60;
+            this.label5.Text = "Password";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(584, 561);
-            this.Controls.Add(this.panEndUsers);
             this.Controls.Add(this.panAdmins);
+            this.Controls.Add(this.panEndUsers);
             this.Controls.Add(this.panCallAgents);
             this.Controls.Add(this.panHome);
             this.Controls.Add(this.btnRefresh);
@@ -889,6 +934,10 @@
         private System.Windows.Forms.TextBox txtAAdminID;
         private System.Windows.Forms.TextBox txtELName;
         private System.Windows.Forms.TextBox txtEFName;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtEPassword;
+        private System.Windows.Forms.TextBox txtEUsername;
     }
 }
 

@@ -36,3 +36,22 @@ C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\Faceboo
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.csproj.CopyComplete
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.dll
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.pdb
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\FacebookAPI.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\FacebookAPI.pdb
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\AngleSharp.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\BusinessLogic.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\fbchat-sharp.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\MQTTnet.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\DataAccess.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\BusinessLogic.pdb
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\AngleSharp.xml
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\fbchat-sharp.xml
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\DataAccess.pdb
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.csprojAssemblyReference.cache
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.csproj.CoreCompileInputs.cache
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.csproj.CopyComplete
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.pdb
