@@ -48,45 +48,57 @@ namespace Interface
             BsAdmin.DataSource = conn.GetAdmins();
             dgvAdmin.DataSource = BsAdmin;
             txtAAdminID.DataBindings.Clear();
-            txtAAdminID.DataBindings.Add(new Binding("Text", BsAdmin, "AdminID"));
+            txtAAdminID.DataBindings.Add(new Binding("Text", BsAdmin, "ID"));
             txtAFName.DataBindings.Clear();
-            txtAFName.DataBindings.Add(new Binding("Text", BsAdmin, "First Name"));
+            txtAFName.DataBindings.Add(new Binding("Text", BsAdmin, "FName"));
             txtALname.DataBindings.Clear();
-            txtALname.DataBindings.Add(new Binding("Text", BsAdmin, "Last Name"));
+            txtALname.DataBindings.Add(new Binding("Text", BsAdmin, "LName"));
             txtAUname.DataBindings.Clear();
-            txtAUname.DataBindings.Add(new Binding("Text", BsAdmin, "Admin UName"));
+            txtAUname.DataBindings.Add(new Binding("Text", BsAdmin, "UName"));
             txtAPassword.DataBindings.Clear();
-            txtAPassword.DataBindings.Add(new Binding("Text", BsAdmin, "Admin Password"));
+            txtAPassword.DataBindings.Add(new Binding("Text", BsAdmin, "Password"));
 
             BindingSource BsAgent = new BindingSource();
             BsAgent.DataSource = conn.GetCallAgents();
             dgvCallAgent.DataSource = BsAgent;
             txtCID.DataBindings.Clear();
-            txtCID.DataBindings.Add(new Binding("Text", BsAgent, "Agent ID"));
+            txtCID.DataBindings.Add(new Binding("Text", BsAgent, "ID"));
             txtCFName.DataBindings.Clear();
-            txtCFName.DataBindings.Add(new Binding("Text", BsAgent, "First Name"));
+            txtCFName.DataBindings.Add(new Binding("Text", BsAgent, "FName"));
             txtCLName.DataBindings.Clear();
-            txtCLName.DataBindings.Add(new Binding("Text", BsAgent, "Last Name"));
+            txtCLName.DataBindings.Add(new Binding("Text", BsAgent, "LName"));
             txtCTotalCalls.DataBindings.Clear();
-            txtCTotalCalls.DataBindings.Add(new Binding("Text", BsAgent, "Agent Calls"));
+            txtCTotalCalls.DataBindings.Add(new Binding("Text", BsAgent, "TotalCalls"));
             txtCAgentEXT.DataBindings.Clear();
-            txtCAgentEXT.DataBindings.Add(new Binding("Text", BsAgent, "Agent Ext"));
+            txtCAgentEXT.DataBindings.Add(new Binding("Text", BsAgent, "AgentEXT"));
+            txtCAVG.DataBindings.Clear();
+            txtCAVG.DataBindings.Add(new Binding("Text", BsAgent, "AVGCallLength"));
+            txtCPassword.DataBindings.Clear();
+            txtCPassword.DataBindings.Add(new Binding("Text", BsAgent, "Password"));
+            txtCTotalHours.DataBindings.Clear();
+            txtCTotalHours.DataBindings.Add(new Binding("Text", BsAgent, "TotalHours"));
+            txtCPerformance.DataBindings.Clear();
+            txtCPerformance.DataBindings.Add(new Binding("Text", BsAgent, "Performance"));
 
             BindingSource BsEUser = new BindingSource();
-            BsEUser.DataSource = conn.GetCallAgents();
+            BsEUser.DataSource = conn.GetEndUsers();
             dgvEndUser.DataSource = BsEUser;
             txtEID.DataBindings.Clear();
-            txtEID.DataBindings.Add(new Binding("Text", BsEUser, "EndUser ID"));
+            txtEID.DataBindings.Add(new Binding("Text", BsEUser, "ID"));
             txtEFName.DataBindings.Clear();
-            txtEFName.DataBindings.Add(new Binding("Text", BsEUser, "First Name"));
+            txtEFName.DataBindings.Add(new Binding("Text", BsEUser, "FName"));
             txtELName.DataBindings.Clear();
-            txtELName.DataBindings.Add(new Binding("Text", BsEUser, "Last Name"));
+            txtELName.DataBindings.Add(new Binding("Text", BsEUser, "LName"));
+            txtEUsername.DataBindings.Clear();
+            txtEUsername.DataBindings.Add(new Binding("Text", BsEUser, "UName"));
+            txtEPassword.DataBindings.Clear();
+            txtEPassword.DataBindings.Add(new Binding("Text", BsEUser, "Password"));
             txtECell.DataBindings.Clear();
-            txtECell.DataBindings.Add(new Binding("Text", BsEUser, "Cell No."));
+            txtECell.DataBindings.Add(new Binding("Text", BsEUser, "CellNumber"));
             txtEEmail.DataBindings.Clear();
-            txtEEmail.DataBindings.Add(new Binding("Text", BsEUser, "Agent Email"));
+            txtEEmail.DataBindings.Add(new Binding("Text", BsEUser, "Email"));
             txtEFBID.DataBindings.Clear();
-            txtEFBID.DataBindings.Add(new Binding("Text", BsEUser, "Agent Facebook ID")); //...until here
+            txtEFBID.DataBindings.Add(new Binding("Text", BsEUser, "FBID")); //...until here
         }
         
 
@@ -132,11 +144,6 @@ namespace Interface
         }
         private void btnCalls_Click(object sender, EventArgs e)
         {
-            List<Admin> lstAdmin = new List<Admin>();
-            DataHandler dh = new DataHandler();
-            BindingSource bsA = new BindingSource();
-            bsA.DataSource = lstAdmin;
-            dgvAdmin.DataSource = bsA.DataSource;  //Added everything above until this point
             this.ActiveControl = this.btnCalls;
             panButtons.Show();
             panAdmins.Show();
@@ -148,11 +155,6 @@ namespace Interface
 
         private void btnClients_Click(object sender, EventArgs e)
         {
-            List<Agent> lstAgent = new List<Agent>();
-            DataHandler dh = new DataHandler();
-            BindingSource bsC = new BindingSource();
-            bsC.DataSource = lstAgent;
-            dgvCallAgent.DataSource = bsC.DataSource; //Added everything above until this point
             this.ActiveControl = this.btnClients;
             panButtons.Show();
             panAdmins.Hide();
@@ -164,11 +166,6 @@ namespace Interface
 
         private void btnContracts_Click(object sender, EventArgs e)
         {
-            List<EndUser> lstEUser = new List<EndUser>();
-            DataHandler dh = new DataHandler();
-            BindingSource bsE = new BindingSource();
-            bsE.DataSource = lstEUser;
-            dgvEndUser.DataSource = bsE.DataSource;  //Added everything above until this point
             this.ActiveControl = this.btnContracts;
             panButtons.Show();
             panAdmins.Hide();

@@ -65,6 +65,10 @@
             this.txtCFName = new System.Windows.Forms.TextBox();
             this.dgvCallAgent = new System.Windows.Forms.DataGridView();
             this.panEndUsers = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtEPassword = new System.Windows.Forms.TextBox();
+            this.txtEUsername = new System.Windows.Forms.TextBox();
             this.txtELName = new System.Windows.Forms.TextBox();
             this.txtEFName = new System.Windows.Forms.TextBox();
             this.txtEFBID = new System.Windows.Forms.TextBox();
@@ -92,10 +96,14 @@
             this.panButtons = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.txtEUsername = new System.Windows.Forms.TextBox();
-            this.txtEPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtCPassword = new System.Windows.Forms.TextBox();
+            this.txtCTotalHours = new System.Windows.Forms.TextBox();
+            this.txtCAVG = new System.Windows.Forms.TextBox();
+            this.txtCPerformance = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.panAdmins.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             this.panCallAgents.SuspendLayout();
@@ -320,6 +328,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panCallAgents.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panCallAgents.Controls.Add(this.label24);
+            this.panCallAgents.Controls.Add(this.label19);
+            this.panCallAgents.Controls.Add(this.label12);
+            this.panCallAgents.Controls.Add(this.label11);
+            this.panCallAgents.Controls.Add(this.txtCPerformance);
+            this.panCallAgents.Controls.Add(this.txtCAVG);
+            this.panCallAgents.Controls.Add(this.txtCTotalHours);
+            this.panCallAgents.Controls.Add(this.txtCPassword);
             this.panCallAgents.Controls.Add(this.txtCAgentEXT);
             this.panCallAgents.Controls.Add(this.txtCID);
             this.panCallAgents.Controls.Add(this.btnCUpdate);
@@ -360,7 +376,7 @@
             // btnCUpdate
             // 
             this.btnCUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCUpdate.Location = new System.Drawing.Point(451, 218);
+            this.btnCUpdate.Location = new System.Drawing.Point(452, 323);
             this.btnCUpdate.Name = "btnCUpdate";
             this.btnCUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnCUpdate.TabIndex = 41;
@@ -370,7 +386,7 @@
             // btnCDelete
             // 
             this.btnCDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCDelete.Location = new System.Drawing.Point(451, 190);
+            this.btnCDelete.Location = new System.Drawing.Point(452, 295);
             this.btnCDelete.Name = "btnCDelete";
             this.btnCDelete.Size = new System.Drawing.Size(75, 23);
             this.btnCDelete.TabIndex = 40;
@@ -380,7 +396,7 @@
             // btnCAdd
             // 
             this.btnCAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCAdd.Location = new System.Drawing.Point(451, 161);
+            this.btnCAdd.Location = new System.Drawing.Point(452, 266);
             this.btnCAdd.Name = "btnCAdd";
             this.btnCAdd.Size = new System.Drawing.Size(75, 23);
             this.btnCAdd.TabIndex = 39;
@@ -390,7 +406,7 @@
             // btnCSearch
             // 
             this.btnCSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCSearch.Location = new System.Drawing.Point(451, 132);
+            this.btnCSearch.Location = new System.Drawing.Point(452, 237);
             this.btnCSearch.Name = "btnCSearch";
             this.btnCSearch.Size = new System.Drawing.Size(75, 23);
             this.btnCSearch.TabIndex = 38;
@@ -518,6 +534,42 @@
             this.panEndUsers.Size = new System.Drawing.Size(559, 481);
             this.panEndUsers.TabIndex = 1;
             this.panEndUsers.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(358, 190);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 60;
+            this.label5.Text = "Password";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(360, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Username";
+            // 
+            // txtEPassword
+            // 
+            this.txtEPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEPassword.Location = new System.Drawing.Point(451, 187);
+            this.txtEPassword.Name = "txtEPassword";
+            this.txtEPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtEPassword.TabIndex = 58;
+            // 
+            // txtEUsername
+            // 
+            this.txtEUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEUsername.Location = new System.Drawing.Point(451, 161);
+            this.txtEUsername.Name = "txtEUsername";
+            this.txtEUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtEUsername.TabIndex = 57;
             // 
             // txtELName
             // 
@@ -796,41 +848,77 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // txtEUsername
+            // txtCPassword
             // 
-            this.txtEUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEUsername.Location = new System.Drawing.Point(451, 161);
-            this.txtEUsername.Name = "txtEUsername";
-            this.txtEUsername.Size = new System.Drawing.Size(100, 20);
-            this.txtEUsername.TabIndex = 57;
+            this.txtCPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCPassword.Location = new System.Drawing.Point(452, 133);
+            this.txtCPassword.Name = "txtCPassword";
+            this.txtCPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtCPassword.TabIndex = 44;
             // 
-            // txtEPassword
+            // txtCTotalHours
             // 
-            this.txtEPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEPassword.Location = new System.Drawing.Point(451, 187);
-            this.txtEPassword.Name = "txtEPassword";
-            this.txtEPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtEPassword.TabIndex = 58;
+            this.txtCTotalHours.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCTotalHours.Location = new System.Drawing.Point(451, 159);
+            this.txtCTotalHours.Name = "txtCTotalHours";
+            this.txtCTotalHours.Size = new System.Drawing.Size(100, 20);
+            this.txtCTotalHours.TabIndex = 45;
             // 
-            // label3
+            // txtCAVG
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(360, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "Username";
+            this.txtCAVG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCAVG.Location = new System.Drawing.Point(451, 185);
+            this.txtCAVG.Name = "txtCAVG";
+            this.txtCAVG.Size = new System.Drawing.Size(100, 20);
+            this.txtCAVG.TabIndex = 46;
             // 
-            // label5
+            // txtCPerformance
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(358, 190);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
-            this.label5.TabIndex = 60;
-            this.label5.Text = "Password";
+            this.txtCPerformance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCPerformance.Location = new System.Drawing.Point(451, 211);
+            this.txtCPerformance.Name = "txtCPerformance";
+            this.txtCPerformance.Size = new System.Drawing.Size(100, 20);
+            this.txtCPerformance.TabIndex = 47;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(362, 136);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 13);
+            this.label11.TabIndex = 48;
+            this.label11.Text = "Password";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(363, 161);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 13);
+            this.label12.TabIndex = 49;
+            this.label12.Text = "Total Hours";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(363, 187);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(85, 13);
+            this.label19.TabIndex = 50;
+            this.label19.Text = "AVG Call Length";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(365, 214);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(67, 13);
+            this.label24.TabIndex = 51;
+            this.label24.Text = "Performance";
             // 
             // frmMain
             // 
@@ -938,6 +1026,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEPassword;
         private System.Windows.Forms.TextBox txtEUsername;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtCPerformance;
+        private System.Windows.Forms.TextBox txtCAVG;
+        private System.Windows.Forms.TextBox txtCTotalHours;
+        private System.Windows.Forms.TextBox txtCPassword;
     }
 }
 
