@@ -21,84 +21,74 @@ namespace Interface
         {
             InitializeComponent();
 
-            btnCalls1.Click += new EventHandler(btnCalls_Click);
-            btnClients1.Click += new EventHandler(btnClients_Click);
-            btnContracts1.Click += new EventHandler(btnContracts_Click);
+            btnAdmins1.Click += new EventHandler(btnAdmins_Click);
+            btnCallAgents1.Click += new EventHandler(btnCallAgents_Click);
+            btnEndUsers1.Click += new EventHandler(btnEndUsers_Click);
             FBConf.Login("jannesdownload09@gmail.com", "V@facebook009");
             refresh();
         }
         
         public void refresh()
         {
-            Connector cn = new Connector();
-            BindingSource bsA = new BindingSource();
-            BindingSource bsC = new BindingSource();
-            BindingSource bsE = new BindingSource();
-            bsA.DataSource = cn.GetAdmins();
-            bsC.DataSource = cn.GetCallAgents();
-            bsE.DataSource = cn.GetEndUsers();
-
-            dgvAdmin.DataSource = bsA;
-            dgvCallAgent.DataSource = bsC;
-            dgvEndUser.DataSource = bsE;
-
-            Connector conn = new Connector(); //Addded everything here and below...
+            Connector conn = new Connector();
 
             BindingSource BsAdmin = new BindingSource();
             BsAdmin.DataSource = conn.GetAdmins();
             dgvAdmin.DataSource = BsAdmin;
             txtAAdminID.DataBindings.Clear();
-            txtAAdminID.DataBindings.Add(new Binding("Text", BsAdmin, "ID"));
+            txtAAdminID.DataBindings.Add(new Binding("Text", BsAdmin, "pidadmin"));
             txtAFName.DataBindings.Clear();
-            txtAFName.DataBindings.Add(new Binding("Text", BsAdmin, "FName"));
+            txtAFName.DataBindings.Add(new Binding("Text", BsAdmin, "fname"));
             txtALname.DataBindings.Clear();
-            txtALname.DataBindings.Add(new Binding("Text", BsAdmin, "LName"));
+            txtALname.DataBindings.Add(new Binding("Text", BsAdmin, "lname"));
             txtAUname.DataBindings.Clear();
-            txtAUname.DataBindings.Add(new Binding("Text", BsAdmin, "UName"));
+            txtAUname.DataBindings.Add(new Binding("Text", BsAdmin, "uname"));
             txtAPassword.DataBindings.Clear();
-            txtAPassword.DataBindings.Add(new Binding("Text", BsAdmin, "Password"));
+            txtAPassword.DataBindings.Add(new Binding("Text", BsAdmin, "password"));
 
             BindingSource BsAgent = new BindingSource();
             BsAgent.DataSource = conn.GetCallAgents();
             dgvCallAgent.DataSource = BsAgent;
             txtCID.DataBindings.Clear();
-            txtCID.DataBindings.Add(new Binding("Text", BsAgent, "ID"));
+            txtCID.DataBindings.Add(new Binding("Text", BsAgent, "pidagent"));
             txtCFName.DataBindings.Clear();
-            txtCFName.DataBindings.Add(new Binding("Text", BsAgent, "FName"));
+            txtCFName.DataBindings.Add(new Binding("Text", BsAgent, "fname"));
             txtCLName.DataBindings.Clear();
-            txtCLName.DataBindings.Add(new Binding("Text", BsAgent, "LName"));
-            txtCTotalCalls.DataBindings.Clear();
-            txtCTotalCalls.DataBindings.Add(new Binding("Text", BsAgent, "TotalCalls"));
-            txtCAgentEXT.DataBindings.Clear();
-            txtCAgentEXT.DataBindings.Add(new Binding("Text", BsAgent, "AgentEXT"));
-            txtCAVG.DataBindings.Clear();
-            txtCAVG.DataBindings.Add(new Binding("Text", BsAgent, "AVGCallLength"));
+            txtCLName.DataBindings.Add(new Binding("Text", BsAgent, "lname"));
+            txtCUserName.DataBindings.Clear();
+            txtCUserName.DataBindings.Add(new Binding("Text", BsAgent, "uname"));
             txtCPassword.DataBindings.Clear();
-            txtCPassword.DataBindings.Add(new Binding("Text", BsAgent, "Password"));
+            txtCPassword.DataBindings.Add(new Binding("Text", BsAgent, "password"));
+            txtCTotalCalls.DataBindings.Clear();
+            txtCTotalCalls.DataBindings.Add(new Binding("Text", BsAgent, "totalcalls"));
+            txtCAgentEXT.DataBindings.Clear();
+            txtCAgentEXT.DataBindings.Add(new Binding("Text", BsAgent, "agentext"));
+            txtCAVG.DataBindings.Clear();
+            txtCAVG.DataBindings.Add(new Binding("Text", BsAgent, "avgcalllength"));
             txtCTotalHours.DataBindings.Clear();
-            txtCTotalHours.DataBindings.Add(new Binding("Text", BsAgent, "TotalHours"));
+            txtCTotalHours.DataBindings.Add(new Binding("Text", BsAgent, "totalhours"));
             txtCPerformance.DataBindings.Clear();
-            txtCPerformance.DataBindings.Add(new Binding("Text", BsAgent, "Performance"));
+            txtCPerformance.DataBindings.Add(new Binding("Text", BsAgent, "performancescore"));
 
             BindingSource BsEUser = new BindingSource();
             BsEUser.DataSource = conn.GetEndUsers();
             dgvEndUser.DataSource = BsEUser;
             txtEID.DataBindings.Clear();
-            txtEID.DataBindings.Add(new Binding("Text", BsEUser, "ID"));
+            txtEID.DataBindings.Add(new Binding("Text", BsEUser, "pidenduser"));
             txtEFName.DataBindings.Clear();
-            txtEFName.DataBindings.Add(new Binding("Text", BsEUser, "FName"));
+            txtEFName.DataBindings.Add(new Binding("Text", BsEUser, "fname"));
             txtELName.DataBindings.Clear();
-            txtELName.DataBindings.Add(new Binding("Text", BsEUser, "LName"));
-            txtEUsername.DataBindings.Clear();
-            txtEUsername.DataBindings.Add(new Binding("Text", BsEUser, "UName"));
+            txtELName.DataBindings.Add(new Binding("Text", BsEUser, "lname"));
+            txtEUName.DataBindings.Clear();
+            txtEUName.DataBindings.Add(new Binding("Text", BsEUser, "uname"));
             txtEPassword.DataBindings.Clear();
-            txtEPassword.DataBindings.Add(new Binding("Text", BsEUser, "Password"));
+            txtEPassword.DataBindings.Add(new Binding("Text", BsEUser, "password"));
             txtECell.DataBindings.Clear();
-            txtECell.DataBindings.Add(new Binding("Text", BsEUser, "CellNumber"));
+            txtECell.DataBindings.Add(new Binding("Text", BsEUser, "cellnumber"));
             txtEEmail.DataBindings.Clear();
-            txtEEmail.DataBindings.Add(new Binding("Text", BsEUser, "Email"));
+            txtEEmail.DataBindings.Add(new Binding("Text", BsEUser, "email"));
             txtEFBID.DataBindings.Clear();
-            txtEFBID.DataBindings.Add(new Binding("Text", BsEUser, "FBID")); //...until here
+            txtEFBID.DataBindings.Add(new Binding("Text", BsEUser, "fbid"));
         }
         
 
@@ -142,9 +132,9 @@ namespace Interface
             panHome.Show();
             refresh();
         }
-        private void btnCalls_Click(object sender, EventArgs e)
+        private void btnAdmins_Click(object sender, EventArgs e)
         {
-            this.ActiveControl = this.btnCalls;
+            this.ActiveControl = this.btnAdmins;
             panButtons.Show();
             panAdmins.Show();
             panCallAgents.Hide();
@@ -153,9 +143,9 @@ namespace Interface
             refresh();
         }
 
-        private void btnClients_Click(object sender, EventArgs e)
+        private void btnCallAgents_Click(object sender, EventArgs e)
         {
-            this.ActiveControl = this.btnClients;
+            this.ActiveControl = this.btnCallAgents;
             panButtons.Show();
             panAdmins.Hide();
             panCallAgents.Show();
@@ -164,9 +154,9 @@ namespace Interface
             refresh();
         }
 
-        private void btnContracts_Click(object sender, EventArgs e)
+        private void btnEndUsers_Click(object sender, EventArgs e)
         {
-            this.ActiveControl = this.btnContracts;
+            this.ActiveControl = this.btnEndUsers;
             panButtons.Show();
             panAdmins.Hide();
             panCallAgents.Hide();
