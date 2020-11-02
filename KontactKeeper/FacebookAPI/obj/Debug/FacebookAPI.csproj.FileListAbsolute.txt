@@ -36,3 +36,21 @@ C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\Faceboo
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.csproj.CopyComplete
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.dll
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\FacebookAPI.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\FacebookAPI.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\AngleSharp.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\BusinessLogic.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\fbchat-sharp.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\MQTTnet.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\DataAccess.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\BusinessLogic.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\AngleSharp.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\fbchat-sharp.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\bin\Debug\DataAccess.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.csprojAssemblyReference.cache
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.csproj.CopyComplete
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.pdb

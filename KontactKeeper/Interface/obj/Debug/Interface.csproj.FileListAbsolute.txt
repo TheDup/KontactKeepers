@@ -50,3 +50,28 @@ C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\Interfa
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.csproj.CopyComplete
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.exe
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\Interface.exe.config
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\Interface.exe
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\Interface.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\AngleSharp.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\BusinessLogic.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\FacebookAPI.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\fbchat-sharp.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\MQTTnet.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\DataAccess.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\BusinessLogic.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\FacebookAPI.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\AngleSharp.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\fbchat-sharp.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\bin\Debug\DataAccess.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.csprojAssemblyReference.cache
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.frmLogin.resources
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.frmMain.resources
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.frmSettings.resources
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.csproj.GenerateResource.cache
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.csproj.CopyComplete
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.exe
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.pdb

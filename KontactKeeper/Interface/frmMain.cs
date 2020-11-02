@@ -24,6 +24,11 @@ namespace Interface
             btnContracts1.Click += new EventHandler(btnContracts_Click);
             FBConf.Login("jannesdownload09@gmail.com", "V@facebook009");
             refresh();
+            panHome.ForeColor = Color.Teal;
+            panEndUsers.ForeColor = Color.Teal;
+            panAdmins.ForeColor = Color.Black;
+            panCallAgents.ForeColor = Color.Teal;
+            panAdmins.ForeColor = Color.Teal;
         }
         
         public void refresh()
@@ -39,8 +44,21 @@ namespace Interface
             dgvAdmin.DataSource = bsA;
             dgvCallAgent.DataSource = bsC;
             dgvEndUser.DataSource = bsE;
+            int darkmodeOption = int.Parse(ConfigurationManager.AppSettings.Get("DarkMode"));
+            MessageBox.Show("Darkmode value is " + ConfigurationManager.AppSettings.Get("DarkMode"), "Darkmode", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (ConfigurationManager.AppSettings.Get("DarkMode") == "1")
+            {
+                panHome.BackColor = Color.Black;
+                panEndUsers.BackColor = Color.Black;
+                panAdmins.BackColor = Color.Black;
+                panCallAgents.BackColor = Color.Black;
+            } else {
+                panHome.BackColor = Color.White;
+                panEndUsers.BackColor = Color.White;
+                panAdmins.BackColor = Color.White;
+                panCallAgents.BackColor = Color.White;
+            }
         }
-        
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
