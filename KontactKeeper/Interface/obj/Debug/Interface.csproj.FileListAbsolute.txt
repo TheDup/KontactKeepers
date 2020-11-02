@@ -50,3 +50,12 @@ C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\Interfa
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.csproj.CopyComplete
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.exe
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.pdb
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.csprojAssemblyReference.cache
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.frmLogin.resources
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.frmMain.resources
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.frmSettings.resources
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.csproj.GenerateResource.cache
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.csproj.CoreCompileInputs.cache
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.exe
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.pdb

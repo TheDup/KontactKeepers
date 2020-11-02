@@ -30,3 +30,19 @@ C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\Busines
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.dll
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\AngleSharp.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\fbchat-sharp.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\MQTTnet.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\AngleSharp.xml
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\fbchat-sharp.xml
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.csprojAssemblyReference.cache
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.pdb

@@ -26,3 +26,17 @@ C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAcc
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\janne\OneDrive\Documents\Git Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\AngleSharp.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\fbchat-sharp.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\MQTTnet.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\AngleSharp.xml
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\fbchat-sharp.xml
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\zama\Source\Repos\KontactKeepers\KontactKeeper\DataAccess\obj\Debug\DataAccess.pdb
