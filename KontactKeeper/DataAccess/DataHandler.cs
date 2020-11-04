@@ -47,8 +47,8 @@ namespace DataAccess
             }
             return dt;
         }
-
-        public void AddUser(string fbid, string name, SqlDateTime lastseen)
+        /////////////////////////////////////////////////////////////////////////FBUSER///////////////////////////
+        public void AddFBUser(string fbid, string name, SqlDateTime lastseen)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace DataAccess
             }
         }
 
-        public void DeleteUser(string id)
+        public void DeleteFBUser(string id)
         {
             try
             {
@@ -106,6 +106,7 @@ namespace DataAccess
             }
         }
 
+        /////////////////////////////////////////////////////////////////////////ADMIN///////////////////////////
         public void AddAdmin(string fname, string lname, string uname, string password)
         {
             try
@@ -164,6 +165,123 @@ namespace DataAccess
             }
         }
 
+        /////////////////////////////////////////////////////////////////////////ENDUSER///////////////////////////
+        public void AddEndUser(string fname, string lname, string uname, string password, string cellnumber, bool waverified, string email, bool emailverified, string fbid, bool fbverified)
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    string query = string.Format("INSERT INTO tblEndUser (FName, LName, UName, Password, Cellnumber, WAVerified, Email, EmailVerified, FBID, FBVerified) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", fname,  lname,  uname,  password,  cellnumber,  waverified.ToString(),  email,  emailverified.ToString(),  fbid, fbverified.ToString());
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public void DeleteEndUser(string id)
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    string query = string.Format("delete from tblEndUser where ID = {0}", id);
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        /////////////////////////////////////////////////////////////////////////CALLAGENT///////////////////////////
+        public void AddCallAgent(string fname, string lname, string uname, string password, int totalhours, string agentext, string avgcalllength, int totalcalls, int performancescore)
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    string query = string.Format("INSERT INTO tblCallAgent (FName, LName, UName, Password, TotalHours, AgentEXT, AVGCallLength, TotalCalls, Performance) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",  fname,  lname,  uname,  password,  totalhours.ToString(),  agentext,  avgcalllength,  totalcalls.ToString(),  performancescore.ToString());
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public void DeleteCallAgent(string id)
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    string query = string.Format("delete from tblCallAgent where ID = {0}", id);
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
     }
 
 }
