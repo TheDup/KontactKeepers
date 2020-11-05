@@ -76,16 +76,16 @@ namespace BusinessLogic
             }
             return users;
         }
-        public void AddWAUser(string fbid, string name, SqlDateTime lastseen)
+        public void AddWAUser(string phone, SqlDateTime lastseen)
         {
             DataHandler dh = new DataHandler();
-            dh.AddWAUser(fbid, name, lastseen);
+            dh.AddWAUser(phone, lastseen);
         }
-        public void UpdateWALastSeen(string fbid, string name, SqlDateTime lastseen)
+        public void UpdateWALastSeen(string phone, SqlDateTime lastseen)
         {
             DataHandler dh = new DataHandler();
-            dh.DeleteFBUser(fbid);
-            dh.AddFBUser(fbid, name, lastseen);
+            dh.DeleteWAUser(phone);
+            dh.AddWAUser(phone, lastseen);
         }
         //////////////////////////////////////////////////ENDUSERS///////////////////////////////
         public List<EndUser> GetEndUsers()
@@ -127,7 +127,7 @@ namespace BusinessLogic
             }
             return agents;
         }
-        public void AddCallAgent( string fname, string lname, string uname, string password, int totalhours, string agentext, string avgcalllength, int totalcalls, int performancescore)
+        public void AddCallAgent(string fname, string lname, string uname, string password, int totalhours, string agentext, string avgcalllength, int totalcalls, int performancescore)
         {
             DataHandler dh = new DataHandler();
             dh.AddCallAgent(fname, lname, uname, password, totalhours, agentext, avgcalllength, totalcalls, performancescore);

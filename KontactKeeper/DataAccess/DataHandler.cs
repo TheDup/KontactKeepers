@@ -105,7 +105,64 @@ namespace DataAccess
                 }
             }
         }
+        /////////////////////////////////////////////////////////////////////////WAUSER///////////////////////////
+        public void AddWAUser(string phone, SqlDateTime lastseen)
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    string query = string.Format("INSERT INTO tblWAUser (Phone, LastSeen) VALUES ('{0}','{1}')", phone, lastseen);
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
 
+        public void DeleteWAUser(string phone)
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    string query = string.Format("delete from tblWAUser where Phone = {0}", phone);
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
         /////////////////////////////////////////////////////////////////////////ADMIN///////////////////////////
         public void AddAdmin(string fname, string lname, string uname, string password)
         {
@@ -173,7 +230,7 @@ namespace DataAccess
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
-                    string query = string.Format("INSERT INTO tblEndUser (FName, LName, UName, Password, Cellnumber, WAVerified, Email, EmailVerified, FBID, FBVerified) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", fname,  lname,  uname,  password,  cellnumber,  waverified.ToString(),  email,  emailverified.ToString(),  fbid, fbverified.ToString());
+                    string query = string.Format("INSERT INTO tblEndUser (FName, LName, UName, Password, Cellnumber, WAVerified, Email, EmailVerified, FBID, FBVerified) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", fname, lname, uname, password, cellnumber, waverified.ToString(), email, emailverified.ToString(), fbid, fbverified.ToString());
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                 }
@@ -232,7 +289,7 @@ namespace DataAccess
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
-                    string query = string.Format("INSERT INTO tblCallAgent (FName, LName, UName, Password, TotalHours, AgentEXT, AVGCallLength, TotalCalls, Performance) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",  fname,  lname,  uname,  password,  totalhours.ToString(),  agentext,  avgcalllength,  totalcalls.ToString(),  performancescore.ToString());
+                    string query = string.Format("INSERT INTO tblCallAgent (FName, LName, UName, Password, TotalHours, AgentEXT, AVGCallLength, TotalCalls, Performance) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", fname, lname, uname, password, totalhours.ToString(), agentext, avgcalllength, totalcalls.ToString(), performancescore.ToString());
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                 }
