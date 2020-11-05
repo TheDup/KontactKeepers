@@ -10,17 +10,17 @@ namespace WhatsappAPI
 {
     public class WAConf
     {
-        public void SendMessage()
+        public void SendMessage(string body, string to)
         {
-            string accountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
-            string authToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
+            string accountSid = "ACbf8d1dcd97ee57e6f33ca2eb4046af72";
+            string authToken = "3ee7bd95a410df16cac63ac610df06f0";
 
             TwilioClient.Init(accountSid, authToken);
 
             var message = MessageResource.Create(
-                body: "This is the ship that made the Kessel Run in fourteen parsecs?",
-                from: new Twilio.Types.PhoneNumber("+14155238886"),
-                to: new Twilio.Types.PhoneNumber("+27721752568")
+                body: body,
+                from: new Twilio.Types.PhoneNumber("+12058904238"),
+                to: new Twilio.Types.PhoneNumber(to)
             );
 
             Console.WriteLine(message.Sid);

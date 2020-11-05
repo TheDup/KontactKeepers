@@ -49,6 +49,8 @@
             this.txtAFName = new System.Windows.Forms.TextBox();
             this.dgvAdmin = new System.Windows.Forms.DataGridView();
             this.panCallAgents = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtCUserName = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -73,6 +75,10 @@
             this.txtCFName = new System.Windows.Forms.TextBox();
             this.dgvCallAgent = new System.Windows.Forms.DataGridView();
             this.panEndUsers = new System.Windows.Forms.Panel();
+            this.txtEPassword = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtEUName = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.txtELName = new System.Windows.Forms.TextBox();
             this.txtEFName = new System.Windows.Forms.TextBox();
             this.txtEFBID = new System.Windows.Forms.TextBox();
@@ -100,12 +106,6 @@
             this.panButtons = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txtCUserName = new System.Windows.Forms.TextBox();
-            this.txtEUName = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txtEPassword = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.panAdmins.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             this.panCallAgents.SuspendLayout();
@@ -361,6 +361,24 @@
             this.panCallAgents.TabIndex = 1;
             this.panCallAgents.Visible = false;
             // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(359, 84);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(55, 13);
+            this.label25.TabIndex = 53;
+            this.label25.Text = "Username";
+            // 
+            // txtCUserName
+            // 
+            this.txtCUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCUserName.Location = new System.Drawing.Point(451, 81);
+            this.txtCUserName.Name = "txtCUserName";
+            this.txtCUserName.Size = new System.Drawing.Size(100, 20);
+            this.txtCUserName.TabIndex = 52;
+            // 
             // label24
             // 
             this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -610,6 +628,44 @@
             this.panEndUsers.Size = new System.Drawing.Size(559, 481);
             this.panEndUsers.TabIndex = 1;
             this.panEndUsers.Visible = false;
+            // 
+            // txtEPassword
+            // 
+            this.txtEPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEPassword.Location = new System.Drawing.Point(451, 107);
+            this.txtEPassword.Name = "txtEPassword";
+            this.txtEPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtEPassword.TabIndex = 64;
+            // 
+            // label27
+            // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(359, 111);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(53, 13);
+            this.label27.TabIndex = 63;
+            this.label27.Text = "Password";
+            // 
+            // txtEUName
+            // 
+            this.txtEUName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEUName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEUName.Location = new System.Drawing.Point(451, 81);
+            this.txtEUName.Name = "txtEUName";
+            this.txtEUName.Size = new System.Drawing.Size(100, 20);
+            this.txtEUName.TabIndex = 62;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(359, 85);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(55, 13);
+            this.label26.TabIndex = 61;
+            this.label26.Text = "Username";
             // 
             // txtELName
             // 
@@ -887,62 +943,6 @@
             this.btnRefresh.Text = "refr";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(359, 84);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(55, 13);
-            this.label25.TabIndex = 53;
-            this.label25.Text = "Username";
-            // 
-            // txtCUserName
-            // 
-            this.txtCUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCUserName.Location = new System.Drawing.Point(451, 81);
-            this.txtCUserName.Name = "txtCUserName";
-            this.txtCUserName.Size = new System.Drawing.Size(100, 20);
-            this.txtCUserName.TabIndex = 52;
-            // 
-            // txtEUName
-            // 
-            this.txtEUName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEUName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEUName.Location = new System.Drawing.Point(451, 81);
-            this.txtEUName.Name = "txtEUName";
-            this.txtEUName.Size = new System.Drawing.Size(100, 20);
-            this.txtEUName.TabIndex = 62;
-            // 
-            // label26
-            // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(359, 85);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(55, 13);
-            this.label26.TabIndex = 61;
-            this.label26.Text = "Username";
-            // 
-            // txtEPassword
-            // 
-            this.txtEPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEPassword.Location = new System.Drawing.Point(451, 107);
-            this.txtEPassword.Name = "txtEPassword";
-            this.txtEPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtEPassword.TabIndex = 64;
-            // 
-            // label27
-            // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(359, 111);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(53, 13);
-            this.label27.TabIndex = 63;
-            this.label27.Text = "Password";
             // 
             // frmMain
             // 
