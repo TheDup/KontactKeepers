@@ -64,6 +64,29 @@ namespace BusinessLogic
             dh.DeleteFBUser(fbid);
             dh.AddFBUser(fbid, name, lastseen);
         }
+        /////////////////////////////////////////WAUSERS////////////////////////////////////////////////////
+        public List<WAUser> GetWAUsers()
+        {
+            DataHandler dh = new DataHandler();
+            DataTable dt = dh.Read("tblWAUsers");
+            List<WAUser> users = new List<WAUser>();
+            foreach (DataRow row in dt.Rows)
+            {
+                users.Add(new WAUser(row[1].ToString(), SqlDateTime.Parse(row[2].ToString())));
+            }
+            return users;
+        }
+        public void AddWAUser(string fbid, string name, SqlDateTime lastseen)
+        {
+            DataHandler dh = new DataHandler();
+            dh.AddWAUser(fbid, name, lastseen);
+        }
+        public void UpdateWALastSeen(string fbid, string name, SqlDateTime lastseen)
+        {
+            DataHandler dh = new DataHandler();
+            dh.DeleteFBUser(fbid);
+            dh.AddFBUser(fbid, name, lastseen);
+        }
         //////////////////////////////////////////////////ENDUSERS///////////////////////////////
         public List<EndUser> GetEndUsers()
         {
