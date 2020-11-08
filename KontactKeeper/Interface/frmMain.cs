@@ -27,7 +27,7 @@ namespace Interface
             FBConf.Login("kontactkeeper09@gmail.com", "J@nnesventer009");
             refresh();
         }
-        
+
         public void refresh()
         {
             Connector conn = new Connector();
@@ -90,7 +90,7 @@ namespace Interface
             txtEFBID.DataBindings.Clear();
             txtEFBID.DataBindings.Add(new Binding("Text", BsEUser, "fbid"));
         }
-        
+
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
@@ -170,11 +170,6 @@ namespace Interface
             refresh();
         }
 
-        private void btnCAAdd_Click(object sender, EventArgs e)
-        {
-            Connector cn = new Connector();
-        }
-
         private void dgvEndUser_CellContentClick(object sender, DataGridViewCellEventArgs e) //Added the datagridview
         {
             Admin administrator = (Admin)dgvAdmin.SelectedRows[0].DataBoundItem;
@@ -198,6 +193,67 @@ namespace Interface
             txtEFBID.Text = endUser.FBID;
             txtEEmail.Text = endUser.Email;
             txtECell.Text = endUser.CellNumber;
+        }
+        private void btnCAAdd_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+            cn.AddAdmin(txtAFName.Text, txtALname.Text, txtAUname.Text, txtAPassword.Text);
+            refresh();
+        }
+        private void btnADelete_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+            cn.DeleteAdmin(txtAAdminID.Text);
+            refresh();
+        }
+
+        private void btnAUpdate_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+            cn.UpdateAdmin(txtAAdminID.Text, txtAFName.Text, txtALname.Text, txtAUname.Text, txtAPassword.Text);
+            refresh();
+        }
+
+        private void btnCAdd_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+            cn.AddCallAgent(txtCFName.Text, txtCLName.Text, txtCUserName.Text, txtCPassword.Text, int.Parse(txtCTotalHours.Text), txtCAgentEXT.Text, txtCAVG.Text, int.Parse(txtCTotalCalls.Text), int.Parse(txtCPerformance.Text));
+            refresh();
+        }
+
+        private void btnCDelete_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+            cn.DeleteCallAgent(txtCID.Text);
+            refresh();
+        }
+
+        private void btnCUpdate_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+            cn.UpdateCallAgent(int.Parse(txtCID.Text), txtCFName.Text, txtCLName.Text, txtCUserName.Text, txtCPassword.Text, int.Parse(txtCTotalHours.Text), txtCAgentEXT.Text, txtCAVG.Text, int.Parse(txtCTotalCalls.Text), int.Parse(txtCPerformance.Text));
+            refresh();
+        }
+
+        private void btnEAdd_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+            cn.AddEndUser(txtEFName.Text, txtELName.Text, txtEUName.Text, txtEPassword.Text, txtECell.Text, false, txtEEmail.Text, false, txtEFBID.Text, false);
+            refresh();
+        }
+
+        private void btnEDelete_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+            cn.DeleteEndUser(txtEID.Text);
+            refresh();
+        }
+
+        private void btnEUpdate_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+            cn.UpdateEndUser(txtEID.Text, txtEFName.Text, txtELName.Text, txtEUName.Text, txtEPassword.Text, txtECell.Text, false, txtEEmail.Text, false, txtEFBID.Text, false);
+            refresh();
         }
     }
 }

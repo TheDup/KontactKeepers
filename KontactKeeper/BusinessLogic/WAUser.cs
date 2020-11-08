@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-    class WAUser
+    public class WAUser
     {
         private string cellnumber;
 
