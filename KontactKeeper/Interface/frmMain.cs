@@ -89,6 +89,7 @@ namespace Interface
             txtEEmail.DataBindings.Add(new Binding("Text", BsEUser, "email"));
             txtEFBID.DataBindings.Clear();
             txtEFBID.DataBindings.Add(new Binding("Text", BsEUser, "fbid"));
+
         }
 
 
@@ -102,23 +103,25 @@ namespace Interface
         {
             if (ConfigurationManager.AppSettings.Get("Fullscreen") == "1")
             {
-                var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                config.AppSettings.Settings["Fullscreen"].Value = "1";
-                config.Save(ConfigurationSaveMode.Modified);
-
-                ConfigurationManager.RefreshSection("appSettings");
-
                 this.WindowState = FormWindowState.Maximized;
             }
             else
             {
-                var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                config.AppSettings.Settings["Fullscreen"].Value = "0";
-                config.Save(ConfigurationSaveMode.Modified);
-
-                ConfigurationManager.RefreshSection("appSettings");
-
                 this.WindowState = FormWindowState.Normal;
+            }
+            if (ConfigurationManager.AppSettings.Get("DarkMode") == "1")
+            {
+                panHome.BackColor = Color.Black;
+                panEndUsers.BackColor = Color.Black;
+                panAdmins.BackColor = Color.Black;
+                panCallAgents.BackColor = Color.Black;
+            }
+            else
+            {
+                panHome.BackColor = Color.White;
+                panEndUsers.BackColor = Color.White;
+                panAdmins.BackColor = Color.White;
+                panCallAgents.BackColor = Color.White;
             }
         }
 

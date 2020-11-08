@@ -202,6 +202,10 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+      <Project>{7e0b2221-68b2-490a-b6b0-f7e1198bf43e}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WhatsappAPI\WhatsappAPI.csproj">
       <Project>{84efb01d-900d-4b85-867b-30906efa2464}</Project>
       <Name>WhatsappAPI</Name>
