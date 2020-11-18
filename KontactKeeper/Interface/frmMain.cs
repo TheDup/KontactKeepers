@@ -24,7 +24,6 @@ namespace Interface
             btnAdmins1.Click += new EventHandler(btnAdmins_Click);
             btnCallAgents1.Click += new EventHandler(btnCallAgents_Click);
             btnEndUsers1.Click += new EventHandler(btnEndUsers_Click);
-            FBConf.Login("kontactkeeper09@gmail.com", "J@nnesventer009");
             refresh();
         }
 
