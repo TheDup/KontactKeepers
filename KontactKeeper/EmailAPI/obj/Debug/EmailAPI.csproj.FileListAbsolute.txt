@@ -13,3 +13,24 @@ C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\Emai
 C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\obj\Debug\EmailAPI.csproj.CopyComplete
 C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\obj\Debug\EmailAPI.dll
 C:\Users\janne\OneDrive\Documents\Visual Studio 2019\Projects\KontactKeeper\EmailAPI\obj\Debug\EmailAPI.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\EmailAPI.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\EmailAPI.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\AngleSharp.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\fbchat-sharp.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\MailKit.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\MimeKit.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\MQTTnet.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\AngleSharp.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\fbchat-sharp.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\MailKit.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\MailKit.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\MimeKit.pdb
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\MimeKit.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\obj\Debug\EmailAPI.csprojAssemblyReference.cache
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\obj\Debug\EmailAPI.csproj.CopyComplete
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\obj\Debug\EmailAPI.dll
+C:\Users\Kamo\Source\Repos\KontactKeepers\KontactKeeper\EmailAPI\obj\Debug\EmailAPI.pdb

@@ -16,26 +16,18 @@ namespace Interface
         public frmSettings()
         {
             InitializeComponent();
-            if (ConfigurationManager.AppSettings.Get("Fullscreen") == "0")
-            {
-                cbFullscreen.Checked = false;
-            }
-            else
-            {
-                cbFullscreen.Checked = true;
-            }
         }
 
         private void btnFullscreen_Click(object sender, EventArgs e)
         {
-            if (ConfigurationManager.AppSettings.Get("Fullscreen") == "0")
+            if (cbFullscreen.Checked)
             {
-                ConfigurationManager.AppSettings.Set("Fullscreen", "1");
+                ConfigurationManager.AppSettings.Set("FullScreen", "0");
                 cbFullscreen.Checked = true;
             }
             else
             {
-                ConfigurationManager.AppSettings.Set("Fullscreen", "0");
+                ConfigurationManager.AppSettings.Set("FullScreen", "1");
                 cbFullscreen.Checked = false;
             }
             this.Hide();
@@ -49,14 +41,36 @@ namespace Interface
 
         private void btnDarkMode_Click(object sender, EventArgs e)
         {
-            if (ConfigurationManager.AppSettings.Get("DarkMode") == "0")
+            if (cbDarkMode.Checked)
             {
-                ConfigurationManager.AppSettings.Set("DarkMode", "1");
+                ConfigurationManager.AppSettings.Set("DarkMode", "0");
                 cbDarkMode.Checked = true;
             }
             else
             {
-                ConfigurationManager.AppSettings.Set("DarkMode", "0");
+                ConfigurationManager.AppSettings.Set("DarkMode", "1");
+                cbDarkMode.Checked = false;
+            }
+            this.Hide();
+            this.Show();
+        }
+
+        private void frmSettings_Activated(object sender, EventArgs e)
+        {
+            if (ConfigurationManager.AppSettings.Get("Fullscreen") == "1")
+            {
+                cbFullscreen.Checked = true;
+            }
+            else
+            {
+                cbFullscreen.Checked = false;
+            }
+            if (ConfigurationManager.AppSettings.Get("DarkMode") == "1")
+            {
+                cbDarkMode.Checked = true;
+            }
+            else
+            {
                 cbDarkMode.Checked = false;
             }
         }
