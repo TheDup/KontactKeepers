@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        form{
+            width: 40%;
+            margin: 3em auto;
+            background-color: gray;
+            color: whitesmoke;
+            font-weight: bold;
+            padding: 2em;
+            box-shadow: 0px 10px 20px black;
+        }
+        ol{
+            list-style: none;
+        }
+        h1{
+            background-color: black;
+            color: whitesmoke;
+            text-align: center;
+        }
+        input{
+            width: 30em;
+        }
+        .buttons{
+            border:none;
+            padding: 2em;
+            margin: 1em;
+            width: 12em;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="Login" method="post">
+        <h1>login</h1>
+        <ol>
+            <li>Email</li>
+            <li><input  type="email" name="email"></li>
+            <li>Password</li>
+            <li><input type="password" name="password"></li>
+            <li><input class="buttons" type="submit" value="Login"></li>
+        </ol>
+    </form>
+</body>
+</html>

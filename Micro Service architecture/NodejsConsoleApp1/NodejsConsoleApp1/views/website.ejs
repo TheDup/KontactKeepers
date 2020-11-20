@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>EndUser Details</title>
+        <style>
+            html, body
+            {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: lightgray;
+            }
+
+            h1
+            {
+                color: dodgerblue;
+            }
+
+            label {
+                display: inline-block;
+                width: 100px;
+                line-height: 10px;
+                margin-bottom: 5px;
+            }
+
+            input {
+            height: 20px;
+            flex: 0 0 200px;
+            margin-left: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Made changes-->
+        <h1>Client Interface</h1>
+        <form method="post" action="Save">
+            <fieldset>
+                <legend>Please enter your details</legend>
+                    <input type="text" name="EID" hidden="hidden" value=<%= dbid %> >
+                    <input type="text" name="WAVerified" hidden="hidden" value=<%= WAVerified %>>
+                    <input type="text" name="EmailVerified" hidden="hidden" value=<%= EmailVerified %>>
+                    <input type="text" name="FBVerified" hidden="hidden" value=<%= FBVerified %>>
+                <p>
+                    <label>First Name:</label>
+                    <input type="text" name="EFirstName" value=<%= fname %>>
+                </p>
+                <p>
+                    <label>Last Name:</label>
+                    <input type="text" name="ELastName" value=<%= lname %>>
+                </p>
+                <p>
+                    <label>Cell Number:</label>
+                    <input type="tel" name="ENumber" value=<%= cellno %>>
+                </p>
+                <p>
+                    <label>Email:</label>
+                    <input type="email" name="EEmail" value=<%= email %>>
+                </p>
+                <p>
+                    <label>Facebook ID:</label>
+                    <input type="text" name="EFBID" value=<%= fbid %>>
+                </p>
+                <p>
+                    <label>Username:</label>
+                    <input type="text" name="EUsername" value=<%= uname %>>
+                </p>
+                <p>
+                    <label>Password:</label>
+                    <input type="password" name="EPassword" value=<%= password %>>
+                </p>
+                <p>
+                    <input class="buttons" type="submit" value="Save"><input class="buttons" type="reset" value="Clear">
+                </p>
+            </fieldset>
+        </form>
+    </body>
+</html>
