@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace KontactKeepers
 {
     // Should be public?
-    class EmailConf
+    public class EmailConf
     {
         private string emailAddressUName = "KontactKeeper@campus-kiosk.co.za";
         private string mailPass = "g4Ha2QtlMi7D";
@@ -27,6 +27,10 @@ namespace KontactKeepers
         public string Pop3Port { get => pop3Port; set => pop3Port = value; }
         public string OutgoingServer { get => outgoingServer; set => outgoingServer = value; }
         public string SmtpPort { get => smtpPort; set => smtpPort = value; }
+
+        public EmailConf()
+        {
+        }
 
         public void SendActivityEmail(string destAddress)
         {
