@@ -52,13 +52,6 @@ C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.dll
 C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.pdb
 C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\BusinessLogic.dll
 C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\BusinessLogic.pdb
-C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\AngleSharp.dll
 C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\DataAccess.dll
-C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\fbchat-sharp.dll
-C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\MQTTnet.dll
-C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\Newtonsoft.Json.dll
 C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\DataAccess.pdb
-C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\AngleSharp.xml
-C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\fbchat-sharp.xml
-C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\Newtonsoft.Json.xml
 C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete

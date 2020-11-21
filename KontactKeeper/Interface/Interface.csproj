@@ -110,6 +110,10 @@
       <Project>{f9771785-375e-464d-8b26-256a2d2577b9}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EmailAPI\EmailAPI.csproj">
+      <Project>{9c064431-2019-4d86-a2d8-89ce61691af3}</Project>
+      <Name>EmailAPI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FacebookAPI\FacebookAPI.csproj">
       <Project>{f6a59e06-e55d-4ebf-b852-781e7e65b771}</Project>
       <Name>FacebookAPI</Name>

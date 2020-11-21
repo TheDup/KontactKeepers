@@ -201,6 +201,11 @@ namespace Interface
             Connector cn = new Connector();
             cn.AddAdmin(txtAFName.Text, txtALname.Text, txtAUname.Text, txtAPassword.Text);
             refresh();
+            KontactKeepers.EmailConf ec = new KontactKeepers.EmailConf();
+            if (txtEEmail.Text.Length > 1)
+            {
+                ec.SendActivityEmail(txtEEmail.Text);
+            }
         }
         private void btnADelete_Click(object sender, EventArgs e)
         {
@@ -214,6 +219,11 @@ namespace Interface
             Connector cn = new Connector();
             cn.UpdateAdmin(txtAAdminID.Text, txtAFName.Text, txtALname.Text, txtAUname.Text, txtAPassword.Text);
             refresh();
+            KontactKeepers.EmailConf ec = new KontactKeepers.EmailConf();
+            if (txtEEmail.Text.Length > 1)
+            {
+                ec.SendActivityEmail(txtEEmail.Text);
+            }
         }
 
         private void btnCAdd_Click(object sender, EventArgs e)
@@ -221,6 +231,11 @@ namespace Interface
             Connector cn = new Connector();
             cn.AddCallAgent(txtCFName.Text, txtCLName.Text, txtCUserName.Text, txtCPassword.Text, int.Parse(txtCTotalHours.Text), txtCAgentEXT.Text, txtCAVG.Text, int.Parse(txtCTotalCalls.Text), int.Parse(txtCPerformance.Text));
             refresh();
+            KontactKeepers.EmailConf ec = new KontactKeepers.EmailConf();
+            if (txtEEmail.Text.Length > 1)
+            {
+                ec.SendActivityEmail(txtEEmail.Text);
+            }
         }
 
         private void btnCDelete_Click(object sender, EventArgs e)
@@ -235,6 +250,11 @@ namespace Interface
             Connector cn = new Connector();
             cn.UpdateCallAgent(int.Parse(txtCID.Text), txtCFName.Text, txtCLName.Text, txtCUserName.Text, txtCPassword.Text, int.Parse(txtCTotalHours.Text), txtCAgentEXT.Text, txtCAVG.Text, int.Parse(txtCTotalCalls.Text), int.Parse(txtCPerformance.Text));
             refresh();
+            KontactKeepers.EmailConf ec = new KontactKeepers.EmailConf();
+            if (txtEEmail.Text.Length > 1)
+            {
+                ec.SendActivityEmail(txtEEmail.Text);
+            }
         }
 
         private void btnEAdd_Click(object sender, EventArgs e)
@@ -242,6 +262,11 @@ namespace Interface
             Connector cn = new Connector();
             cn.AddEndUser(txtEFName.Text, txtELName.Text, txtEUName.Text, txtEPassword.Text, txtECell.Text, false, txtEEmail.Text, false, txtEFBID.Text, false);
             refresh();
+            KontactKeepers.EmailConf ec = new KontactKeepers.EmailConf();
+            if (txtEEmail.Text.Length > 1)
+            {
+                ec.SendActivityEmail(txtEEmail.Text);
+            }
         }
 
         private void btnEDelete_Click(object sender, EventArgs e)
