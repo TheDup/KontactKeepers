@@ -29,17 +29,17 @@ namespace Interface
         {
 
             EmailConf emailConf = new EmailConf();
-            for (int i = 0; i < 10; i++)
+            while(true)
             {
 
                 Connector cn = new Connector();
                 //List<EmailUser> emailClients =cn.
-                List<EndUser> eusers= cn.GetEndUsers();
-                List<string> emails;
-                foreach (EndUser eUser in emailClients)
+                List<EndUser> enusers= cn.GetEndUsers();
+                List<EmailUser> emails = cn.GetEmailUsers();
+                foreach (EmailUser email in emails)
                 {
-                    eUser.emailConf.RecieveActivity()
-                        cn.UpdateEndUser()
+
+                    email.LastSeen = emailConf.RecieveActivity(email.Email);
 
                 }
                 Thread.Sleep(2147483647);
