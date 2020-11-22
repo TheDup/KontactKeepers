@@ -1,0 +1,1 @@
+twilio phone-numbers:update "+12058904238" --sms-url="https://localhost:44373/sms"
