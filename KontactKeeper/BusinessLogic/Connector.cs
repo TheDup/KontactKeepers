@@ -120,15 +120,16 @@ namespace BusinessLogic
             }
             return users;
         }
-        public int AddWAUser(string phone, string lastseen)
+        public void AddWAUser(string phone, string lastseen)
         {
             DataHandler dh = new DataHandler();
-            return dh.AddWAUser(phone, lastseen);
+            dh.AddWAUser(phone, lastseen);
         }
-        public int UpdateWALastSeen(string phone, string lastseen)
+        public void UpdateWALastSeen(string phone, string lastseen)
         {
             DataHandler dh = new DataHandler();
-            return dh.DeleteWAUser(phone) + dh.AddWAUser(phone, lastseen);
+            dh.DeleteWAUser(phone);
+            dh.AddWAUser(phone, lastseen);
         }
 
         public List<WAUser> SearchWAUser(string phone = null)
@@ -140,7 +141,7 @@ namespace BusinessLogic
                 DataTable dt = dh.SearchWAUser(phone: phone);
                 foreach (DataRow row in dt.Rows)
                 {
-                    users.Add(new WAUser(row[1].ToString(), SqlDateTime.Parse(row[2].ToString())));
+                    users.Add(new WAUser(row[1].ToString(), row[2].ToString()));
                 }
             }
             return users;

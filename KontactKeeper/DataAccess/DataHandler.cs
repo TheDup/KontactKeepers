@@ -141,7 +141,7 @@ namespace DataAccess
             }
         }
         /////////////////////////////////////////////////////////////////////////WAUSER///////////////////////////
-        public void AddWAUser(string phone, SqlDateTime lastseen)
+        public void AddWAUser(string phone, string lastseen)
         {
             try
             {
