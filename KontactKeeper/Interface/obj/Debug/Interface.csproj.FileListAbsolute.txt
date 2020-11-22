@@ -64,10 +64,8 @@ C:\Repo\KontactKeepers\KontactKeeper\Interface\bin\Debug\Interface.exe
 C:\Repo\KontactKeepers\KontactKeeper\Interface\bin\Debug\Interface.pdb
 C:\Repo\KontactKeepers\KontactKeeper\Interface\bin\Debug\BusinessLogic.dll
 C:\Repo\KontactKeepers\KontactKeeper\Interface\bin\Debug\DataAccess.dll
-C:\Repo\KontactKeepers\KontactKeeper\Interface\bin\Debug\FacebookAPI.dll
 C:\Repo\KontactKeepers\KontactKeeper\Interface\bin\Debug\BusinessLogic.pdb
 C:\Repo\KontactKeepers\KontactKeeper\Interface\bin\Debug\DataAccess.pdb
-C:\Repo\KontactKeepers\KontactKeeper\Interface\bin\Debug\FacebookAPI.pdb
 C:\Repo\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.csprojAssemblyReference.cache
 C:\Repo\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.frmLogin.resources
 C:\Repo\KontactKeepers\KontactKeeper\Interface\obj\Debug\Interface.frmMain.resources

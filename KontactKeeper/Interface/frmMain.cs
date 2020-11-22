@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
-using FacebookAPI;
 using BusinessLogic;
 using System.IO;
 using DataAccess;

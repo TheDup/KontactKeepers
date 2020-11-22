@@ -1,0 +1,17 @@
+{
+  "name": "fbserver",
+  "version": "0.0.0",
+  "description": "fbserver",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "html": "^1.0.0",
+    "moment": "^2.29.1",
+    "msnodesqlv8": "^2.0.8",
+    "mssql": "^6.2.3"
+  }
+}
