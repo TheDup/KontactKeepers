@@ -23,11 +23,19 @@ namespace BusinessLogic
             get { return lastseen; }
             set { lastseen = value; }
         }
+        private string lastsent;
 
-        public WAUser(string cellnumber, string lastseen)
+        public string LastSent
+        {
+            get { return lastsent; }
+            set { lastsent = value; }
+        }
+
+        public WAUser(string cellnumber, string lastseen, string lastsent)
         {
             this.cellnumber = cellnumber;
             this.lastseen = lastseen;
+            this.lastsent = lastsent;
         }
     }
 }

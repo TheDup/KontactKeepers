@@ -24,11 +24,19 @@ namespace BusinessLogic
             get { return lastseen; }
             set { lastseen = value; }
         }
+        private string lastsent;
 
-        public EmailUser(string email, string lastseen)
+        public string LastSent
+        {
+            get { return lastsent; }
+            set { lastsent = value; }
+        }
+
+        public EmailUser(string email, string lastseen, string lastsent)
         {
             this.email = email;
             this.lastseen = lastseen;
+            this.lastsent = lastsent;
         }
     }
 }

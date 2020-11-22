@@ -74,20 +74,20 @@ namespace BusinessLogic
             List<FBUser> users = new List<FBUser>();
             foreach (DataRow row in dt.Rows)
             {
-                users.Add(new FBUser(row[1].ToString(), row[2].ToString(), SqlDateTime.Parse(row[3].ToString())));
+                users.Add(new FBUser(row[1].ToString(), row[2].ToString(), SqlDateTime.Parse(row[3].ToString()), row[4].ToString()));
             }
             return users;
         }
-        public void AddFBUser(string fbid, string name, SqlDateTime lastseen)
+        public void AddFBUser(string fbid, string name, SqlDateTime lastseen, string lastsent)
         {
             DataHandler dh = new DataHandler();
-            dh.AddFBUser(fbid, name, lastseen);
+            dh.AddFBUser(fbid, name, lastseen, lastsent);
         }
-        public void UpdateFBLastSeen(string fbid, string name, SqlDateTime lastseen)
+        public void UpdateFBLastSeen(string fbid, string name, SqlDateTime lastseen, string lastsent)
         {
             DataHandler dh = new DataHandler();
             dh.DeleteFBUser(fbid);
-            dh.AddFBUser(fbid, name, lastseen);
+            dh.AddFBUser(fbid, name, lastseen, lastsent);
         }
 
         public List<FBUser> SearchFBUser(string fbid = null,string name = null)
@@ -98,13 +98,13 @@ namespace BusinessLogic
             {
                 DataTable dt = dh.SearchFBUser(name: name);
                 foreach (DataRow row in dt.Rows)
-                    users.Add(new FBUser(row[1].ToString(), row[2].ToString(), SqlDateTime.Parse(row[3].ToString())));
+                    users.Add(new FBUser(row[1].ToString(), row[2].ToString(), SqlDateTime.Parse(row[3].ToString()), row[4].ToString()));
             }
             if (fbid != null)
             {
                 DataTable dt = dh.SearchFBUser(fbid: fbid);
                 foreach (DataRow row in dt.Rows)
-                    users.Add(new FBUser(row[1].ToString(), row[2].ToString(), SqlDateTime.Parse(row[3].ToString())));
+                    users.Add(new FBUser(row[1].ToString(), row[2].ToString(), SqlDateTime.Parse(row[3].ToString()) ,row[4].ToString()));
             }
             return users;
         }
@@ -116,20 +116,20 @@ namespace BusinessLogic
             List<WAUser> users = new List<WAUser>();
             foreach (DataRow row in dt.Rows)
             {
-                users.Add(new WAUser(row[1].ToString(), row[2].ToString()));
+                users.Add(new WAUser(row[1].ToString(), row[2].ToString(), row[3].ToString()));
             }
             return users;
         }
-        public void AddWAUser(string phone, string lastseen)
+        public void AddWAUser(string phone, string lastseen, string lastsent)
         {
             DataHandler dh = new DataHandler();
-            dh.AddWAUser(phone, lastseen);
+            dh.AddWAUser(phone, lastseen, lastsent);
         }
-        public void UpdateWALastSeen(string phone, string lastseen)
+        public void UpdateWALastSeen(string phone, string lastseen, string lastsent)
         {
             DataHandler dh = new DataHandler();
             dh.DeleteWAUser(phone);
-            dh.AddWAUser(phone, lastseen);
+            dh.AddWAUser(phone, lastseen, lastsent);
         }
 
         public List<WAUser> SearchWAUser(string phone = null)
@@ -141,7 +141,7 @@ namespace BusinessLogic
                 DataTable dt = dh.SearchWAUser(phone: phone);
                 foreach (DataRow row in dt.Rows)
                 {
-                    users.Add(new WAUser(row[1].ToString(), row[2].ToString()));
+                    users.Add(new WAUser(row[1].ToString(), row[2].ToString(), row[3].ToString()));
                 }
             }
             return users;
@@ -154,20 +154,20 @@ namespace BusinessLogic
             List<EmailUser> users = new List<EmailUser>();
             foreach (DataRow row in dt.Rows)
             {
-                users.Add(new EmailUser(row[1].ToString(), row[2].ToString()));
+                users.Add(new EmailUser(row[1].ToString(), row[2].ToString(), row[3].ToString()));
             }
             return users;
         }
-        public void AddEmailUser(string email, string lastseen)
+        public void AddEmailUser(string email, string lastseen, string lastsent)
         {
             DataHandler dh = new DataHandler();
             dh.AddWAUser(email, lastseen);
         }
-        public void UpdateEmailLastSeen(string email, string lastseen)
+        public void UpdateEmailLastSeen(string email, string lastseen, string lastsent)
         {
             DataHandler dh = new DataHandler();
             dh.DeleteEmailUser(email);
-            dh.AddEmailUser(email, lastseen);
+            dh.AddEmailUser(email, lastseen, lastsent);
         }
 
         public List<EmailUser> SearchEmailUser(string phone = null)
@@ -179,7 +179,7 @@ namespace BusinessLogic
                 DataTable dt = dh.SearchEmailUser(email: email);
                 foreach (DataRow row in dt.Rows)
                 {
-                    users.Add(new EmailUser(row[1].ToString(), row[2].ToString()));
+                    users.Add(new EmailUser(row[1].ToString(), row[2].ToString(), row[2].ToString()));
                 }
             }
             return users;

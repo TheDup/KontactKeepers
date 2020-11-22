@@ -34,13 +34,20 @@ namespace BusinessLogic
 			}
 			set { lastseen = value; }
 		}
+		private string lastsent;
 
+		public string LastSent
+		{
+			get { return lastsent; }
+			set { lastsent = value; }
+		}
 
-		public FBUser(string id, string name, SqlDateTime lastseen)
+		public FBUser(string id, string name, SqlDateTime lastseen, string lastsent)
 		{
 			this.fbid = id;
 			this.name = name;
 			this.lastseen = lastseen;
+			this.lastsent = lastsent;
 		}
 	}
 }

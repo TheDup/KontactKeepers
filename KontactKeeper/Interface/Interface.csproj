@@ -114,6 +114,14 @@
       <Project>{9c064431-2019-4d86-a2d8-89ce61691af3}</Project>
       <Name>EmailAPI</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FBSendAPI\FBSendAPI.csproj">
+      <Project>{e9ce7eae-0b56-4161-afa4-9d9ec452e722}</Project>
+      <Name>FBSendAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhatsappAPI\WhatsappAPI.csproj">
+      <Project>{84efb01d-900d-4b85-867b-30906efa2464}</Project>
+      <Name>WhatsappAPI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

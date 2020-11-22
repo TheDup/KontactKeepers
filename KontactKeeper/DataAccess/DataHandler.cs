@@ -48,14 +48,14 @@ namespace DataAccess
             return dt;
         }
         /////////////////////////////////////////////////////////////////////////FBUSER///////////////////////////
-        public void AddFBUser(string fbid, string name, SqlDateTime lastseen)
+        public void AddFBUser(string fbid, string name, SqlDateTime lastseen, string lastsent)
         {
             try
             {
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
-                    string query = string.Format("INSERT INTO tblFBUser (FBID, FBName, LastSeen) VALUES ('{0}','{1}','{2}')", fbid, name, lastseen);
+                    string query = string.Format("INSERT INTO tblFBUser (FBID, FBName, LastSeen, LastSent) VALUES ('{0}','{1}','{2}', '{3}')", fbid, name, lastseen, lastsent);
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                 }
@@ -141,14 +141,14 @@ namespace DataAccess
             }
         }
         /////////////////////////////////////////////////////////////////////////WAUSER///////////////////////////
-        public void AddWAUser(string phone, string lastseen)
+        public void AddWAUser(string phone, string lastseen, string lastsent)
         {
             try
             {
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
-                    string query = string.Format("INSERT INTO tblWAUser (Phone, LastSeen) VALUES ('{0}','{1}')", phone, lastseen);
+                    string query = string.Format("INSERT INTO tblWAUser (Phone, LastSeen, LastSent) VALUES ('{0}','{1}','{2}')", phone, lastseen, lastsent);
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                 }
@@ -232,14 +232,14 @@ namespace DataAccess
             }
         }
         //////////////////////////////////////////////////////EmailUser/////////////////////////////////////////
-        public void AddEmailUser(string email, string lastseen)
+        public void AddEmailUser(string email, string lastseen, string lastsent)
         {
             try
             {
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
-                    string query = string.Format("INSERT INTO tblEmailUser(Email, LastSeen) VALUES ('{0}','{1}')", email, lastseen);
+                    string query = string.Format("INSERT INTO tblEmailUser(Email, LastSeen, LastSent) VALUES ('{0}','{1}','{2})", email, lastseen, lastsent);
         SqlCommand cmd = new SqlCommand(query, conn);
         cmd.ExecuteNonQuery();
                 }

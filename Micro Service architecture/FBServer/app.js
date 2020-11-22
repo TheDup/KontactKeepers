@@ -7,22 +7,30 @@ const { DateTime } = require('mssql/msnodesqlv8');
 const app = express().use(bodyParser.json());
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'))
 
-const { Worker, isMainThread, parentPort } = require('worker_threads');
-if (isMainThread) {
-    const worker = new Worker(__filename);
-    // Receive messages from the worker thread
-    worker.once('message', (message) => {
-        console.log(message + ' received from the worker thread!');
-    });
-    // Send a ping message to the spawned worker thread 
-    worker.postMessage('ping');
-} else {
-    // When a ping message received, send a pong message back.
-    parentPort.once('message', (message) => {
-        console.log(message + ' received from the parent thread!');
-        parentPort.postMessage('pong');
-    });
+const { workerData, parentPort } = require('worker_threads');
+
+parentPort.postMessage({ fileName: workerData, status: 'Done' });
+//app.jsconst { Worker } = require('worker_threads');
+
+function runService(workerData) {
+    return new Promise((resolve, reject) => {
+        const worker = new Worker('./worker.js', { workerData });
+        worker.on('message', resolve);
+        worker.on('error', reject);
+        worker.on('exit', (code) => {
+            if (code !== 0) {
+                reject(new Error("Stopped the Worker Thread with the exit code: ${ code }"));
+            }
+        });
+    };  
 }
+
+async function run() {
+    const result = await runService('GeeksForGeeks');
+    console.log(result);
+}
+
+run().catch(err => console.error(err));
 
 app.post('/webhook', (req, res) => {
     let body = req.body;
