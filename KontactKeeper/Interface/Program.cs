@@ -40,7 +40,7 @@ namespace Interface
                 {
 
                     email.LastSeen = emailConf.RecieveActivity(email.Email);
-
+                    cn.UpdateEmailLastSeen(email.Email, email.LastSeen);
                 }
                 Thread.Sleep(2147483647);
             }
