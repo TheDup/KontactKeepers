@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data.SqlTypes;
+using System.Diagnostics;
 
 namespace DataAccess
 {
@@ -14,8 +15,8 @@ namespace DataAccess
     {
         SqlConnection conn;
         public DataHandler()
-        {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionstring"].ConnectionString);
+        {//ConfigurationManager.ConnectionStrings["connectionstring"].ConnectionString
+            conn = new SqlConnection("Data Source=localhost;Initial Catalog=Kontactkeeper;Integrated Security=True");
         }
         public DataTable Read(string table)
         {
@@ -106,8 +107,9 @@ namespace DataAccess
             }
         }
         /////////////////////////////////////////////////////////////////////////WAUSER///////////////////////////
-        public void AddWAUser(string phone, SqlDateTime lastseen)
+        public int AddWAUser(string phone, string lastseen)
         {
+            int res = 0;
             try
             {
                 if (conn.State != ConnectionState.Open)
@@ -115,7 +117,7 @@ namespace DataAccess
                     conn.Open();
                     string query = string.Format("INSERT INTO tblWAUser (Phone, LastSeen) VALUES ('{0}','{1}')", phone, lastseen);
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.ExecuteNonQuery();
+                    res = cmd.ExecuteNonQuery();
                 }
             }
             catch (SqlException sqlex)
@@ -133,10 +135,12 @@ namespace DataAccess
                     conn.Close();
                 }
             }
+            return res;
         }
 
-        public void DeleteWAUser(string phone)
+        public int DeleteWAUser(string phone)
         {
+            int res = 0;
             try
             {
                 if (conn.State != ConnectionState.Open)
@@ -144,7 +148,7 @@ namespace DataAccess
                     conn.Open();
                     string query = string.Format("delete from tblWAUser where Phone = {0}", phone);
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.ExecuteNonQuery();
+                    res = cmd.ExecuteNonQuery();
                 }
             }
             catch (SqlException sqlex)
@@ -162,6 +166,7 @@ namespace DataAccess
                     conn.Close();
                 }
             }
+            return res;
         }
         /////////////////////////////////////////////////////////////////////////ADMIN///////////////////////////
         public void AddAdmin(string fname, string lname, string uname, string password)

@@ -1,0 +1,3 @@
+C:\Repo\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.njsprojAssemblyReference.cache
+C:\Repo\KontactKeepers\KontactKeeper\FacebookAPI\obj\Debug\FacebookAPI.njsproj.CoreCompileInputs.cache
+C:\Repo\KontactKeepers\KontactKeeper\FacebookAPI\bin\Microsoft.NodejsTools.WebRole.dll

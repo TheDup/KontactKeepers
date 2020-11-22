@@ -1,0 +1,9 @@
+C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Release\BusinessLogic.dll
+C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Release\BusinessLogic.pdb
+C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Release\DataAccess.dll
+C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Release\DataAccess.pdb
+C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\obj\Release\BusinessLogic.csprojAssemblyReference.cache
+C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\obj\Release\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\obj\Release\BusinessLogic.csproj.CopyComplete
+C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\obj\Release\BusinessLogic.dll
+C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\obj\Release\BusinessLogic.pdb

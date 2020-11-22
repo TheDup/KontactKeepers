@@ -16,15 +16,15 @@ namespace BusinessLogic
             get { return cellnumber; }
             set { cellnumber = value; }
         }
-        private SqlDateTime lastseen;
+        private string lastseen;
 
-        public SqlDateTime LastSeen
+        public string LastSeen
         {
             get { return lastseen; }
             set { lastseen = value; }
         }
 
-        public WAUser(string cellnumber, SqlDateTime lastseen)
+        public WAUser(string cellnumber, string lastseen)
         {
             this.cellnumber = cellnumber;
             this.lastseen = lastseen;

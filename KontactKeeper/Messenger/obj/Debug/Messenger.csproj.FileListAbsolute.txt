@@ -51,7 +51,6 @@ C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\roslyn\vbc.rsp
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\roslyn\VBCSCompiler.exe
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\roslyn\VBCSCompiler.exe.config
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\Antlr3.Runtime.dll
-C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\BusinessLogic.dll
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\Microsoft.IdentityModel.Logging.dll
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\Microsoft.IdentityModel.Tokens.dll
@@ -70,8 +69,6 @@ C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\Twilio.AspNet.Mvc.dll
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\Twilio.dll
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\WebGrease.dll
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\WhatsappAPI.dll
-C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\DataAccess.dll
-C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\BusinessLogic.pdb
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\WhatsappAPI.pdb
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\WhatsappAPI.dll.config
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\Microsoft.IdentityModel.Tokens.xml
@@ -87,9 +84,15 @@ C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\Newtonsoft.Json.xml
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\Twilio.xml
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\Antlr3.Runtime.pdb
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\DataAccess.pdb
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\obj\Debug\Messenger.csprojAssemblyReference.cache
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\obj\Debug\Messenger.csproj.CoreCompileInputs.cache
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\obj\Debug\Messenger.csproj.CopyComplete
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\obj\Debug\Messenger.dll
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\obj\Debug\Messenger.pdb
+C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\BusinessLogic.dll
+C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\DataAccess.dll
+C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\BusinessLogic.pdb
+C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\DataAccess.pdb
+C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\WindowsFormsApp1.exe
+C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\WindowsFormsApp1.pdb
+C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\WindowsFormsApp1.exe.config

@@ -1,0 +1,6 @@
+C:\Repo\KontactKeepers\KontactKeeper\DataAccess\bin\Release\DataAccess.dll
+C:\Repo\KontactKeepers\KontactKeeper\DataAccess\bin\Release\DataAccess.pdb
+C:\Repo\KontactKeepers\KontactKeeper\DataAccess\obj\Release\DataAccess.csprojAssemblyReference.cache
+C:\Repo\KontactKeepers\KontactKeeper\DataAccess\obj\Release\DataAccess.csproj.CoreCompileInputs.cache
+C:\Repo\KontactKeepers\KontactKeeper\DataAccess\obj\Release\DataAccess.dll
+C:\Repo\KontactKeepers\KontactKeeper\DataAccess\obj\Release\DataAccess.pdb

@@ -18,6 +18,11 @@ namespace Interface
             InitializeComponent();
         }
 
+        public void Messg(string err)
+        {
+            MessageBox.Show(err);
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             bool check = false;

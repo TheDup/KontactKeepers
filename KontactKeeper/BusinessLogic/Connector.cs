@@ -68,24 +68,23 @@ namespace BusinessLogic
         public List<WAUser> GetWAUsers()
         {
             DataHandler dh = new DataHandler();
-            DataTable dt = dh.Read("tblWAUsers");
+            DataTable dt = dh.Read("tblWAUser");
             List<WAUser> users = new List<WAUser>();
             foreach (DataRow row in dt.Rows)
             {
-                users.Add(new WAUser(row[1].ToString(), SqlDateTime.Parse(row[2].ToString())));
+                users.Add(new WAUser(row[1].ToString(), row[2].ToString()));
             }
             return users;
         }
-        public void AddWAUser(string phone, SqlDateTime lastseen)
+        public int AddWAUser(string phone, string lastseen)
         {
             DataHandler dh = new DataHandler();
-            dh.AddWAUser(phone, lastseen);
+            return dh.AddWAUser(phone, lastseen);
         }
-        public void UpdateWALastSeen(string phone, SqlDateTime lastseen)
+        public int UpdateWALastSeen(string phone, string lastseen)
         {
             DataHandler dh = new DataHandler();
-            dh.DeleteWAUser(phone);
-            dh.AddWAUser(phone, lastseen);
+            return dh.DeleteWAUser(phone) + dh.AddWAUser(phone, lastseen);
         }
         //////////////////////////////////////////////////ENDUSERS///////////////////////////////
         public List<EndUser> GetEndUsers()

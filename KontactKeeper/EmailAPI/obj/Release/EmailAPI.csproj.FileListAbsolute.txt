@@ -1,0 +1,15 @@
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\bin\Release\EmailAPI.dll
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\bin\Release\EmailAPI.pdb
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\bin\Release\BouncyCastle.Crypto.dll
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\bin\Release\MailKit.dll
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\bin\Release\MimeKit.dll
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\bin\Release\BouncyCastle.Crypto.xml
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\bin\Release\MailKit.pdb
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\bin\Release\MailKit.xml
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\bin\Release\MimeKit.pdb
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\bin\Release\MimeKit.xml
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\obj\Release\EmailAPI.csprojAssemblyReference.cache
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\obj\Release\EmailAPI.csproj.CoreCompileInputs.cache
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\obj\Release\EmailAPI.csproj.CopyComplete
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\obj\Release\EmailAPI.dll
+C:\Repo\KontactKeepers\KontactKeeper\EmailAPI\obj\Release\EmailAPI.pdb

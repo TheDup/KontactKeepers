@@ -1,0 +1,17 @@
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\bin\Release\WhatsappAPI.dll.config
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\bin\Release\WhatsappAPI.dll
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\bin\Release\WhatsappAPI.pdb
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\bin\Release\Microsoft.IdentityModel.Logging.dll
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\bin\Release\Microsoft.IdentityModel.Tokens.dll
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\bin\Release\Newtonsoft.Json.dll
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\bin\Release\System.IdentityModel.Tokens.Jwt.dll
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\bin\Release\Twilio.dll
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\bin\Release\Microsoft.IdentityModel.Tokens.xml
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\bin\Release\Newtonsoft.Json.xml
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\bin\Release\System.IdentityModel.Tokens.Jwt.xml
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\bin\Release\Twilio.xml
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\obj\Release\WhatsappAPI.csprojAssemblyReference.cache
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\obj\Release\WhatsappAPI.csproj.CoreCompileInputs.cache
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\obj\Release\WhatsappAPI.csproj.CopyComplete
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\obj\Release\WhatsappAPI.dll
+C:\Repo\KontactKeepers\KontactKeeper\WhatsappAPI\obj\Release\WhatsappAPI.pdb
