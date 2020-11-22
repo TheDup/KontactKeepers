@@ -11,7 +11,7 @@ app.post('/webhook', (req, res) => {
     if (body.object === 'page') {
         body.entry.forEach(function (entry) {
             let sender = entry.messaging[0].sender.id;
-
+            console.log(sender);
             const sql = require('mssql/msnodesqlv8')
             const pool = new sql.ConnectionPool({
                 database: 'Kontactkeeper',

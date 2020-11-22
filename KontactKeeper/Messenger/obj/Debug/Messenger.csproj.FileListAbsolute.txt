@@ -93,6 +93,3 @@ C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\BusinessLogic.dll
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\DataAccess.dll
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\BusinessLogic.pdb
 C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\DataAccess.pdb
-C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\WindowsFormsApp1.exe
-C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\WindowsFormsApp1.pdb
-C:\Repo\KontactKeepers\KontactKeeper\Messenger\bin\WindowsFormsApp1.exe.config

@@ -55,6 +55,3 @@ C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\BusinessLogic.pdb
 C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\DataAccess.dll
 C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\DataAccess.pdb
 C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
-C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\WindowsFormsApp1.exe
-C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\WindowsFormsApp1.pdb
-C:\Repo\KontactKeepers\KontactKeeper\BusinessLogic\bin\Debug\WindowsFormsApp1.exe.config
