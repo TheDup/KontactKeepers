@@ -8,9 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KontactKeepers
+namespace EmailAPI
 {
     // Should be public?
+
     public class EmailConf
     {
         private string emailAddressUName = "KontactKeeper@campus-kiosk.co.za";
@@ -31,6 +32,14 @@ namespace KontactKeepers
 
         public EmailConf()
         {
+        }
+
+        public void EmailTheseUsers(List<string> eusrs)
+        {
+            foreach (string euser in eusrs)
+            {
+                SendActivityEmail(euser);
+            }
         }
 
         public void SendActivityEmail(string destAddress)

@@ -200,7 +200,7 @@ namespace Interface
             Connector cn = new Connector();
             cn.AddAdmin(txtAFName.Text, txtALname.Text, txtAUname.Text, txtAPassword.Text);
             refresh();
-            KontactKeepers.EmailConf ec = new KontactKeepers.EmailConf();
+            EmailAPI.EmailConf ec = new EmailAPI.EmailConf();
             if (txtEEmail.Text.Length > 1)
             {
                 ec.SendActivityEmail(txtEEmail.Text);
@@ -218,7 +218,7 @@ namespace Interface
             Connector cn = new Connector();
             cn.UpdateAdmin(txtAAdminID.Text, txtAFName.Text, txtALname.Text, txtAUname.Text, txtAPassword.Text);
             refresh();
-            KontactKeepers.EmailConf ec = new KontactKeepers.EmailConf();
+            EmailAPI.EmailConf ec = new EmailAPI.EmailConf();
             if (txtEEmail.Text.Length > 1)
             {
                 ec.SendActivityEmail(txtEEmail.Text);
@@ -230,7 +230,7 @@ namespace Interface
             Connector cn = new Connector();
             cn.AddCallAgent(txtCFName.Text, txtCLName.Text, txtCUserName.Text, txtCPassword.Text, int.Parse(txtCTotalHours.Text), txtCAgentEXT.Text, txtCAVG.Text, int.Parse(txtCTotalCalls.Text), int.Parse(txtCPerformance.Text));
             refresh();
-            KontactKeepers.EmailConf ec = new KontactKeepers.EmailConf();
+            EmailAPI.EmailConf ec = new EmailAPI.EmailConf();
             if (txtEEmail.Text.Length > 1)
             {
                 ec.SendActivityEmail(txtEEmail.Text);
@@ -249,7 +249,7 @@ namespace Interface
             Connector cn = new Connector();
             cn.UpdateCallAgent(int.Parse(txtCID.Text), txtCFName.Text, txtCLName.Text, txtCUserName.Text, txtCPassword.Text, int.Parse(txtCTotalHours.Text), txtCAgentEXT.Text, txtCAVG.Text, int.Parse(txtCTotalCalls.Text), int.Parse(txtCPerformance.Text));
             refresh();
-            KontactKeepers.EmailConf ec = new KontactKeepers.EmailConf();
+            EmailAPI.EmailConf ec = new EmailAPI.EmailConf();
             if (txtEEmail.Text.Length > 1)
             {
                 ec.SendActivityEmail(txtEEmail.Text);
@@ -261,7 +261,7 @@ namespace Interface
             Connector cn = new Connector();
             cn.AddEndUser(txtEFName.Text, txtELName.Text, txtEUName.Text, txtEPassword.Text, txtECell.Text, false, txtEEmail.Text, false, txtEFBID.Text, false);
             refresh();
-            KontactKeepers.EmailConf ec = new KontactKeepers.EmailConf();
+            EmailAPI.EmailConf ec = new EmailAPI.EmailConf();
             if (txtEEmail.Text.Length > 1)
             {
                 ec.SendActivityEmail(txtEEmail.Text);
