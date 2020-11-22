@@ -41,6 +41,31 @@ namespace BusinessLogic
             DataHandler dh = new DataHandler();
             dh.DeleteAdmin(pidadmin);
         }
+
+        public List<Admin> SearchAdmin(string fname = "", string lname = "", string uname = "")
+        {
+            DataHandler dh = new DataHandler();
+            List<Admin> admins = new List<Admin>();
+            if (uname!="")
+            {
+                DataTable dt = dh.SearchAdmin(uname: uname);
+                foreach (DataRow row in dt.Rows)
+                    admins.Add(new Admin(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString()));
+            }
+            if (fname != "")
+            {
+                DataTable dt = dh.SearchAdmin(fname: fname);
+                foreach (DataRow row in dt.Rows)
+                    admins.Add(new Admin(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString()));
+            }
+            if (lname != "")
+            {
+                DataTable dt = dh.SearchAdmin(lname: lname);
+                foreach (DataRow row in dt.Rows)
+                    admins.Add(new Admin(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString()));
+            }
+            return admins;
+        }
         /////////////////////////////////////////FBUSERS////////////////////////////////////////////////////
         public List<FBUser> GetFBUsers()
         {
@@ -64,6 +89,25 @@ namespace BusinessLogic
             dh.DeleteFBUser(fbid);
             dh.AddFBUser(fbid, name, lastseen);
         }
+
+        public List<FBUser> SearchFBUser(string fbid = null,string name = null)
+        {
+            DataHandler dh = new DataHandler();
+            List<FBUser> users = new List<FBUser>();
+            if (name != null)
+            {
+                DataTable dt = dh.SearchFBUser(name: name);
+                foreach (DataRow row in dt.Rows)
+                    users.Add(new FBUser(row[1].ToString(), row[2].ToString(), SqlDateTime.Parse(row[3].ToString())));
+            }
+            if (fbid != null)
+            {
+                DataTable dt = dh.SearchFBUser(fbid: fbid);
+                foreach (DataRow row in dt.Rows)
+                    users.Add(new FBUser(row[1].ToString(), row[2].ToString(), SqlDateTime.Parse(row[3].ToString())));
+            }
+            return users;
+        }
         /////////////////////////////////////////WAUSERS////////////////////////////////////////////////////
         public List<WAUser> GetWAUsers()
         {
@@ -85,6 +129,21 @@ namespace BusinessLogic
         {
             DataHandler dh = new DataHandler();
             return dh.DeleteWAUser(phone) + dh.AddWAUser(phone, lastseen);
+        }
+
+        public List<WAUser> SearchWAUser(string phone = null)
+        {
+            DataHandler dh = new DataHandler();
+            List<WAUser> users = new List<WAUser>();
+            if (phone != null)
+            {
+                DataTable dt = dh.SearchWAUser(phone: phone);
+                foreach (DataRow row in dt.Rows)
+                {
+                    users.Add(new WAUser(row[1].ToString(), SqlDateTime.Parse(row[2].ToString())));
+                }
+            }
+            return users;
         }
         //////////////////////////////////////////////////ENDUSERS///////////////////////////////
         public List<EndUser> GetEndUsers()
@@ -114,6 +173,61 @@ namespace BusinessLogic
             DataHandler dh = new DataHandler();
             dh.DeleteEndUser(pidenduser);
         }
+
+        public List<EndUser> SearchEndUsers(string fbid = null, string fname = null, string lname = null, string uname = null, string cellnumber = null, string email = null)
+        {
+            DataHandler dh = new DataHandler();
+            List<EndUser> users = new List<EndUser>();
+            if (fbid != null)
+            {
+                DataTable dt = dh.SearchEndUser(fbid: fbid);
+                foreach (DataRow row in dt.Rows)
+                {
+                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                }
+            }
+            if (fname != null)
+            {
+                DataTable dt = dh.SearchEndUser(fname: fname);
+                foreach (DataRow row in dt.Rows)
+                {
+                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                }
+            }
+            if (lname != null)
+            {
+                DataTable dt = dh.SearchEndUser(lname: lname);
+                foreach (DataRow row in dt.Rows)
+                {
+                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                }
+            }
+            if (uname != null)
+            {
+                DataTable dt = dh.SearchEndUser(uname: uname);
+                foreach (DataRow row in dt.Rows)
+                {
+                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                }
+            }
+            if (cellnumber != null)
+            {
+                DataTable dt = dh.SearchEndUser(cellnumber: cellnumber);
+                foreach (DataRow row in dt.Rows)
+                {
+                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                }
+            }
+            if (email != null)
+            {
+                DataTable dt = dh.SearchEndUser(email: email);
+                foreach (DataRow row in dt.Rows)
+                {
+                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                }
+            }
+            return users;
+        }
         /////////////////////////////////////////////CALLAGENTS///////////////////////////////////
         public List<Agent> GetCallAgents()
         {
@@ -141,6 +255,53 @@ namespace BusinessLogic
         {
             DataHandler dh = new DataHandler();
             dh.DeleteCallAgent(pidagent);
+        }
+
+        public List<Agent> SearchAgent(string fname=null, string lname = null, string uname = null, int totalhours=0, int totalcalls=0)
+        {
+            DataHandler dh = new DataHandler();
+            List<Agent> agents = new List<Agent>();
+            if (fname != null)
+            {
+                DataTable dt = dh.SearchCallAgent(fname: fname);
+                foreach (DataRow row in dt.Rows)
+                {
+                    agents.Add(new Agent(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), int.Parse(row[5].ToString()), row[6].ToString(), row[7].ToString(), int.Parse(row[8].ToString()), int.Parse(row[9].ToString())));
+                }
+            }
+            if (lname != null)
+            {
+                DataTable dt = dh.SearchCallAgent(lname: lname);
+                foreach (DataRow row in dt.Rows)
+                {
+                    agents.Add(new Agent(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), int.Parse(row[5].ToString()), row[6].ToString(), row[7].ToString(), int.Parse(row[8].ToString()), int.Parse(row[9].ToString())));
+                }
+            }
+            if (uname != null)
+            {
+                DataTable dt = dh.SearchCallAgent(uname: uname);
+                foreach (DataRow row in dt.Rows)
+                {
+                    agents.Add(new Agent(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), int.Parse(row[5].ToString()), row[6].ToString(), row[7].ToString(), int.Parse(row[8].ToString()), int.Parse(row[9].ToString())));
+                }
+            }
+            if (totalhours != 0)
+            {
+                DataTable dt = dh.SearchCallAgent(totalHours: totalhours);
+                foreach (DataRow row in dt.Rows)
+                {
+                    agents.Add(new Agent(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), int.Parse(row[5].ToString()), row[6].ToString(), row[7].ToString(), int.Parse(row[8].ToString()), int.Parse(row[9].ToString())));
+                }
+            }
+            if (totalcalls != 0)
+            {
+                DataTable dt = dh.SearchCallAgent(totalCalls: totalcalls);
+                foreach (DataRow row in dt.Rows)
+                {
+                    agents.Add(new Agent(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), int.Parse(row[5].ToString()), row[6].ToString(), row[7].ToString(), int.Parse(row[8].ToString()), int.Parse(row[9].ToString())));
+                }
+            }
+            return agents;
         }
     }
 }
