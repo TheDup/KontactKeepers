@@ -77,6 +77,41 @@ namespace DataAccess
             }
         }
 
+        public DataTable SearchFBUser(string fbid = null, string name = null)
+        {
+            string query = "";
+            if (fbid != null & name == null)
+                query = string.Format("SELECT * FROM tblFBUser WHERE FBID='{0}'", fbid);
+            if (fbid == null & name != null)
+                query = string.Format("SELECT * FROM tblFBUser WHERE FBName='{0}''", name);
+            DataTable dt = new DataTable();
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    adapter.Fill(dt);
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return dt;
+        }
+
         public void DeleteFBUser(string id)
         {
             try
@@ -135,6 +170,39 @@ namespace DataAccess
             }
         }
 
+        public DataTable SearchWAUser(string phone=null)
+        {
+            string query = "";
+            if (phone != null)
+                query = string.Format("SELECT * FROM tblWAUser where Phone='{0}'", phone);
+            DataTable dt = new DataTable();
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    adapter.Fill(dt);
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return dt;
+        }
+
         public void DeleteWAUser(string phone)
         {
             try
@@ -191,6 +259,43 @@ namespace DataAccess
                     conn.Close();
                 }
             }
+        }
+
+        public DataTable SearchAdmin(string fname=null, string lname = null, string uname = null)
+        {
+            string query="";
+            if (fname != null & lname == null & uname == null)
+                query = string.Format("SELECT * FROM tblAdmin WHERE FName='{0}'", fname);
+            if (fname == null & lname != null & uname == null)
+                query = string.Format("SELECT * FROM tblAdmin WHERE LName='{0}'", lname);
+            if (fname == null & lname == null & uname != null)
+                query = string.Format("SELECT * FROM tblAdmin WHERE UName='{0}'", uname);
+            DataTable dt = new DataTable();
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    adapter.Fill(dt);
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return dt;
         }
 
         public void DeleteAdmin(string id)
@@ -252,6 +357,49 @@ namespace DataAccess
             }
         }
 
+        public DataTable SearchEndUser(string fbid=null, string fname=null, string lname = null, string uname = null, string cellnumber = null, string email = null)
+        {
+            string query = "";
+            if (fbid == null & fname == null & lname == null & uname != null & cellnumber == null & email == null)
+                query = string.Format("SELECT * FROM tblEndUser WHERE UName='{0}'", uname);
+            if (fbid == null & fname == null & lname != null & uname == null & cellnumber == null & email == null)
+                query = string.Format("SELECT * FROM tblEndUser WHERE LName='{0}'", lname);
+            if (fbid == null & fname != null & lname == null & uname == null & cellnumber == null & email == null)
+                query = string.Format("SELECT * FROM tblEndUser WHERE FName='{0}'", fname);
+            if (fbid == null & fname == null & lname == null & uname == null & cellnumber != null & email == null)
+                query = string.Format("SELECT * FROM tblEndUser WHERE Cellnumber='{0}'", cellnumber);
+            if (fbid == null & fname == null & lname == null & uname == null & cellnumber == null & email != null)
+                query = string.Format("SELECT * FROM tblEndUser WHERE Email='{0}'", email);
+            if (fbid != null & fname == null & lname == null & uname == null & cellnumber == null & email == null)
+                query = string.Format("SELECT * FROM tblEndUser WHERE FBID='{0}'", fbid);
+            DataTable dt = new DataTable();
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    adapter.Fill(dt);
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return dt;
+        }
+
         public void DeleteEndUser(string id)
         {
             try
@@ -309,6 +457,47 @@ namespace DataAccess
                     conn.Close();
                 }
             }
+        }
+
+        public DataTable SearchCallAgent(string fname=null, string lname = null, string uname = null, int totalHours = 0, int totalCalls = 0)
+        {
+            string query = "";
+            if (fname != null & lname == null & uname != null & totalCalls == 0 & totalHours == 0)
+                query = string.Format("SELECT * FROM tblCallAgent WHERE FName='{0}'", fname);
+            if (fname == null & lname != null & uname == null & totalCalls == 0 & totalHours == 0)
+                query = string.Format("SELECT * FROM tblCallAgent WHERE LName='{0}'", lname);
+            if (fname == null & lname == null & uname != null & totalCalls == 0 & totalHours == 0)
+                query = string.Format("SELECT * FROM tblCallAgent WHERE UName='{0}'", uname);
+            if (fname == null & lname == null & uname == null & totalCalls == 0 & totalHours != 0)
+                query = string.Format("SELECT * FROM tblCallAgent WHERE TotalHours='{0}'", totalHours);
+            if (fname == null & lname == null & uname == null & totalCalls != 0 & totalHours == 0)
+                query = string.Format("SELECT * FROM tblCallAgent WHERE TotalCalls='{0}'", totalCalls);
+            DataTable dt = new DataTable();
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    adapter.Fill(dt);
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return dt;
         }
 
         public void DeleteCallAgent(string id)

@@ -282,5 +282,75 @@ namespace Interface
             cn.UpdateEndUser(txtEID.Text, txtEFName.Text, txtELName.Text, txtEUName.Text, txtEPassword.Text, txtECell.Text, false, txtEEmail.Text, false, txtEFBID.Text, false);
             refresh();
         }
+
+        private void btnESearch_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+            BindingSource BsEUser = new BindingSource();
+            BsEUser.DataSource = cn.SearchEndUsers(txtEFBID.Text, txtEFName.Text, txtELName.Text, txtEUName.Text, txtECell.Text, txtEEmail.Text);
+            dgvEndUser.DataSource = BsEUser;
+            txtEID.DataBindings.Clear();
+            txtEID.DataBindings.Add(new Binding("Text", BsEUser, "pidenduser"));
+            txtEFName.DataBindings.Clear();
+            txtEFName.DataBindings.Add(new Binding("Text", BsEUser, "fname"));
+            txtELName.DataBindings.Clear();
+            txtELName.DataBindings.Add(new Binding("Text", BsEUser, "lname"));
+            txtEUName.DataBindings.Clear();
+            txtEUName.DataBindings.Add(new Binding("Text", BsEUser, "uname"));
+            txtEPassword.DataBindings.Clear();
+            txtEPassword.DataBindings.Add(new Binding("Text", BsEUser, "password"));
+            txtECell.DataBindings.Clear();
+            txtECell.DataBindings.Add(new Binding("Text", BsEUser, "cellnumber"));
+            txtEEmail.DataBindings.Clear();
+            txtEEmail.DataBindings.Add(new Binding("Text", BsEUser, "email"));
+            txtEFBID.DataBindings.Clear();
+            txtEFBID.DataBindings.Add(new Binding("Text", BsEUser, "fbid"));
+        }
+
+        private void btnCSearch_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+            BindingSource BsAgent = new BindingSource();
+            BsAgent.DataSource = cn.SearchAgent(txtCFName.Text, txtCLName.Text, txtCUserName.Text, int.Parse(txtCTotalHours.Text), int.Parse(txtCTotalCalls.Text));
+            dgvCallAgent.DataSource = BsAgent;
+            txtCID.DataBindings.Clear();
+            txtCID.DataBindings.Add(new Binding("Text", BsAgent, "pidagent"));
+            txtCFName.DataBindings.Clear();
+            txtCFName.DataBindings.Add(new Binding("Text", BsAgent, "fname"));
+            txtCLName.DataBindings.Clear();
+            txtCLName.DataBindings.Add(new Binding("Text", BsAgent, "lname"));
+            txtCUserName.DataBindings.Clear();
+            txtCUserName.DataBindings.Add(new Binding("Text", BsAgent, "uname"));
+            txtCPassword.DataBindings.Clear();
+            txtCPassword.DataBindings.Add(new Binding("Text", BsAgent, "password"));
+            txtCTotalCalls.DataBindings.Clear();
+            txtCTotalCalls.DataBindings.Add(new Binding("Text", BsAgent, "totalcalls"));
+            txtCAgentEXT.DataBindings.Clear();
+            txtCAgentEXT.DataBindings.Add(new Binding("Text", BsAgent, "agentext"));
+            txtCAVG.DataBindings.Clear();
+            txtCAVG.DataBindings.Add(new Binding("Text", BsAgent, "avgcalllength"));
+            txtCTotalHours.DataBindings.Clear();
+            txtCTotalHours.DataBindings.Add(new Binding("Text", BsAgent, "totalhours"));
+            txtCPerformance.DataBindings.Clear();
+            txtCPerformance.DataBindings.Add(new Binding("Text", BsAgent, "performancescore"));
+        }
+
+        private void btnASearch_Click(object sender, EventArgs e)
+        {
+            Connector cn = new Connector();
+            BindingSource BsAdmin = new BindingSource();
+            BsAdmin.DataSource = cn.SearchAdmin(txtAFName.Text, txtALname.Text, txtAUname.Text);
+            dgvAdmin.DataSource = BsAdmin;
+            txtAAdminID.DataBindings.Clear();
+            txtAAdminID.DataBindings.Add(new Binding("Text", BsAdmin, "pidadmin"));
+            txtAFName.DataBindings.Clear();
+            txtAFName.DataBindings.Add(new Binding("Text", BsAdmin, "fname"));
+            txtALname.DataBindings.Clear();
+            txtALname.DataBindings.Add(new Binding("Text", BsAdmin, "lname"));
+            txtAUname.DataBindings.Clear();
+            txtAUname.DataBindings.Add(new Binding("Text", BsAdmin, "uname"));
+            txtAPassword.DataBindings.Clear();
+            txtAPassword.DataBindings.Add(new Binding("Text", BsAdmin, "password"));
+        }
     }
 }

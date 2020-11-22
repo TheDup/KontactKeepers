@@ -271,6 +271,7 @@
             this.btnASearch.TabIndex = 21;
             this.btnASearch.Text = "Search";
             this.btnASearch.UseVisualStyleBackColor = true;
+            this.btnASearch.Click += new System.EventHandler(this.btnASearch_Click);
             // 
             // label9
             // 
@@ -509,6 +510,7 @@
             this.btnCSearch.TabIndex = 38;
             this.btnCSearch.Text = "Search";
             this.btnCSearch.UseVisualStyleBackColor = true;
+            this.btnCSearch.Click += new System.EventHandler(this.btnCSearch_Click);
             // 
             // label13
             // 
@@ -748,6 +750,7 @@
             this.btnESearch.TabIndex = 38;
             this.btnESearch.Text = "Search";
             this.btnESearch.UseVisualStyleBackColor = true;
+            this.btnESearch.Click += new System.EventHandler(this.btnESearch_Click);
             // 
             // label7
             // 
@@ -956,10 +959,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(584, 561);
-            this.Controls.Add(this.panEndUsers);
-            this.Controls.Add(this.panCallAgents);
-            this.Controls.Add(this.panHome);
             this.Controls.Add(this.panAdmins);
+            this.Controls.Add(this.panCallAgents);
+            this.Controls.Add(this.panEndUsers);
+            this.Controls.Add(this.panHome);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.panButtons);
