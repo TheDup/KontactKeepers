@@ -17,15 +17,15 @@ namespace BusinessLogic
             set { email = value; }
         }
 
-        private DateTime lastseen;
+        private string lastseen;
 
-        public DateTime LastSeen
+        public string LastSeen
         {
             get { return lastseen; }
             set { lastseen = value; }
         }
 
-        public EmailUser(string email, DateTime lastseen)
+        public EmailUser(string email, string lastseen)
         {
             this.email = email;
             this.lastseen = lastseen;

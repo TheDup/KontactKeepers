@@ -231,8 +231,99 @@ namespace DataAccess
                 }
             }
         }
-        /////////////////////////////////////////////////////////////////////////ADMIN///////////////////////////
-        public void AddAdmin(string fname, string lname, string uname, string password)
+        //////////////////////////////////////////////////////EmailUser/////////////////////////////////////////
+        public void AddEmailUser(string email, string lastseen)
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                    string query = string.Format("INSERT INTO tblEmailUser(Email, LastSeen) VALUES ('{0}','{1}')", email, lastseen);
+        SqlCommand cmd = new SqlCommand(query, conn);
+        cmd.ExecuteNonQuery();
+                }
+            }
+                        catch (SqlException sqlex)
+            {
+                Console.WriteLine(sqlex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public DataTable SearchEmailUser(string email = null)
+{
+    string query = "";
+    if (email != null)
+        query = string.Format("SELECT * FROM tblEmailUser where Email='{0}'", email);
+    DataTable dt = new DataTable();
+    try
+    {
+        if (conn.State != ConnectionState.Open)
+        {
+            conn.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+            adapter.Fill(dt);
+        }
+    }
+    catch (SqlException sqlex)
+    {
+        Console.WriteLine(sqlex.Message);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+    finally
+    {
+        if (conn.State == ConnectionState.Open)
+        {
+            conn.Close();
+        }
+    }
+    return dt;
+}
+
+public void DeleteEmailUser(string email)
+{
+    try
+    {
+        if (conn.State != ConnectionState.Open)
+        {
+            conn.Open();
+            string query = string.Format("delete from tblEmailUser where Email = {0}", email);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+        }
+    }
+    catch (SqlException sqlex)
+    {
+        Console.WriteLine(sqlex.Message);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+    finally
+    {
+        if (conn.State == ConnectionState.Open)
+        {
+            conn.Close();
+        }
+    }
+}
+/////////////////////////////////////////////////////////////////////////ADMIN///////////////////////////
+public void AddAdmin(string fname, string lname, string uname, string password)
         {
             try
             {

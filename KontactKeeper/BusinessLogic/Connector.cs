@@ -146,8 +146,46 @@ namespace BusinessLogic
             }
             return users;
         }
+        //////////////////////////////////////////////////EMAILUSER//////////////////////////////
+        public List<EmailUser> GetEmailUsers()
+        {
+            DataHandler dh = new DataHandler();
+            DataTable dt = dh.Read("tblEmailUser");
+            List<EmailUser> users = new List<EmailUser>();
+            foreach (DataRow row in dt.Rows)
+            {
+                users.Add(new EmailUser(row[1].ToString(), row[2].ToString()));
+            }
+            return users;
+        }
+        public void AddEmailUser(string email, string lastseen)
+        {
+            DataHandler dh = new DataHandler();
+            dh.AddWAUser(email, lastseen);
+        }
+        public void UpdateEmailLastSeen(string email, string lastseen)
+        {
+            DataHandler dh = new DataHandler();
+            dh.DeleteEmailUser(email);
+            dh.AddEmailUser(email, lastseen);
+        }
+
+        public List<EmailUser> SearchEmailUser(string phone = null)
+        {
+            DataHandler dh = new DataHandler();
+            List<EmailUser> users = new List<EmailUser>();
+            if (phone != null)
+            {
+                DataTable dt = dh.SearchEmailUser(email: email);
+                foreach (DataRow row in dt.Rows)
+                {
+                    users.Add(new EmailUser(row[1].ToString(), row[2].ToString()));
+                }
+            }
+            return users;
+        }
         //////////////////////////////////////////////////ENDUSERS///////////////////////////////
-        public List<EndUser> GetEndUsers()
+            public List<EndUser> GetEndUsers()
         {
             DataHandler dh = new DataHandler();
             DataTable dt = dh.Read("tblEndUser");
