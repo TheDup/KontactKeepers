@@ -419,14 +419,14 @@ public void AddAdmin(string fname, string lname, string uname, string password)
         }
 
         /////////////////////////////////////////////////////////////////////////ENDUSER///////////////////////////
-        public void AddEndUser(string fname, string lname, string uname, string password, string cellnumber, bool waverified, string email, bool emailverified, string fbid, bool fbverified)
+        public void AddEndUser(string fname, string lname, string uname, string password, string cellnumber, string email,  string fbid)
         {
             try
             {
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
-                    string query = string.Format("INSERT INTO tblEndUser (FName, LName, UName, Password, Cellnumber, WAVerified, Email, EmailVerified, FBID, FBVerified) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", fname, lname, uname, password, cellnumber, waverified.ToString(), email, emailverified.ToString(), fbid, fbverified.ToString());
+                    string query = string.Format("INSERT INTO tblEndUser (FName, LName, UName, Password, Cellnumber, Email, FBID) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", fname, lname, uname, password, cellnumber, email, fbid);
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                 }

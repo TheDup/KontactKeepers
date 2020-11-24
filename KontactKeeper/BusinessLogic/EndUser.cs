@@ -51,26 +51,12 @@ namespace BusinessLogic
 			get { return cellnumber; }
 			set { cellnumber = value; }
 		}
-		private bool waverified;
-
-		public bool WAVerified
-		{
-			get { return waverified; }
-			set { waverified = value; }
-		}
 		private string email;
 
 		public string Email
 		{
 			get { return email; }
 			set { email = value; }
-		}
-		private bool emailverified;
-
-		public bool EmailVerified
-		{
-			get { return emailverified; }
-			set { emailverified = value; }
 		}
 		private string fbid;
 
@@ -80,16 +66,7 @@ namespace BusinessLogic
 			set { fbid = value; }
 		}
 
-		private bool fbverified;
-
-		public bool FBVerified
-		{
-			get { return fbverified; }
-			set { fbverified = value; }
-		}
-
-
-		public EndUser(int pidenduser, string fname, string lname, string uname, string password, string cellnumber, bool waverified, string email, bool emailverified, string fbid, bool fbverified)
+		public EndUser(int pidenduser, string fname, string lname, string uname, string password, string cellnumber,  string email,  string fbid)
 		{
 			this.pidenduser = pidenduser;
 			this.fname = fname;
@@ -97,11 +74,8 @@ namespace BusinessLogic
 			this.uname = uname;
 			this.password = password;
 			this.cellnumber = cellnumber;
-			this.waverified = waverified;
 			this.email = email;
-			this.emailverified = emailverified;
 			this.fbid = fbid;
-			this.fbverified = fbverified;
 		}
 	}
 }

@@ -34,21 +34,15 @@ namespace EmailAPI
         {
         }
 
-        public void EmailTheseUsers(List<string> eusrs)
-        {
-            foreach (string euser in eusrs)
-            {
-                SendActivityEmail(euser);
-            }
-        }
-
-        public void SendActivityEmail(string destAddress)
+        
+        public void SendEmail(string destAddress, string message)
         {
             var messageToSend = new MimeMessage();
 
             messageToSend.Subject = "Account activity";
             BodyBuilder bb = new BodyBuilder();
-            bb.HtmlBody = File.ReadAllText("index.html");
+            //bb.HtmlBody = File.ReadAllText("index.html");
+            bb.TextBody = message;
             messageToSend.Body = bb.ToMessageBody();
             messageToSend.From.Add(new MailboxAddress("KontactKeeper", emailAddressUName));
             messageToSend.To.Add(new MailboxAddress("Client", destAddress));
@@ -115,7 +109,14 @@ namespace EmailAPI
 
             string[][] activityA = activityL.ToArray();
             QuickSort(activityA, activityA.Length - 1, 0);
-            return activityA[activityA.Length - 1][1];
+            if (activityA.Length >= 1)
+            {
+                return activityA[activityA.Length - 1][1];
+            }
+            else
+            {
+                return "empty";
+            }
         }
     }
 }

@@ -34,16 +34,23 @@ namespace Interface
             EmailConf emailConf = new EmailConf();
             while(true)
             {
-
                 Connector cn = new Connector();
-                //List<EmailUser> emailClients =cn.
-                List<EndUser> enusers= cn.GetEndUsers();
-                List<EmailUser> emails = cn.GetEmailUsers();
-                foreach (EmailUser email in emails)
+                List<EndUser> endusers = cn.GetEndUsers();
+                List<EmailUser> emailusers = cn.GetEmailUsers();
+                
+                foreach (EndUser enduser in endusers)
                 {
-
-                    email.LastSeen = emailConf.RecieveActivity(email.Email);
-                    cn.UpdateEmailLastSeen(email.Email, email.LastSeen, email.LastSent);
+                    string lastseen = emailConf.RecieveActivity(enduser.Email);
+                    if (lastseen != "empty")
+                    {
+                        foreach (EmailUser emuser in emailusers)
+                        {
+                            if (enduser.Email == emuser.Email)
+                            {
+                                cn.UpdateEmailLastSeen(emuser.Email, lastseen, DateTime.Now.ToString());
+                            }
+                        }
+                    }
                 }
                 Thread.Sleep(2147483647);
             }
@@ -51,19 +58,17 @@ namespace Interface
         public static void tmethB()
         {
             Connector cn = new Connector();
-            List<EndUser> users = cn.GetEndUsers();
-            //email
             EmailConf em = new EmailConf();
-            //whatsapp
             WAConf wa = new WAConf();
-            //facebook
-            Messenger ms = new Messenger();
+            Messenger fb = new Messenger();
 
+            List<EndUser> users = cn.GetEndUsers();
             List<WAUser> wausers = cn.GetWAUsers();
             List<EmailUser> emusers = cn.GetEmailUsers();
             List<FBUser> fbusers = cn.GetFBUsers();
 
-            //datediff
+            string verifymessage = "Greetings, Please reply YES to confirm that you are still using this {0}. If any of your contact details have changed, please update it on the KontactKeeper website at https://KontactKeeper.com/contactdetails";
+            string notifymessage = "Greetings, We haven't heard from you on {0} for a while, if your {1} have changed, please update it on the KontactKeeper website at https://KontactKeeper.com/contactdetails";
 
             foreach (EndUser user in users)
             {
@@ -71,42 +76,55 @@ namespace Interface
                 {
                     if (twa.CellNumber == user.CellNumber)
                     {
-                        DateTime current = DateTime.Now;
-                        if ((DateTime.Parse(twa.LastSent) - DateTime.Parse(twa.LastSeen)).TotalDays >= 90)
+                        DateTime now = DateTime.Now;
+                        if (((now - DateTime.Parse(twa.LastSeen)).TotalDays > 90) && ((now - DateTime.Parse(twa.LastSent)).TotalDays > 90))
                         {
-                            wa.SendMessage("Please reply YES to confirm activity", twa.CellNumber);
+                            string message = string.Format(notifymessage, "Whatsapp", "phone number");
+                            em.SendEmail(user.Email, message);
+                            fb.SendMessageAsync(user.FBID, message);
+                        }
+                        else if ((now - DateTime.Parse(twa.LastSent)).TotalDays > 90)
+                        {
+                            wa.SendMessage(twa.CellNumber, string.Format(verifymessage, "phone number"));
                         }
                     }
-
                 }
+
                 foreach (EmailUser tem in emusers)
                 {
-                    if (true)
+                    if (tem.Email == user.Email)
                     {
-                        DateTime current = DateTime.Now;
-                        if ((DateTime.Parse(tem.LastSent) - DateTime.Parse(tem.LastSeen)).TotalDays >= 90)
+                        DateTime now = DateTime.Now;
+                        if (((now - DateTime.Parse(tem.LastSeen)).TotalDays > 90) && ((now - DateTime.Parse(tem.LastSent)).TotalDays > 90))
                         {
-                            em.SendActivityEmail(tem.Email);
+                            string message = string.Format(notifymessage, "Email", "email address");
+                            wa.SendMessage(user.CellNumber, message);
+                            fb.SendMessageAsync(user.FBID, message);
+                        }
+                        else if ((now - DateTime.Parse(tem.LastSent)).TotalDays > 90)
+                        {
+                            em.SendEmail(tem.Email, string.Format(verifymessage, "email address"));
                         }
                     }
-
                 }
+
                 foreach (FBUser tfb in fbusers)
                 {
-                    if (true)
+                    if (tfb.FBID == user.FBID)
                     {
-                        DateTime current = DateTime.Now;
-                        if ((DateTime.Parse(tfb.LastSent) - DateTime.Parse(tfb.LastSeen.ToString())).TotalDays >= 90)
+                        DateTime now = DateTime.Now;
+                        if (((now - (DateTime)(tfb.LastSeen)).TotalDays > 90) && ((now - DateTime.Parse(tfb.LastSent)).TotalDays > 90))
                         {
-                            ms.SendMessageAsync(tfb.FBID);
+                            string message = string.Format(notifymessage, "Facebook", "facebook id");
+                            em.SendEmail(user.Email, message);
+                            fb.SendMessageAsync(user.FBID, message);
+                        }
+                        else if ((now - DateTime.Parse(tfb.LastSent)).TotalDays > 90)
+                        {
+                            wa.SendMessage(tfb.FBID, string.Format(verifymessage, "facebook account"));
                         }
                     }
-
                 }
-
-                em.SendActivityEmail(user.Email);
-                wa.SendMessage("Please reply Yes to confirm activity" ,user.CellNumber);
-                ms.SendMessageAsync(user.FBID);
             }
         }
     }

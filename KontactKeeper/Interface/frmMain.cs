@@ -11,11 +11,18 @@ using System.Configuration;
 using BusinessLogic;
 using System.IO;
 using DataAccess;
+using EmailAPI;
+using WhatsappAPI;
+using FBSendAPI;
 
 namespace Interface
 {
     public partial class frmMain : Form
     {
+        Connector cn = new Connector();
+        Messenger fb = new Messenger();
+        WAConf wa = new WAConf();
+        EmailConf em = new EmailConf();
         public frmMain()
         {
             InitializeComponent();
@@ -28,10 +35,8 @@ namespace Interface
 
         public void refresh()
         {
-            Connector conn = new Connector();
-
             BindingSource BsAdmin = new BindingSource();
-            BsAdmin.DataSource = conn.GetAdmins();
+            BsAdmin.DataSource = cn.GetAdmins();
             dgvAdmin.DataSource = BsAdmin;
             txtAAdminID.DataBindings.Clear();
             txtAAdminID.DataBindings.Add(new Binding("Text", BsAdmin, "pidadmin"));
@@ -45,7 +50,7 @@ namespace Interface
             txtAPassword.DataBindings.Add(new Binding("Text", BsAdmin, "password"));
 
             BindingSource BsAgent = new BindingSource();
-            BsAgent.DataSource = conn.GetCallAgents();
+            BsAgent.DataSource = cn.GetCallAgents();
             dgvCallAgent.DataSource = BsAgent;
             txtCID.DataBindings.Clear();
             txtCID.DataBindings.Add(new Binding("Text", BsAgent, "pidagent"));
@@ -69,7 +74,7 @@ namespace Interface
             txtCPerformance.DataBindings.Add(new Binding("Text", BsAgent, "performancescore"));
 
             BindingSource BsEUser = new BindingSource();
-            BsEUser.DataSource = conn.GetEndUsers();
+            BsEUser.DataSource = cn.GetEndUsers();
             dgvEndUser.DataSource = BsEUser;
             txtEID.DataBindings.Clear();
             txtEID.DataBindings.Add(new Binding("Text", BsEUser, "pidenduser"));
@@ -197,94 +202,71 @@ namespace Interface
         }
         private void btnCAAdd_Click(object sender, EventArgs e)
         {
-            Connector cn = new Connector();
             cn.AddAdmin(txtAFName.Text, txtALname.Text, txtAUname.Text, txtAPassword.Text);
             refresh();
-            EmailAPI.EmailConf ec = new EmailAPI.EmailConf();
-            if (txtEEmail.Text.Length > 1)
-            {
-                ec.SendActivityEmail(txtEEmail.Text);
-            }
         }
         private void btnADelete_Click(object sender, EventArgs e)
         {
-            Connector cn = new Connector();
             cn.DeleteAdmin(txtAAdminID.Text);
             refresh();
         }
 
         private void btnAUpdate_Click(object sender, EventArgs e)
         {
-            Connector cn = new Connector();
             cn.UpdateAdmin(txtAAdminID.Text, txtAFName.Text, txtALname.Text, txtAUname.Text, txtAPassword.Text);
             refresh();
-            EmailAPI.EmailConf ec = new EmailAPI.EmailConf();
-            if (txtEEmail.Text.Length > 1)
-            {
-                ec.SendActivityEmail(txtEEmail.Text);
-            }
         }
 
         private void btnCAdd_Click(object sender, EventArgs e)
         {
-            Connector cn = new Connector();
             cn.AddCallAgent(txtCFName.Text, txtCLName.Text, txtCUserName.Text, txtCPassword.Text, int.Parse(txtCTotalHours.Text), txtCAgentEXT.Text, txtCAVG.Text, int.Parse(txtCTotalCalls.Text), int.Parse(txtCPerformance.Text));
             refresh();
-            EmailAPI.EmailConf ec = new EmailAPI.EmailConf();
-            if (txtEEmail.Text.Length > 1)
-            {
-                ec.SendActivityEmail(txtEEmail.Text);
-            }
         }
 
         private void btnCDelete_Click(object sender, EventArgs e)
         {
-            Connector cn = new Connector();
             cn.DeleteCallAgent(txtCID.Text);
             refresh();
         }
 
         private void btnCUpdate_Click(object sender, EventArgs e)
         {
-            Connector cn = new Connector();
             cn.UpdateCallAgent(int.Parse(txtCID.Text), txtCFName.Text, txtCLName.Text, txtCUserName.Text, txtCPassword.Text, int.Parse(txtCTotalHours.Text), txtCAgentEXT.Text, txtCAVG.Text, int.Parse(txtCTotalCalls.Text), int.Parse(txtCPerformance.Text));
             refresh();
-            EmailAPI.EmailConf ec = new EmailAPI.EmailConf();
-            if (txtEEmail.Text.Length > 1)
-            {
-                ec.SendActivityEmail(txtEEmail.Text);
-            }
         }
 
         private void btnEAdd_Click(object sender, EventArgs e)
         {
-            Connector cn = new Connector();
-            cn.AddEndUser(txtEFName.Text, txtELName.Text, txtEUName.Text, txtEPassword.Text, txtECell.Text, false, txtEEmail.Text, false, txtEFBID.Text, false);
+            cn.AddEndUser(txtEFName.Text, txtELName.Text, txtEUName.Text, txtEPassword.Text, txtECell.Text, txtEEmail.Text, txtEFBID.Text);
             refresh();
-            EmailAPI.EmailConf ec = new EmailAPI.EmailConf();
             if (txtEEmail.Text.Length > 1)
             {
-                ec.SendActivityEmail(txtEEmail.Text);
+                em.SendEmail(txtEEmail.Text, "Greetings from KontactKeeper. Thanks for registering! Please reply YES to verify this email");
+            }
+            if (txtECell.Text.Length >= 10 )
+            {
+                wa.SendMessage(txtECell.Text, "Greetings from KontactKeeper. Thanks for registering! Please reply YES to verify this Phone number");
+            }
+            if (txtEFBID.Text.Length >= 10)
+            {
+                fb.SendMessageAsync(txtEFBID.Text, "Greetings from KontactKeeper. Thanks for registering! Please reply YES to verify this Facebook account");
             }
         }
 
         private void btnEDelete_Click(object sender, EventArgs e)
         {
-            Connector cn = new Connector();
             cn.DeleteEndUser(txtEID.Text);
             refresh();
         }
 
         private void btnEUpdate_Click(object sender, EventArgs e)
         {
-            Connector cn = new Connector();
-            cn.UpdateEndUser(txtEID.Text, txtEFName.Text, txtELName.Text, txtEUName.Text, txtEPassword.Text, txtECell.Text, false, txtEEmail.Text, false, txtEFBID.Text, false);
+            cn.UpdateEndUser(txtEID.Text, txtEFName.Text, txtELName.Text, txtEUName.Text, txtEPassword.Text, txtECell.Text, txtEEmail.Text, txtEFBID.Text);
             refresh();
         }
 
         private void btnESearch_Click(object sender, EventArgs e)
         {
-            Connector cn = new Connector();
             BindingSource BsEUser = new BindingSource();
             BsEUser.DataSource = cn.SearchEndUsers(txtEFBID.Text, txtEFName.Text, txtELName.Text, txtEUName.Text, txtECell.Text, txtEEmail.Text);
             dgvEndUser.DataSource = BsEUser;
@@ -308,7 +290,6 @@ namespace Interface
 
         private void btnCSearch_Click(object sender, EventArgs e)
         {
-            Connector cn = new Connector();
             BindingSource BsAgent = new BindingSource();
             BsAgent.DataSource = cn.SearchAgent(txtCFName.Text, txtCLName.Text, txtCUserName.Text, int.Parse(txtCTotalHours.Text), int.Parse(txtCTotalCalls.Text));
             dgvCallAgent.DataSource = BsAgent;
@@ -336,7 +317,6 @@ namespace Interface
 
         private void btnASearch_Click(object sender, EventArgs e)
         {
-            Connector cn = new Connector();
             BindingSource BsAdmin = new BindingSource();
             BsAdmin.DataSource = cn.SearchAdmin(txtAFName.Text, txtALname.Text, txtAUname.Text);
             dgvAdmin.DataSource = BsAdmin;

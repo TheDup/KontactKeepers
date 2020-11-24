@@ -10,7 +10,7 @@ namespace FBSendAPI
 {
     public class Messenger
     {
-        public async Task SendMessageAsync(string fbid)
+        public async Task SendMessageAsync(string fbid, string message)
         {
             var payload = new Body
             {
@@ -20,7 +20,7 @@ namespace FBSendAPI
                 },
                 Mesage = new Message
                 {
-                    message_body = "Greetings, we haven't heard from you for a while, please reply YES to confirm thet you are still using this account"
+                    message_body = message
                 }
 
             };

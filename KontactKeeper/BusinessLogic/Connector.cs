@@ -11,10 +11,10 @@ namespace BusinessLogic
 {
     public class Connector
     {
+        DataHandler dh = new DataHandler();
         ///////////////////////////////////////ADMINS/////////////////////////////////////////////////////////
         public List<Admin> GetAdmins()
         {
-            DataHandler dh = new DataHandler();
             List<Admin> admins = new List<Admin>();
             DataTable dt = dh.Read("tblAdmin");
             foreach (DataRow row in dt.Rows)
@@ -25,26 +25,22 @@ namespace BusinessLogic
         }
         public void AddAdmin(string fname, string lname, string uname, string password)
         {
-            DataHandler dh = new DataHandler();
             dh.AddAdmin(fname, lname, uname, password);
         }
 
         public void UpdateAdmin(string pidadmin, string fname, string lname, string uname, string password)
         {
-            DataHandler dh = new DataHandler();
             dh.DeleteAdmin(pidadmin);
             dh.AddAdmin(fname, lname, uname, password);
         }
 
         public void DeleteAdmin(string pidadmin)
         {
-            DataHandler dh = new DataHandler();
             dh.DeleteAdmin(pidadmin);
         }
 
         public List<Admin> SearchAdmin(string fname = "", string lname = "", string uname = "")
         {
-            DataHandler dh = new DataHandler();
             List<Admin> admins = new List<Admin>();
             if (uname!="")
             {
@@ -69,7 +65,6 @@ namespace BusinessLogic
         /////////////////////////////////////////FBUSERS////////////////////////////////////////////////////
         public List<FBUser> GetFBUsers()
         {
-            DataHandler dh = new DataHandler();
             DataTable dt = dh.Read("tblFBUser");
             List<FBUser> users = new List<FBUser>();
             foreach (DataRow row in dt.Rows)
@@ -78,21 +73,19 @@ namespace BusinessLogic
             }
             return users;
         }
-        public void AddFBUser(string fbid, string name, SqlDateTime lastseen, string lastsent)
+        public void AddFBUser(string fbid, string name, SqlDateTime lastseen)
         {
-            DataHandler dh = new DataHandler();
-            dh.AddFBUser(fbid, name, lastseen, lastsent);
+            DateTime current = DateTime.Now;
+            dh.AddFBUser(fbid, name, lastseen, current.ToString());
         }
-        public void UpdateFBLastSeen(string fbid, string name, SqlDateTime lastseen, string lastsent)
+        public void UpdateFBUser(string fbid, string name, SqlDateTime lastseen, string lastsent)
         {
-            DataHandler dh = new DataHandler();
             dh.DeleteFBUser(fbid);
             dh.AddFBUser(fbid, name, lastseen, lastsent);
         }
 
         public List<FBUser> SearchFBUser(string fbid = null,string name = null)
         {
-            DataHandler dh = new DataHandler();
             List<FBUser> users = new List<FBUser>();
             if (name != null)
             {
@@ -111,7 +104,6 @@ namespace BusinessLogic
         /////////////////////////////////////////WAUSERS////////////////////////////////////////////////////
         public List<WAUser> GetWAUsers()
         {
-            DataHandler dh = new DataHandler();
             DataTable dt = dh.Read("tblWAUser");
             List<WAUser> users = new List<WAUser>();
             foreach (DataRow row in dt.Rows)
@@ -122,19 +114,16 @@ namespace BusinessLogic
         }
         public void AddWAUser(string phone, string lastseen, string lastsent)
         {
-            DataHandler dh = new DataHandler();
             dh.AddWAUser(phone, lastseen, lastsent);
         }
         public void UpdateWALastSeen(string phone, string lastseen, string lastsent)
         {
-            DataHandler dh = new DataHandler();
             dh.DeleteWAUser(phone);
             dh.AddWAUser(phone, lastseen, lastsent);
         }
 
         public List<WAUser> SearchWAUser(string phone = null)
         {
-            DataHandler dh = new DataHandler();
             List<WAUser> users = new List<WAUser>();
             if (phone != null)
             {
@@ -149,7 +138,6 @@ namespace BusinessLogic
         //////////////////////////////////////////////////EMAILUSER//////////////////////////////
         public List<EmailUser> GetEmailUsers()
         {
-            DataHandler dh = new DataHandler();
             DataTable dt = dh.Read("tblEmailUser");
             List<EmailUser> users = new List<EmailUser>();
             foreach (DataRow row in dt.Rows)
@@ -160,21 +148,18 @@ namespace BusinessLogic
         }
         public void AddEmailUser(string email, string lastseen, string lastsent)
         {
-            DataHandler dh = new DataHandler();
-            dh.AddWAUser(email, lastseen);
+            dh.AddEmailUser(email, lastseen, lastsent);
         }
         public void UpdateEmailLastSeen(string email, string lastseen, string lastsent)
         {
-            DataHandler dh = new DataHandler();
             dh.DeleteEmailUser(email);
             dh.AddEmailUser(email, lastseen, lastsent);
         }
 
-        public List<EmailUser> SearchEmailUser(string phone = null)
+        public List<EmailUser> SearchEmailUser(string email = null)
         {
-            DataHandler dh = new DataHandler();
             List<EmailUser> users = new List<EmailUser>();
-            if (phone != null)
+            if (email != null)
             {
                 DataTable dt = dh.SearchEmailUser(email: email);
                 foreach (DataRow row in dt.Rows)
@@ -185,44 +170,40 @@ namespace BusinessLogic
             return users;
         }
         //////////////////////////////////////////////////ENDUSERS///////////////////////////////
-            public List<EndUser> GetEndUsers()
+        public List<EndUser> GetEndUsers()
         {
-            DataHandler dh = new DataHandler();
             DataTable dt = dh.Read("tblEndUser");
             List<EndUser> users = new List<EndUser>();
             foreach (DataRow row in dt.Rows)
             {
-                users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), row[6].ToString(), row[7].ToString()));
             }
             return users;
         }
-        public void AddEndUser(string fname, string lname, string uname, string password, string cellnumber, bool waverified, string email, bool emailverified, string fbid, bool fbverified)
+        public void AddEndUser(string fname, string lname, string uname, string password, string cellnumber, string email, string fbid)
         {
-            DataHandler dh = new DataHandler();
-            dh.AddEndUser(fname, lname, uname, password, cellnumber, waverified, email, emailverified, fbid, fbverified);
+            dh.AddEndUser(fname, lname, uname, password, cellnumber, email, fbid);
+
         }
-        public void UpdateEndUser(string pidenduser, string fname, string lname, string uname, string password, string cellnumber, bool waverified, string email, bool emailverified, string fbid, bool fbverified)
+        public void UpdateEndUser(string pidenduser, string fname, string lname, string uname, string password, string cellnumber, string email, string fbid)
         {
-            DataHandler dh = new DataHandler();
             dh.DeleteEndUser(pidenduser);
-            dh.AddEndUser(fname, lname, uname, password, cellnumber, waverified, email, emailverified, fbid, fbverified);
+            dh.AddEndUser(fname, lname, uname, password, cellnumber, email, fbid);
         }
         public void DeleteEndUser(string pidenduser)
         {
-            DataHandler dh = new DataHandler();
             dh.DeleteEndUser(pidenduser);
         }
 
         public List<EndUser> SearchEndUsers(string fbid = null, string fname = null, string lname = null, string uname = null, string cellnumber = null, string email = null)
         {
-            DataHandler dh = new DataHandler();
             List<EndUser> users = new List<EndUser>();
             if (fbid != null)
             {
                 DataTable dt = dh.SearchEndUser(fbid: fbid);
                 foreach (DataRow row in dt.Rows)
                 {
-                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), row[6].ToString(), row[7].ToString()));
                 }
             }
             if (fname != null)
@@ -230,7 +211,7 @@ namespace BusinessLogic
                 DataTable dt = dh.SearchEndUser(fname: fname);
                 foreach (DataRow row in dt.Rows)
                 {
-                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), row[6].ToString(), row[7].ToString()));
                 }
             }
             if (lname != null)
@@ -238,7 +219,7 @@ namespace BusinessLogic
                 DataTable dt = dh.SearchEndUser(lname: lname);
                 foreach (DataRow row in dt.Rows)
                 {
-                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), row[6].ToString(), row[7].ToString()));
                 }
             }
             if (uname != null)
@@ -246,7 +227,7 @@ namespace BusinessLogic
                 DataTable dt = dh.SearchEndUser(uname: uname);
                 foreach (DataRow row in dt.Rows)
                 {
-                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), row[6].ToString(), row[7].ToString()));
                 }
             }
             if (cellnumber != null)
@@ -254,7 +235,7 @@ namespace BusinessLogic
                 DataTable dt = dh.SearchEndUser(cellnumber: cellnumber);
                 foreach (DataRow row in dt.Rows)
                 {
-                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), row[6].ToString(), row[7].ToString()));
                 }
             }
             if (email != null)
@@ -262,7 +243,7 @@ namespace BusinessLogic
                 DataTable dt = dh.SearchEndUser(email: email);
                 foreach (DataRow row in dt.Rows)
                 {
-                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), bool.Parse(row[6].ToString()), row[7].ToString(), bool.Parse(row[8].ToString()), row[9].ToString(), bool.Parse(row[10].ToString())));
+                    users.Add(new EndUser(int.Parse(row[0].ToString()), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), row[6].ToString(), row[7].ToString()));
                 }
             }
             return users;
@@ -270,7 +251,6 @@ namespace BusinessLogic
         /////////////////////////////////////////////CALLAGENTS///////////////////////////////////
         public List<Agent> GetCallAgents()
         {
-            DataHandler dh = new DataHandler();
             DataTable dt = dh.Read("tblCallAgent");
             List<Agent> agents = new List<Agent>();
             foreach (DataRow row in dt.Rows)
@@ -281,24 +261,20 @@ namespace BusinessLogic
         }
         public void AddCallAgent(string fname, string lname, string uname, string password, int totalhours, string agentext, string avgcalllength, int totalcalls, int performancescore)
         {
-            DataHandler dh = new DataHandler();
             dh.AddCallAgent(fname, lname, uname, password, totalhours, agentext, avgcalllength, totalcalls, performancescore);
         }
         public void UpdateCallAgent(int pidagent, string fname, string lname, string uname, string password, int totalhours, string agentext, string avgcalllength, int totalcalls, int performancescore)
         {
-            DataHandler dh = new DataHandler();
             dh.DeleteCallAgent(pidagent.ToString());
             dh.AddCallAgent(fname, lname, uname, password, totalhours, agentext, avgcalllength, totalcalls, performancescore);
         }
         public void DeleteCallAgent(string pidagent)
         {
-            DataHandler dh = new DataHandler();
             dh.DeleteCallAgent(pidagent);
         }
 
         public List<Agent> SearchAgent(string fname=null, string lname = null, string uname = null, int totalhours=0, int totalcalls=0)
         {
-            DataHandler dh = new DataHandler();
             List<Agent> agents = new List<Agent>();
             if (fname != null)
             {
