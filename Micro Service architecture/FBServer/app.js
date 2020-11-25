@@ -7,30 +7,6 @@ const { DateTime } = require('mssql/msnodesqlv8');
 const app = express().use(bodyParser.json());
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'))
 
-const { workerData, parentPort } = require('worker_threads');
-
-parentPort.postMessage({ fileName: workerData, status: 'Done' });
-//app.jsconst { Worker } = require('worker_threads');
-
-function runService(workerData) {
-    return new Promise((resolve, reject) => {
-        const worker = new Worker('./worker.js', { workerData });
-        worker.on('message', resolve);
-        worker.on('error', reject);
-        worker.on('exit', (code) => {
-            if (code !== 0) {
-                reject(new Error("Stopped the Worker Thread with the exit code: ${ code }"));
-            }
-        });
-    };  
-}
-
-async function run() {
-    const result = await runService('GeeksForGeeks');
-    console.log(result);
-}
-
-run().catch(err => console.error(err));
 
 app.post('/webhook', (req, res) => {
     let body = req.body;
@@ -38,7 +14,6 @@ app.post('/webhook', (req, res) => {
         body.entry.forEach(function (entry) {
             let sender = entry.messaging[0].sender.id;
             let webhook_event = entry.messaging[0];
-
             if (webhook_event.message) {
                 handleMessage(sender, webhook_event.message);
             } else if (webhook_event.postback) {
@@ -91,7 +66,6 @@ app.get('/webhook', (req, res) => {
     }
 });
 
-
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
 
@@ -102,7 +76,7 @@ function handleMessage(sender_psid, received_message) {
 
         // Create the payload for a basic text message
         response = {
-            "text": `You sent the message: "${received_message.text}". Now send me an image!`
+            "text": `Activity confirmed, Thank you!`
         }
     }
 

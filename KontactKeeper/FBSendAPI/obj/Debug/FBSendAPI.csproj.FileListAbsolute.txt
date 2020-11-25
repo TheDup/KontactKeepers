@@ -1,0 +1,9 @@
+C:\Repo\KontactKeepers\KontactKeeper\FBSendAPI\bin\Debug\FBSendAPI.dll
+C:\Repo\KontactKeepers\KontactKeeper\FBSendAPI\bin\Debug\FBSendAPI.pdb
+C:\Repo\KontactKeepers\KontactKeeper\FBSendAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Repo\KontactKeepers\KontactKeeper\FBSendAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Repo\KontactKeepers\KontactKeeper\FBSendAPI\obj\Debug\FBSendAPI.csprojAssemblyReference.cache
+C:\Repo\KontactKeepers\KontactKeeper\FBSendAPI\obj\Debug\FBSendAPI.csproj.CoreCompileInputs.cache
+C:\Repo\KontactKeepers\KontactKeeper\FBSendAPI\obj\Debug\FBSendAPI.csproj.CopyComplete
+C:\Repo\KontactKeepers\KontactKeeper\FBSendAPI\obj\Debug\FBSendAPI.dll
+C:\Repo\KontactKeepers\KontactKeeper\FBSendAPI\obj\Debug\FBSendAPI.pdb

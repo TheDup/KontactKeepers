@@ -114,10 +114,125 @@ namespace Interface
             }
             if (ConfigurationManager.AppSettings.Get("DarkMode") == "1")
             {
-                panHome.BackColor = Color.Black;
-                panEndUsers.BackColor = Color.Black;
-                panAdmins.BackColor = Color.Black;
-                panCallAgents.BackColor = Color.Black;
+                panHome.BackColor = Color.DarkGray;
+                panEndUsers.BackColor = Color.DarkGray;
+                panAdmins.BackColor = Color.DarkGray;
+                panCallAgents.BackColor = Color.DarkGray;
+                foreach (Control a in panHome.Controls)
+                {
+                    if (a is Button)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is Label)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is TextBox)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is MaskedTextBox)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                }
+                foreach (Control a in panEndUsers.Controls)
+                {
+                    if (a is Button)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is MaskedTextBox)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is Label)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is TextBox)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                }
+                foreach (Control a in panCallAgents.Controls)
+                {
+                    if (a is Button)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is MaskedTextBox)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is Label)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is TextBox)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                }
+                foreach (Control a in panAdmins.Controls)
+                {
+                    if (a is Button)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is Label)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is TextBox)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is MaskedTextBox)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                }
+                foreach (Control a in panButtons.Controls)
+                {
+                    if (a is Button)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is Label)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is TextBox)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                    if (a is MaskedTextBox)
+                    {
+                        a.ForeColor = Color.White;
+                        a.BackColor = Color.Black;
+                    }
+                }
             }
             else
             {
@@ -125,7 +240,123 @@ namespace Interface
                 panEndUsers.BackColor = Color.White;
                 panAdmins.BackColor = Color.White;
                 panCallAgents.BackColor = Color.White;
+                foreach (Control a in panHome.Controls)
+                {
+                    if (a is Button)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is Label)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is TextBox)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is MaskedTextBox)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                }
+                foreach (Control a in panEndUsers.Controls)
+                {
+                    if (a is Button)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is Label)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is TextBox)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is MaskedTextBox)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                }
+                foreach (Control a in panCallAgents.Controls)
+                {
+                    if (a is Button)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is Label)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is TextBox)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is MaskedTextBox)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                }
+                foreach (Control a in panAdmins.Controls)
+                {
+                    if (a is Button)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is Label)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is TextBox)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is MaskedTextBox)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                }
+                foreach (Control a in panButtons.Controls)
+                {
+                    if (a is Button)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is Label)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is TextBox)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                    if (a is MaskedTextBox)
+                    {
+                        a.ForeColor = Color.Black;
+                        a.BackColor = Color.White;
+                    }
+                }
             }
+            label23.ForeColor = Color.Blue;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -178,27 +409,27 @@ namespace Interface
 
         private void dgvEndUser_CellContentClick(object sender, DataGridViewCellEventArgs e) //Added the datagridview
         {
-            Admin administrator = (Admin)dgvAdmin.SelectedRows[0].DataBoundItem;
-            txtAAdminID.Text = administrator.PIDAdmin.ToString();
-            txtAFName.Text = administrator.FName;
-            txtALname.Text = administrator.LName;
-            txtAUname.Text = administrator.UName;
-            txtAPassword.Text = administrator.Password;
+            //Admin administrator = (Admin)dgvAdmin.SelectedRows[0].DataBoundItem;
+            //txtAAdminID.Text = administrator.PIDAdmin.ToString();
+            //txtAFName.Text = administrator.FName;
+            //txtALname.Text = administrator.LName;
+            //txtAUname.Text = administrator.UName;
+            //txtAPassword.Text = administrator.Password;
 
-            Agent agents = (Agent)dgvCallAgent.SelectedRows[0].DataBoundItem;
-            txtCID.Text = agents.PIDAgent.ToString();
-            txtCFName.Text = agents.FName;
-            txtCLName.Text = agents.LName;
-            txtCAgentEXT.Text = agents.AgentEXT;
-            txtCTotalCalls.Text = agents.TotalCalls.ToString();
+            //Agent agents = (Agent)dgvCallAgent.SelectedRows[0].DataBoundItem;
+            //txtCID.Text = agents.PIDAgent.ToString();
+            //txtCFName.Text = agents.FName;
+            //txtCLName.Text = agents.LName;
+            //txtCAgentEXT.Text = agents.AgentEXT;
+            //txtCTotalCalls.Text = agents.TotalCalls.ToString();
 
-            EndUser endUser = (EndUser)dgvEndUser.SelectedRows[0].DataBoundItem;
-            txtEID.Text = endUser.PIDEndUser.ToString();
-            txtEFName.Text = endUser.FName;
-            txtELName.Text = endUser.LName;
-            txtEFBID.Text = endUser.FBID;
-            txtEEmail.Text = endUser.Email;
-            txtECell.Text = endUser.CellNumber;
+            //EndUser endUser = (EndUser)dgvEndUser.SelectedRows[0].DataBoundItem;
+            //txtEID.Text = endUser.PIDEndUser.ToString();
+            //txtEFName.Text = endUser.FName;
+            //txtELName.Text = endUser.LName;
+            //txtEFBID.Text = endUser.FBID;
+            //txtEEmail.Text = endUser.Email;
+            //txtECell.Text = endUser.CellNumber;
         }
         private void btnCAAdd_Click(object sender, EventArgs e)
         {
@@ -235,22 +466,23 @@ namespace Interface
             refresh();
         }
 
-        private void btnEAdd_Click(object sender, EventArgs e)
+        private async void btnEAdd_Click(object sender, EventArgs e)
         {
             cn.AddEndUser(txtEFName.Text, txtELName.Text, txtEUName.Text, txtEPassword.Text, txtECell.Text, txtEEmail.Text, txtEFBID.Text);
-            refresh();
-            if (txtEEmail.Text.Length > 1)
-            {
-                em.SendEmail(txtEEmail.Text, "Greetings from KontactKeeper. Thanks for registering! Please reply YES to verify this email");
-            }
-            if (txtECell.Text.Length >= 10 )
+           
+            if (txtECell.Text.Length >= 10)
             {
                 wa.SendMessage(txtECell.Text, "Greetings from KontactKeeper. Thanks for registering! Please reply YES to verify this Phone number");
             }
             if (txtEFBID.Text.Length >= 10)
             {
-                fb.SendMessageAsync(txtEFBID.Text, "Greetings from KontactKeeper. Thanks for registering! Please reply YES to verify this Facebook account");
+                await fb.SendMessage(txtEFBID.Text, "Greetings from KontactKeeper. Thanks for registering! Please reply YES to verify this Facebook account");
             }
+            if (txtEEmail.Text.Length > 1)
+            {
+                em.SendEmail(txtEEmail.Text, "Greetings from KontactKeeper. Thanks for registering! Please reply YES to verify this email");
+            }
+            refresh();
         }
 
         private void btnEDelete_Click(object sender, EventArgs e)

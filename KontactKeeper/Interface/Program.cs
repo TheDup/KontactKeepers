@@ -55,7 +55,7 @@ namespace Interface
                 Thread.Sleep(2147483647);
             }
         }
-        public static void tmethB()
+        public static async void tmethB()
         {
             Connector cn = new Connector();
             EmailConf em = new EmailConf();
@@ -81,7 +81,7 @@ namespace Interface
                         {
                             string message = string.Format(notifymessage, "Whatsapp", "phone number");
                             em.SendEmail(user.Email, message);
-                            fb.SendMessageAsync(user.FBID, message);
+                            await fb.SendMessage(user.FBID, message);
                         }
                         else if ((now - DateTime.Parse(twa.LastSent)).TotalDays > 90)
                         {
@@ -99,7 +99,7 @@ namespace Interface
                         {
                             string message = string.Format(notifymessage, "Email", "email address");
                             wa.SendMessage(user.CellNumber, message);
-                            fb.SendMessageAsync(user.FBID, message);
+                            await fb.SendMessage(user.FBID, message);
                         }
                         else if ((now - DateTime.Parse(tem.LastSent)).TotalDays > 90)
                         {
@@ -117,7 +117,7 @@ namespace Interface
                         {
                             string message = string.Format(notifymessage, "Facebook", "facebook id");
                             em.SendEmail(user.Email, message);
-                            fb.SendMessageAsync(user.FBID, message);
+                            await fb.SendMessage(user.FBID, message);
                         }
                         else if ((now - DateTime.Parse(tfb.LastSent)).TotalDays > 90)
                         {

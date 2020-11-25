@@ -26,14 +26,14 @@ namespace Messenger.Controllers
                 if (user.CellNumber == from)
                 {
                     found = true;
-                    cn.UpdateWALastSeen(from, sqlFormattedDate);
+                    cn.UpdateWALastSeen(from, sqlFormattedDate, user.LastSent);
                 }
             }
 
 
             if (found == false)
             {
-                cn.AddWAUser(from, sqlFormattedDate);
+                cn.AddWAUser(from, sqlFormattedDate, "2001-09-11 8:46:40.000");
             }
             //cn.AddWAUser("0721752576", "2020-11-12 12:10:10.000"));
         }

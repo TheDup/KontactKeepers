@@ -959,8 +959,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(584, 561);
-            this.Controls.Add(this.panEndUsers);
             this.Controls.Add(this.panAdmins);
+            this.Controls.Add(this.panEndUsers);
             this.Controls.Add(this.panCallAgents);
             this.Controls.Add(this.panHome);
             this.Controls.Add(this.btnRefresh);
