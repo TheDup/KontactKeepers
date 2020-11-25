@@ -897,7 +897,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(444, 73);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ContactKeeper";
+            this.label1.Text = "KontactKeeper";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnHome
@@ -959,10 +959,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.panHome);
             this.Controls.Add(this.panAdmins);
             this.Controls.Add(this.panEndUsers);
             this.Controls.Add(this.panCallAgents);
-            this.Controls.Add(this.panHome);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.panButtons);
