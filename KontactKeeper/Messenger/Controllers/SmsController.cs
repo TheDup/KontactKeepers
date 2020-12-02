@@ -11,7 +11,7 @@ namespace Messenger.Controllers
 {
     public class SmsController : TwilioController
     {
-        public void Index(SmsRequest incomingMessage)
+        public TwiMLResult Index(SmsRequest incomingMessage)
         {
             Connector cn = new Connector();
             List<WAUser> users = cn.GetWAUsers();
@@ -36,6 +36,9 @@ namespace Messenger.Controllers
                 cn.AddWAUser(from, sqlFormattedDate, "2001-09-11 8:46:40.000");
             }
             //cn.AddWAUser("0721752576", "2020-11-12 12:10:10.000"));
+            var messagingResponse = new MessagingResponse();
+            messagingResponse.Message("Activity reported, Thank you!");
+            return TwiML(messagingResponse);
         }
     }
 }

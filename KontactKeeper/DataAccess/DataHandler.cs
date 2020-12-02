@@ -15,7 +15,7 @@ namespace DataAccess
         SqlConnection conn;
         public DataHandler()
         {
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionstring"].ConnectionString);
+            conn = new SqlConnection("Data Source=JAMESPC;Initial Catalog=Kontactkeeper;Integrated Security=True");
         }
         public DataTable Read(string table)
         {

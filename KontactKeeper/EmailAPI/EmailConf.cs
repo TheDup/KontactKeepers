@@ -15,7 +15,7 @@ namespace EmailAPI
     public class EmailConf
     {
         private string emailAddressUName = "KontactKeeper@campus-kiosk.co.za";
-        private string mailPass = "g4Ha2QtlMi7D";
+        private string mailPass = "Jan,TheChampion";
         private string incomingSSLServer = "host21.axxesslocal.co.za";
         private string imapPort = "993";
         private string pop3Port = "995";
